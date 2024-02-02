@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "../assets/logo.png";
+import { BsGrid3X3GapFill } from 'react-icons/bs';
 export default function Navbar() {
   return (
     <div>
@@ -17,7 +18,11 @@ export default function Navbar() {
             MENU
           </button>
         </div>
+        {/* <div className="w-full"></div> */}
       </div>
+      <div className=" fixed top-0  px-2 xss:px-4 xs:px-6 sm:px-10 md:px-8  font-poppins w-full bg-[#87ACA3]/[0.4] lg:hidden   py-5 flex  z-[70] rounded-b-lg justify-between">
+        
+        </div>
     </div>
   );
 }
