@@ -5,7 +5,7 @@ import "./globals.css";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Clean Crafters Website",
+  title: "CleanCrafters ",
   description: "Get access to qualified cleaners and without stress",
 };
 
