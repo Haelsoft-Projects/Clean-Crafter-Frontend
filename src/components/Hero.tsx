@@ -7,8 +7,8 @@ export default function Hero() {
       <div className=" w-full  bg-[#F3F2F2]">
         {" "}
         <div className="container lg:px-2 xl:px-0  mx-auto flex flex-col lg:flex-row lg:justify-between items-center text-center px-2  sm:px-10 md:px-8">
-          <div className="mt-4 lg:mt-6 xl:mt-0  lg:w-full">
-            <p className="text-[#292450] md:text-[45px] lg:text-[28px] text-[35px] lg:text-left w-full xl:text-[40px] font-bold">
+          <div className="mt-4 lg:mt-6 xl:mt-0 pl-8 lg:w-full">
+            <p className="text-[#292450] md:text-[45px] lg:text-[28px] text-[35px] lg:text-left w-full xl:text-[32px] font-bold">
               Discover <br className=" lg:hidden " />
               <span className="text-[#4A9EED]">Highly-Rated</span>
               <br className=" hidden " /> <span>Cleaning</span>{" "}
@@ -43,10 +43,10 @@ export default function Hero() {
             </div>
 
             <div className="w-full flex space-x-4 mt-8 mb-4  md:mt-10 justify-between lg:justify-normal">
-              <button className="border px-2 text-base border-[#292450] w-1/2 lg:w-1/3 xl:w-1/4 py-3 bg-white rounded-[10px]">
+              <button className="border px-2 text-base border-[#292450] w-1/2 lg:w-1/3 xl:w-1/3 py-3 bg-white rounded-[10px]">
                 Enter your Address{" "}
               </button>
-              <button className="py-3 px-2 text-base text-white w-1/2  lg:w-1/3 xl:w-1/4  bg-[#4A9EED] rounded-[10px]">
+              <button className="py-3 px-2 text-base text-white w-1/2  lg:w-1/3 xl:w-1/3  bg-[#4A9EED] rounded-[10px]">
                 Let’s go
               </button>
             </div>
