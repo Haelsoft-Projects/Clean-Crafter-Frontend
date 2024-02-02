@@ -8,7 +8,7 @@ export default function Navbar() {
   const [bool, setbool] = useState<boolean>(false);
   return (
     <div>
-      <div className=" container p lg:flex hidden justify-between items-center mx-auto">
+      <div className=" container lg:px-2 xl:px-0 mx-auto p lg:flex hidden justify-between items-center ">
         <Image src={logo} alt="logo" className="object-contain" />
         {/* <img src={logo} alt="" /> */}
         <div className="gap-x-14 flex ">
@@ -18,13 +18,11 @@ export default function Navbar() {
           <button className=" rounded-[10px] text-base font-bold">
             LOG IN
           </button>{" "}
-          <button className="text-[#4A9EED] rounded-[10px] font-bold">
-            MENU
-          </button>
+          <button className="text-black rounded-[10px] font-bold">MENU</button>
         </div>
         {/* <div className="w-full"></div> */}
       </div>
-      <div className=" fixed top-0  px-2  sm:px-10 md:px-8   w-full  lg:hidden   py-4 flex  z-[70] rounded-b-sm justify-between">
+      <div className="  top-0  px-2  sm:px-10 md:px-8   w-full  lg:hidden   py-4 flex  z-[70] rounded-b-sm justify-between">
         <Link href="">
           {" "}
           <Image src={logo} alt="" className="md:w-40 w-24 " />
@@ -41,8 +39,8 @@ export default function Navbar() {
       </div>
       {bool && (
         <div
-          className="h-[7rem] lg:hidden w-full flex flex-col shadow text-base rounded-b-xl items-center justify-evenly text-white  bg-[#4A9EED]
-         text-light z-50 fixed top-[7.5rem] "
+          className="h-[7rem] md:h-[12rem] lg:hidden w-full flex flex-col shadow text-base rounded-b-xl items-center justify-evenly text-white  bg-[#4A9EED] md:text-xl  lg:text-base
+         text-light z-50 fixed top-[7.5rem] md:top-[11.2rem] "
         >
           <Link href="" onClick={() => setbool(false)}>
             {" "}
