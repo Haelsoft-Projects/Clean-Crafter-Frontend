@@ -15,7 +15,7 @@ export default function Hero() {
               <br className="lg:block hidden" />
               Professionals
             </p>
-            <div className="flex flex-col text-left gap-y-4 md:gap-y-8 lg:gap-y-4 md:mt-10 mt-8 text-base lg:mt-10 ">
+            <div className="flex flex-col text-left gap-y-8 md:gap-y-8 lg:gap-y-4 md:mt-10 mt-8 text-base lg:mt-10 ">
               <div className="flex items-center">
                 <CgCheck className="text-xl font-bold" />
                 <span className="md:text-[20px] lg:text-[22px] text-base">
