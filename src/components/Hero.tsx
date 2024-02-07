@@ -6,9 +6,9 @@ export default function Hero() {
     <div>
       <div className=" w-full  bg-[#F3F2F2]">
         {" "}
-        <div className="container lg:px-2 xl:px-0 pt-10  mx-auto flex flex-col lg:flex-row lg:justify-between items-center text-center px-2  sm:px-10 md:px-8">
+        <div className="container lg:px-2 xl:px-0 pt-20 pb-1 mt-0   mx-auto flex flex-col lg:flex-row lg:justify-between items-center text-center px-2  sm:px-10 md:px-8">
           <div className="mt-4 text-center flex-col lg:mt-6 xl:mt-0 lg:pl-8 lg:w-full">
-            <p className="text-[#292450] md:text-[45px] lg:text-[28px] text-[35px] lg:text-left w-full xl:text-[32px] font-bold">
+            <p className="text-[#292450] md:text-[45px] lg:text-[28px] text-[35px] lg:text-left w-full xl:text-[38px] font-bold">
               Discover <br className=" lg:hidden " />
               <span className="text-[#4A9EED]">Highly-Rated</span>
               <br className=" hidden " /> <span>Cleaning</span>{" "}
@@ -54,7 +54,7 @@ export default function Hero() {
           <Image
             src={heroimage}
             alt="A man  holding cleaning tools"
-            className="object-contain w-[40rem] md:mx-auto lg:w-[32rem] self-end xl:w-[46rem] mt-4 lg:mt-0"
+            className="object-contain w-[40rem] md:mx-auto lg:w-[32rem] self-end xl:w-[45rem] mt-4 lg:mt-0"
           />
         </div>
       </div>
