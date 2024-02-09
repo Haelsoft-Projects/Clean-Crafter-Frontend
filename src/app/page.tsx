@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Achievements from "@/components/Achivements";
 import Reasons from "@/components/Reasons";
 import HowitWorks from "@/components/HowitWorks";
+import Services from "@/components/Services";
 export default function Home() {
   return (
     <>
@@ -11,10 +12,11 @@ export default function Home() {
         <Navbar />
         <Hero />
         <About />
-        <HowitWorks  />
+        <HowitWorks />
         <Achievements />
         <Reasons />
-            </div>
+        <Services />
+      </div>
     </>
   );
 }
