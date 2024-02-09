@@ -41,7 +41,7 @@ const MarketPlace = () => {
   return (
     <div className="bg-[#F3F3F3] min-h-[1108.22px] py-5 px-4  sm:px-10 md:px-8 ">
       <div className="container mx-auto text-center mt-32">
-        <p className="font-medium text-center text-[45px]">
+        <p className="font-medium text-[35px] lg:text-[46px] text-center">
           Nigeria’s leading marketplace for cleaning services
         </p>
         <p className="text-center text-xl mt-8">
@@ -54,7 +54,7 @@ const MarketPlace = () => {
 
         <div className="grid lg:grid-cols-2 gap-y-2 lg:px-24 mt-10 justify-center place-items-center">
           {data.map((item, index) => (
-            <div className="flex min-h-[195px]  mt-8  w-full lg:w-[500px] border border-[#DDD] shadow-[0_0_8px_4px_#EDEDED]">
+            <div key={index} className="flex min-h-[195px]  mt-8  w-full lg:w-[500px] border border-[#DDD] shadow-[0_0_8px_4px_#EDEDED]">
               <div className="w-2/4 py-4 bg-[#EEEE] flex-col flex  px-3 text-start">
                 {" "}
                 <span className="text-xs"> by:</span>
