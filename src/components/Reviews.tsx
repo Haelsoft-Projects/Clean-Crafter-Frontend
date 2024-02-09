@@ -39,12 +39,12 @@ const Reviews = () => {
     },
   ];
   return (
-    <div className="bg-[#F3F3F3]  py-5 px-4  sm:px-10 md:px-8 mt-20 ">
-      <div className="container mx-auto text-center lg:mt-10">
+    <div className="bg-[#F3F3F3]  z ">
+      <div className="container mx-auto py-10 px-4  sm:px-10 md:px-8    text-center mt-20">
         <p className="font-medium text-2xl lg:text-[46px] text-center">
           Nigeria’s leading marketplace for cleaning services
         </p>
-        <p className="text-center text-sm lg:text-xl lg:mt-10 mt-8">
+        <p className="text-center text-sm lg:text-xl lg:mt-10 mt-8 mx-auto lg:w-[994.31px]">
           Whatever it is you need: a regular clean, a deep scrub of your oven or
           a one off deep clean - The cleaners registered on the Helpling
           platform offer every cleaning service you could need. After your
@@ -56,7 +56,7 @@ const Reviews = () => {
           {data.map((item, index) => (
             <div
               key={index}
-              className="flex min-h-[195px]  mt-8  w-full lg:w-[500px] border border-[#DDD] shadow-[0_0_8px_4px_#EDEDED]"
+              className="flex min-h-[195px] mt-8  w-full lg:w-[500px] border border-[#DDD] shadow-[0_0_8px_4px_#EDEDED]"
             >
               <div className="w-2/4 py-4 bg-[#EEEE] flex-col flex  px-3 text-start">
                 {" "}
@@ -64,8 +64,6 @@ const Reviews = () => {
                 <div className="mt-4"> {item.name}</div>
               </div>
               <div className="w-full bg-white py-4 flex flex-col items-start px-3">
-             
-
                 <span className="text-xs">Cleaner</span>
                 <span className="mt-4 text-">{item.cleaner}</span>
                 <div className="flex gap-x-2 mt-4">
@@ -80,12 +78,10 @@ const Reviews = () => {
                   {item.message}
                 </div>
                 <div className="flex justify-end w-full ">
-            <FiPlusCircle className=" text-2xl text-[#4A9EED] font-bold" />
-            </div>
+                  <FiPlusCircle className=" text-2xl text-[#4A9EED] font-bold" />
+                </div>
               </div>
-         
             </div>
-
           ))}
         </div>
 
