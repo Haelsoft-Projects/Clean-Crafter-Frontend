@@ -16,7 +16,9 @@ export default function Home() {
         <Achievements />
         <Reasons />
         <Services />
-      </div>
+
+    </div>
     </>
   );
 }
+
