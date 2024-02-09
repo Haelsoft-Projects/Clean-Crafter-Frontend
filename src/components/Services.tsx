@@ -11,7 +11,7 @@ import img7 from "../assets/landingpage/services/7.png";
 const Services = () => {
   return (
     <div>
-      <div className="container px-2  sm:px-10 md:px-8  mx-auto mb-32 flex flex-col gap-y-20 lg:gap-y-10 mt-20">
+      <div className="container px-4  sm:px-10 md:px-8  mx-auto mb-32  flex flex-col gap-y-20 lg:gap-y-10 mt-20">
         <p className="text-[35px] lg:text-[46px] font-medium text-center">
           Cleaning Services{" "}
         </p>
@@ -70,12 +70,11 @@ const Services = () => {
               <p className="ss">Deep Cleaning</p>
             </div>
             <div className="flex flex-col p-3 col-span-2  gap-y-2 justify-center items-center border border-[#CCCCCC]">
-            {" "}
-            <Image src={img7} alt="pressing Iron" />
-            <p className="ss">Regular Cleaning</p>
-          </div>
+              {" "}
+              <Image src={img7} alt="pressing Iron" />
+              <p className="ss">Regular Cleaning</p>
+            </div>
           </div>{" "}
-        
         </div>
       </div>
     </div>

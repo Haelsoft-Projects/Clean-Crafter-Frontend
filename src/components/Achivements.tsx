@@ -5,7 +5,7 @@ import { RiAwardFill } from "react-icons/ri";
 export default function Achievements() {
   return (
     <div>
-      <div className="flex bg-[#4A9EED] min-h-[248px] mb-32 mt-20">
+      <div className="flex bg-[#4A9EED] px-4  sm:px-10 md:px-8  min-h-[248px] mb-32 mt-20">
       <div className="container mx-auto flex flex-col lg:flex-row items-center px-2   sm:px-10 md:px-8 justify-between gap-y-6 py-20 lg:py-0 ">
         <div className="gap-y-1 flex flex-col items-center text-white font-medium">
           <FaCheckCircle className="text-white text-4xl"/>

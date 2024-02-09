@@ -3,7 +3,7 @@
 const HowitWorks = () => {
   return (
     <div>
-      <div className="mt-20 bg-[#F3F2F2] min-h-[331px] py-6 Pb-8  w-full">
+      <div className="mt-20 bg-[#F3F2F2] min-h-[331px] py-6 Pb-8  w-full px-4  sm:px-10 md:px-8">
         <div className="container mx-auto flex flex-col items-center px-2   sm:px-10 md:px-8">
           <p className="text-center text-[46px] font-medium mt-8">
             How it works
