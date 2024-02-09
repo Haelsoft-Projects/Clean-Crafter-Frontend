@@ -54,14 +54,17 @@ const Reviews = () => {
 
         <div className="grid lg:grid-cols-2 gap-y-2 lg:px-24 mt-8 justify-center place-items-center">
           {data.map((item, index) => (
-            <div key={index} className="flex min-h-[195px]  mt-8  w-full lg:w-[500px] border border-[#DDD] shadow-[0_0_8px_4px_#EDEDED]">
+            <div
+              key={index}
+              className="flex min-h-[195px]  mt-8  w-full lg:w-[500px] border border-[#DDD] shadow-[0_0_8px_4px_#EDEDED]"
+            >
               <div className="w-2/4 py-4 bg-[#EEEE] flex-col flex  px-3 text-start">
                 {" "}
                 <span className="text-xs"> by:</span>
                 <div className="mt-4"> {item.name}</div>
               </div>
-              <div className="w-full relative bg-white py-4 flex flex-col items-start px-3">
-                <FiPlusCircle className="absolute bottom-4  right-4 text-2xl text-[#4A9EED] font-bold" />
+              <div className="w-full bg-white py-4 flex flex-col items-start px-3">
+             
 
                 <span className="text-xs">Cleaner</span>
                 <span className="mt-4 text-">{item.cleaner}</span>
@@ -76,10 +79,19 @@ const Reviews = () => {
                 <div className="border-t  pt-2 mt-3 border-dashed border-[#DDD] w-full text-start">
                   {item.message}
                 </div>
-              </div>
+                <div className="flex justify-end w-full ">
+            <FiPlusCircle className=" text-2xl text-[#4A9EED] font-bold" />
             </div>
+              </div>
+         
+            </div>
+
           ))}
         </div>
+
+        <button className="w-full mt-20 lg:w-[190px] rounded-[5px] h-[60px] bg-[#4A9EED] text-white">
+          All reviews
+        </button>
       </div>
     </div>
   );
