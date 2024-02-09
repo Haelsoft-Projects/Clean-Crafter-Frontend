@@ -39,12 +39,12 @@ const MarketPlace = () => {
     },
   ];
   return (
-    <div className="bg-[#F3F3F3] min-h-[1108.22px] py-5 px-4  sm:px-10 md:px-8 ">
-      <div className="container mx-auto text-center mt-32">
-        <p className="font-medium text-[35px] lg:text-[46px] text-center">
+    <div className="bg-[#F3F3F3] min-h-[1108.22px] py-5 px-4  sm:px-10 md:px-8 mt-20 ">
+      <div className="container mx-auto text-center m">
+        <p className="font-medium text-2xl lg:text-[46px] text-center">
           Nigeria’s leading marketplace for cleaning services
         </p>
-        <p className="text-center text-xl mt-8">
+        <p className="text-center text-sm lg:text-xl mt-8">
           Whatever it is you need: a regular clean, a deep scrub of your oven or
           a one off deep clean - The cleaners registered on the Helpling
           platform offer every cleaning service you could need. After your
@@ -52,7 +52,7 @@ const MarketPlace = () => {
           they’ll make your home shine.
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-y-2 lg:px-24 mt-10 justify-center place-items-center">
+        <div className="grid lg:grid-cols-2 gap-y-2 lg:px-24 mt-8 justify-center place-items-center">
           {data.map((item, index) => (
             <div key={index} className="flex min-h-[195px]  mt-8  w-full lg:w-[500px] border border-[#DDD] shadow-[0_0_8px_4px_#EDEDED]">
               <div className="w-2/4 py-4 bg-[#EEEE] flex-col flex  px-3 text-start">

@@ -11,11 +11,11 @@ import img7 from "../assets/landingpage/services/7.png";
 const Services = () => {
   return (
     <div>
-      <div className="container px-4  sm:px-10 md:px-8  mx-auto mb-32  flex flex-col gap-y-20 lg:gap-y-10 mt-20">
-        <p className="text-[35px] lg:text-[46px] font-medium text-center">
+      <div className="container px-4  sm:px-10 md:px-8  mx-auto   flex flex-col gap-y-8 lg:gap-y-10 mt-20">
+        <p className="text-2xl lg:text-[46px] font-medium text-center">
           Cleaning Services{" "}
         </p>
-        <p className="text-xl text-center">
+        <p className=" text-sm text-center">
           Whatever it is you need: a regular clean, a deep scrub of your oven or
           a one off deep clean - The cleaners registered on the Helpling
           platform offer every cleaning service you could need. After your
@@ -33,7 +33,7 @@ const Services = () => {
           </button>
         </div>
 
-        <div className="flex  flex-col-reverse lg:flex-row justify-between min-h-[530px] bg-[#F3F2F2]">
+        <div className="flex  mt-8 flex-col-reverse lg:flex-row justify-between min-h-[530px] bg-[#F3F2F2]">
           <Image
             src={img}
             alt=""
