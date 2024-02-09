@@ -39,7 +39,7 @@ const Services = () => {
             alt=""
             className="w-[40rem] object-contain self-end ite"
           />
-          <div className=" grid lg:grid-cols-2 bg-white p-3 lg:min-w-[465px] lg:mt-8 px-2 lg:px-0">
+          <div className=" grid lg:grid-cols-2 bg-white  lg:min-w-[465px] lg:mt-8 px-2 lg:px-0">
             <div className="flex flex-col p-3  gap-y-2 justify-center items-center border-r-0  border border-[#CCCCCC]">
               <Image src={img1} alt="pressing Iron" />
               <p className="ss">Ironing</p>
