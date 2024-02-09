@@ -5,7 +5,8 @@ import Achievements from "@/components/Achivements";
 import Reasons from "@/components/Reasons";
 import HowitWorks from "@/components/HowitWorks";
 import Services from "@/components/Services";
-import MarketPlace from "@/components/MarketPlace";
+import Faqs from "@/components/Faqs";
+import Reviews from "@/components/Reviews";
 export default function Home() {
   return (
     <>
@@ -17,7 +18,8 @@ export default function Home() {
         <Achievements />
         <Reasons />
         <Services />
-        <MarketPlace />
+        <Reviews/>
+        <Faqs />
 
     </div>
     </>

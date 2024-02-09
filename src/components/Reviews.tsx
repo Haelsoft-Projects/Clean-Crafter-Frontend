@@ -1,7 +1,7 @@
 import { IoIosStar } from "react-icons/io";
 import { FiPlusCircle } from "react-icons/fi";
 import { useState } from "react";
-const MarketPlace = () => {
+const Reviews = () => {
   const data = [
     {
       name: "Rauno",
@@ -39,12 +39,12 @@ const MarketPlace = () => {
     },
   ];
   return (
-    <div className="bg-[#F3F3F3] min-h-[1108.22px] py-5 px-4  sm:px-10 md:px-8 mt-20 ">
-      <div className="container mx-auto text-center m">
+    <div className="bg-[#F3F3F3]  py-5 px-4  sm:px-10 md:px-8 mt-20 ">
+      <div className="container mx-auto text-center lg:mt-10">
         <p className="font-medium text-2xl lg:text-[46px] text-center">
           Nigeria’s leading marketplace for cleaning services
         </p>
-        <p className="text-center text-sm lg:text-xl mt-8">
+        <p className="text-center text-sm lg:text-xl lg:mt-10 mt-8">
           Whatever it is you need: a regular clean, a deep scrub of your oven or
           a one off deep clean - The cleaners registered on the Helpling
           platform offer every cleaning service you could need. After your
@@ -85,4 +85,4 @@ const MarketPlace = () => {
   );
 };
 
-export default MarketPlace;
+export default Reviews;
