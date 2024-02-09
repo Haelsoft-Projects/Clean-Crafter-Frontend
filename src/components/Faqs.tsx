@@ -16,17 +16,17 @@ const Faqs = () => {
           <p className="text-black text-[35px] lg:text-[46px] text-center ">
             Frequently Asked Questions
           </p>
-        <div className="mt-0">
-        {data.map((item, index) => (
-            <div
-              key={index}
-              className="flex h-[64px] rounded-lg mt-8 justify-between items-center px-4 lg:px-8 w-full border border-[#F1F5F9] shadow-[0_8px_20px_0_rgba(61,_107,_163,_0.08)]"
-            >
-              <p className="text-sm">{item}</p>
-              <Image src={icon} alt="icons" loading="lazy" />
-            </div>
-          ))}
-        </div>
+          <div className="mt-0">
+            {data.map((item, index) => (
+              <div
+                key={index}
+                className="flex h-[64px] rounded-lg mt-8 justify-between items-center px-4 lg:px-8 w-full border border-[#F1F5F9] shadow-[0_8px_20px_0_rgba(61,_107,_163,_0.08)]"
+              >
+                <p className="text-sm">{item}</p>
+                <Image src={icon} alt="icons" loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

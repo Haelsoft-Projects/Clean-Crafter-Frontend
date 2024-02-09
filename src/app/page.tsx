@@ -7,6 +7,7 @@ import HowitWorks from "@/components/HowitWorks";
 import Services from "@/components/Services";
 import Faqs from "@/components/Faqs";
 import Reviews from "@/components/Reviews";
+import Book from "@/components/Book";
 export default function Home() {
   return (
     <>
@@ -20,7 +21,7 @@ export default function Home() {
         <Services />
         <Reviews/>
         <Faqs />
-
+<Book />
     </div>
     </>
   );
