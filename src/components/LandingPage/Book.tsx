@@ -1,5 +1,5 @@
 import Image from "next/image";
-import bg from "../assets/landingpage/section.png";
+import bg from "../../assets/landingpage/section.png";
 const Book = () => {
   return (
     <div>

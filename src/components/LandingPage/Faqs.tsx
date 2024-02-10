@@ -1,5 +1,5 @@
 import Image from "next/image";
-import icon from "../assets/landingpage/faqicon.png";
+import icon from "../../assets/landingpage/faqicon.png";
 const Faqs = () => {
   type value = Array<string>;
   const data: value = [

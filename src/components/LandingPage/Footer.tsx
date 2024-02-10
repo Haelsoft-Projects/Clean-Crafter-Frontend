@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Google from "../assets/landingpage/goge.png";
-import Apple from "../assets/landingpage/apple.png";
-import Facebook from "../assets/landingpage/facebook.png";
-import Twitter from "../assets/landingpage/twit.png";
-import Youtube from "../assets/landingpage/youtube.png";
+import Google from "../../assets/landingpage/goge.png";
+import Apple from "../../assets/landingpage/apple.png";
+import Facebook from "../../assets/landingpage/facebook.png";
+import Twitter from "../../assets/landingpage/twit.png";
+import Youtube from "../../assets/landingpage/youtube.png";
 const Footer = () => {
   return (
     <div className="bg-[#444444]">
@@ -21,10 +21,10 @@ const Footer = () => {
 
           <div className=" lg:basis-1/2 flex flex-col items-center ">
             <div className=" flex flex-col lg:w-[507px]  justify-center items-center lg:items-start lg:justify-between mt-3  lg:ml-5 ">
-              <p className="text-white  text-[20px] text-center">
+              <p className="text-white  text-[20px] w-full lg:text-center text-start">
                 Subscribe to our new letter{" "}
               </p>
-              <div className="lg:content-center mx-auto w-fit lg:w-full items-center lg:ml-[30px] lg:m-2 flex">
+              <div className="lg:content-center mx-auto w-fit  items-center lg:ml-[30px] lg:m-2 flex">
                 <input
                   placeholder="Email Adress "
                   className="lg:w-[310px] h-[43px] p-4"

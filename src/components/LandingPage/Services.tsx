@@ -1,12 +1,12 @@
 import Image from "next/image";
-import img from "../assets/landingpage/hero.png";
-import img1 from "../assets/landingpage/services/1.png";
-import img2 from "../assets/landingpage/services/2.png";
-import img3 from "../assets/landingpage/services/3.png";
-import img4 from "../assets/landingpage/services/4.png";
-import img5 from "../assets/landingpage/services/5.png";
-import img6 from "../assets/landingpage/services/6.png";
-import img7 from "../assets/landingpage/services/7.png";
+import img from "../../assets/landingpage/hero.png";
+import img1 from "../../assets/landingpage/services/1.png";
+import img2 from "../../assets/landingpage/services/2.png";
+import img3 from "../../assets/landingpage/services/3.png";
+import img4 from "../../assets/landingpage/services/4.png";
+import img5 from "../../assets/landingpage/services/5.png";
+import img6 from "../../assets/landingpage/services/6.png";
+import img7 from "../../assets/landingpage/services/7.png";
 
 const Services = () => {
   return (
@@ -37,7 +37,7 @@ const Services = () => {
           <Image
             src={img}
             alt=""
-            className="w-[40rem] object-contain self-end ite"
+            className=" w-[40rem] xl:w-[40rem] lg:w-[30rem]  object-contain self-end ite"
           />
           <div className=" grid lg:grid-cols-2 bg-white  lg:min-w-[465px] lg:mt-8 px-2 lg:px-0">
             <div className="flex flex-col p-3  gap-y-2 justify-center items-center border-r-0  border border-[#CCCCCC]">

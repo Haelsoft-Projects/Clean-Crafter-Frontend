@@ -1,7 +1,7 @@
 import Image from "next/image";
-import img1 from "../assets/landingpage/img1.png";
-import img2 from "../assets/landingpage/img2.png";
-import img3 from "../assets/landingpage/img3.png";
+import img1 from "../../assets/landingpage/img1.png";
+import img2 from "../../assets/landingpage/img2.png";
+import img3 from "../../assets/landingpage/img3.png";
 export default function Reasons() {
   return (
     <div>

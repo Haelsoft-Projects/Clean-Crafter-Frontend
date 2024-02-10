@@ -1,14 +1,14 @@
-import About from "@/components/About";
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Achievements from "@/components/Achivements";
-import Reasons from "@/components/Reasons";
-import HowitWorks from "@/components/HowitWorks";
-import Services from "@/components/Services";
-import Faqs from "@/components/Faqs";
-import Reviews from "@/components/Reviews";
-import Book from "@/components/Book";
-import Footer from "@/components/Footer";
+import About from "@/components/LandingPage/About";
+import Hero from "@/components/LandingPage/Hero";
+import Navbar from "@/components/LandingPage/Navbar";
+import Achievements from "@/components/LandingPage/Achivements";
+import Reasons from "@/components/LandingPage/Reasons";
+import HowitWorks from "@/components/LandingPage/HowitWorks";
+import Services from "@/components/LandingPage/Services";
+import Faqs from "@/components/LandingPage/Faqs";
+import Reviews from "@/components/LandingPage/Reviews";
+import Book from "@/components/LandingPage/Book";
+import Footer from "@/components/LandingPage/Footer";
 export default function Home() {
   return (
     <>

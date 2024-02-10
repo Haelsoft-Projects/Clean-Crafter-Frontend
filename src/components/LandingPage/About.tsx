@@ -1,6 +1,6 @@
 import Image from "next/image";
-import img1 from "../assets/landingpage/sub1.png";
-import img2 from "../assets/landingpage/sub2.png";
+import img1 from "../../assets/landingpage/sub1.png";
+import img2 from "../../assets/landingpage/sub2.png";
 export default function About() {
   return (
     <div>

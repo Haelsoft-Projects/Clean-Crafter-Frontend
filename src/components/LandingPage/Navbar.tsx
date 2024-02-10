@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import { HiMenu } from "react-icons/hi";
 import Link from "next/link";
 import { useState } from "react";
