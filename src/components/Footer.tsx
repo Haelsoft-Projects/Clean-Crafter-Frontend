@@ -57,7 +57,7 @@ const Footer = () => {
           <Image alt="" src={Facebook} className="ml-1" />
           <Image alt="" src={Youtube} className="ml-1" />
         </div>
-        <div className="flex flex-col lg:flex-row mt-4 mb-4">
+        <div className="flex flex-col lg:flex-row lg:mt-4 lg:mb-4">
           <p className="  text-[14px]  lg:ml-2 text-[#4A9EED]"> CleanCrafters</p>
           <ul className="list-disc list-inside flex lg:flex-row flex-wrap text-[12px] text-white  ">
             <li className="ml-1">Home</li>
