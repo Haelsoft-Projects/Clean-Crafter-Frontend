@@ -8,6 +8,7 @@ import Services from "@/components/Services";
 import Faqs from "@/components/Faqs";
 import Reviews from "@/components/Reviews";
 import Book from "@/components/Book";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
@@ -19,11 +20,11 @@ export default function Home() {
         <Achievements />
         <Reasons />
         <Services />
-        <Reviews/>
+        <Reviews />
         <Faqs />
-<Book />
-    </div>
+        <Book />
+        <Footer />
+      </div>
     </>
   );
 }
-
