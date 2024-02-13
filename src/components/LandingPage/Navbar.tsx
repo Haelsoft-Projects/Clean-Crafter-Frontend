@@ -1,4 +1,5 @@
-"use client";
+'use client'
+import { useRouter } from 'next/navigation'
 import Image from "next/image";
 import logo from "../../assets/logo.png";
 import { HiMenu } from "react-icons/hi";
@@ -6,6 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
+const  router=useRouter(); 
   const [bool, setbool] = useState<boolean>(false);
   return (
     <div>
@@ -13,10 +15,10 @@ export default function Navbar() {
         <Image src={logo} alt="logo" className="object-contain" />
         {/* <img src={logo} alt="" /> */}
         <div className="gap-x-14 flex ">
-          <button className="bg-[#4A9EED] text-white rounded-[10px] font-bold  px-8 py-2">
+          <button onClick={() => router.push('/signup')} className="bg-[#4A9EED] text-white rounded-[10px] font-bold  px-8 py-2">
             REGISTER AS A CLEANER
           </button>
-          <button className=" rounded-[10px] text-base font-bold">
+          <button onClick={() => router.push('/login')}  className=" rounded-[10px] text-base font-bold">
             LOG IN
           </button>{" "}
           <button className="text-black rounded-[10px] font-bold">MENU</button>
