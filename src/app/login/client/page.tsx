@@ -5,29 +5,64 @@ import { useRouter } from "next/navigation";
 import { useFormik } from "formik";
 import { loginValidate } from "@/Service";
 import Image from "next/image";
-import img from "../../assets/img.png";
+import img from "../../../assets/img.png";
 import Input from "@/components/common/Input";
-
-const Signin = () => {
+import axios from "axios";
+import BeatLoader from "react-spinners/BeatLoader";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const Login = () => {
   const router = useRouter();
+   
+  const [isloading, setisloading] = useState<boolean>(false);
   const formik = useFormik({
     initialValues: {
-      email: "",
-      password: "",
+      email: "olaimarnoel@gmail.com",
+      password: "emma@123ASD",
     },
     validationSchema: loginValidate,
-    onSubmit: async (values) => {},
+    onSubmit: async (values) => {
+      setisloading(true);
+      axios
+        .post("/auth/jwt/create", {
+          email: values.email,
+          password: values.password,
+        })
+        .then((res) => {
+          console.log(res);
+          setisloading(false);
+          toast.success("Success", {
+            autoClose: 2000,
+            position: "top-right",
+          });
+          router.push("/dashboard");
+        })
+        .catch((e) => {
+          console.log(e);
+          setisloading(false);
+          toast.error("An error occurred", {
+            autoClose: 2000,
+            position: "top-right",
+          });
+        });
+    },
   });
 
   return (
     <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between    ">
-      {/* <Image
-        src={img}
-        alt="dfasfasd"
-        className="object-cover  w-[80%] lg:w-[55%] xl:w-[55%] hidden lg:block  rounded-r-[50px] "
-      /> */}
-      <div className="w-[80%] lg:w-[57%] xl:w-[55%] lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
-        <Image src={img} alt="image" />
+      <ToastContainer />
+      {isloading && (
+        <div className="h-screen fixed w-screen  bg-black/[0.9] flex justify-center items-center ">
+          <BeatLoader color="#4A9EED" size={30} />
+        </div>
+      )}
+      <div className="w-[80%] lg:w-[57%] xl:w-[55%] lg:px-10 xl:px-24 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
+        <div className="flex flex-col">
+          <Image src={img} alt="image" />
+          <p className="mt-2 text-center text-white text-[20px] font-medium">
+            Elevating Cleanliness To A Craft
+          </p>
+        </div>
       </div>
       <div className=" lg:w-[43%] xl:w-[45%] flex  justify-center items-center lg:px-10 xl:px-20">
         <div className="flex  flex-col justify-center items-center w-full">
@@ -53,7 +88,7 @@ const Signin = () => {
             <Input
               label="Password"
               type="text"
-              name="Password"
+              name="password"
               value={formik.values.password}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -84,4 +119,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Login;

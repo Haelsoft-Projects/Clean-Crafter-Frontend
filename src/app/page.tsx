@@ -9,9 +9,13 @@ import Faqs from "@/components/LandingPage/Faqs";
 import Reviews from "@/components/LandingPage/Reviews";
 import Book from "@/components/LandingPage/Book";
 import Footer from "@/components/LandingPage/Footer";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Home() {
   return (
     <>
+    	<ToastContainer />
       <div className="">
         <Navbar />
         <Hero />

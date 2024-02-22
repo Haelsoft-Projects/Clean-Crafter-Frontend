@@ -7,8 +7,13 @@ import { useFormik } from "formik";
 import { signUpValidate } from "@/Service";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import axios from "axios";
+import BeatLoader from "react-spinners/BeatLoader";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Clients = () => {
   const router = useRouter();
+  const [isloading, setisloading] = useState<boolean>(false);
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -21,20 +26,58 @@ const Clients = () => {
     },
     validationSchema: signUpValidate,
     onSubmit: async (values) => {
-      router.push("/dashboard");
+      //   router.push("/dashboard");
+      setisloading(true);
+      axios
+        .post("/auth/users/", {
+          first_name: values.firstName,
+          last_name: values.lastName,
+          email: values.email,
+          nin: values.nin,
+          phone_number: values.phoneNumber,
+          password: values.password,
+        })
+        .then((res) => {
+          console.log(res);
+          setisloading(false);
+          toast.success("Success", {
+            autoClose: 2000,
+            position: "top-right",
+          });
+          router.push("/login/cleaners");
+        })
+        .catch((e) => {
+          console.log(e);
+          setisloading(false);
+          toast.error("An error occurred", {
+            autoClose: 2000,
+            position: "top-right",
+          });
+        });
     },
   });
-  console.log(formik.values);
   return (
     <div>
+      <ToastContainer />
+      {isloading && (
+        <div className="h-screen fixed w-screen  bg-black/[0.9] flex justify-center items-center ">
+          <BeatLoader color="#4A9EED" size={30} />
+        </div>
+      )}
+
       <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between  gap-x-0 ">
         {/* <Image
               src={img}
               alt="dfasfasd"
               className="object-cover  w-[50%] hidden lg:block  rounded-r-[50px] "
             /> */}
-                <div className="w-[80%] lg:w-[57%] xl:w-[55%] lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
-          <Image src={img} alt="image" />
+        <div className="w-[80%] lg:w-[57%] xl:w-[55%] lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
+          <div className="flex flex-col">
+            <Image src={img} alt="image" />
+            <p className="mt-2 text-center text-white text-[20px] font-medium">
+              Elevating Cleanliness To A Craft
+            </p>
+          </div>
         </div>
         <div className=" lg:w-[43%] xl:w-[45%] flex  justify-center items-center lg:px-10 xl:px-20">
           <div className="flex  flex-col justify-center items-center w-full mt-10 mb-4">
@@ -99,7 +142,7 @@ const Clients = () => {
               <Input
                 label="Password"
                 type="text"
-                name="Password"
+                name="password"
                 value={formik.values.password}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -130,7 +173,7 @@ const Clients = () => {
                 Already have an account?
                 <button
                   type="button"
-                  onClick={() => router.push("/login")}
+                  onClick={() => router.push("/login/clients")}
                   className="underline font-bold"
                 >
                   Login

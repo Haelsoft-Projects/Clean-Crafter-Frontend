@@ -15,10 +15,10 @@ const  router=useRouter();
         <Image src={logo} alt="logo" className="object-contain" />
         {/* <img src={logo} alt="" /> */}
         <div className="gap-x-14 flex ">
-          <button onClick={() => router.push('/signup')} className="bg-[#4A9EED] text-white rounded-[10px] font-bold  px-8 py-2">
+          <button onClick={() => router.push('/signup/cleaners')} className="bg-[#4A9EED] text-white rounded-[10px] font-bold  px-8 py-2">
             REGISTER AS A CLEANER
           </button>
-          <button onClick={() => router.push('/login')}  className=" rounded-[10px] text-base font-bold">
+          <button onClick={() => router.push('/login/clients')}  className=" rounded-[10px] text-base font-bold">
             LOG IN
           </button>{" "}
           <button className="text-black rounded-[10px] font-bold">MENU</button>

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
-const rubik = Rubik({ subsets: ["latin"] });
+const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CleanCrafters ",
@@ -16,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={rubik.className}>{children}</body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }
