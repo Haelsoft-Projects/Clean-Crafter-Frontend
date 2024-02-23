@@ -9,23 +9,23 @@ import play from "../../assets/common/play.png";
 import store from "../../assets/common/store.png";
 const Footer = () => {
   return (
-    <div className="bg-[#0056B3] flex ">
-      <div className="container  mx-auto text-white flex flex-col lg:flex-row justify-between py-2 lg:pb-20 pt-10 text-center">
+    <div className="bg-[#0056B3] flex flex-col ">
+      <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto text-white flex flex-col lg:flex-row justify-between py-2 lg:pb-20 pt-10 text-center lg:text-start">
         <div className="flex flex-col justify-start gap-y-4">
-          <p className="  font-bold text-[22px] ">COMPANY</p>
-          <p className="cursor-pointer text-xl font-medium ">Our Services</p>
-          <p className="cursor-pointer font-medium text-xl">About Us</p>
-          <p className="cursor-pointer font-medium text-xl">Contact Us</p>
-          <p className="cursor-pointer font-medium text-xl">FAQs</p>
+          <p className="  font-bold text-lg xl:text-[22px] ">COMPANY</p>
+          <p className="cursor-pointer text-sm xl:text-xl font-medium ">Our Services</p>
+          <p className="cursor-pointer font-medium text-sm xl:text-xl">About Us</p>
+          <p className="cursor-pointer font-medium text-sm xl:text-xl">Contact Us</p>
+          <p className="cursor-pointer font-medium text-sm xl:text-xl">FAQs</p>
         </div>
         <div className="flex flex-col justify-start gap-y-4 mt-8 lg:mt-0">
-          <p className="  font-bold text-[22px] ">FURTHER INFORMATION</p>
-          <p className="cursor-pointer font-medium text-xl">Become a Cleaner</p>
-          <p className="cursor-pointer font-medium text-xl">Terms of Service</p>
-          <p className="cursor-pointer font-medium text-xl">Privacy Policy</p>
+          <p className="  font-bold text-lg xl:text-[22px] ">FURTHER INFORMATION</p>
+          <p className="cursor-pointer font-medium text-sm xl:text-xl ">Become a Cleaner</p>
+          <p className="cursor-pointer font-medium text-sm xl:text-xl">Terms of Service</p>
+          <p className="cursor-pointer font-medium text-sm xl:text-xl ">Privacy Policy</p>
         </div>
         <div className="flex flex-col justify-center items-center lg:justify-start gap-y-4 mt-8 lg:mt-0">
-          <p className="font-bold text-[22px]">CONTACT INFORMATION</p>
+          <p className="font-bold text-lg xl:text-[22px]">CONTACT INFORMATION</p>
           <div className="text-sm flex items-center gap-x-2 ">
             <BsFillTelephoneFill className="text-[#FFD54F] text-2xl" />
             <div className="flex flex-col gap-y-1 font-medium text-base">
@@ -39,7 +39,7 @@ const Footer = () => {
               <span className="text-base"> info@haelsoft.com.ng </span>
             </div>
             <div className="flex flex-col gap-y-2 border-t border-t-white pt-4 mt-10 w-full">
-              <p className="text-[22px] font-bold">CONNECT WITH US</p>
+              <p className="lg:text-sm  text-center xl:text-[22px] font-bold">CONNECT WITH US</p>
               <div className="flex gap-x-4">
                 <div className="cursor-pointer h-[35px] w-[35px] flex justify-center items-center rounded-full bg-[#FFD54F]">
                   <GrLinkedinOption />

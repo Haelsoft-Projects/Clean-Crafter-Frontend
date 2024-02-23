@@ -74,3 +74,5 @@ export const loginValidate = yup.object().shape({
     .required("Please fill up this field"),
   password: yup.string().required("Please fill up this field"),
 });
+
+
