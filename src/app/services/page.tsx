@@ -157,7 +157,7 @@ const Services = () => {
             <p className="flex">
               <div className="text-[40px] "> ‘‘</div>
               <span className="mt-5 ml-2">
-                Since joining CleanCrafters, I've seen a significant increase in
+                Since joining CleanCrafters, I&apos;ve seen a significant increase in
                 my bookings. The app is user-friendly, and I love how easy it is
                 to manage my schedule and connect with clients. ’’
               </span>
@@ -189,7 +189,7 @@ const Services = () => {
             <p className="flex">
               <div className="text-[40px] "> ‘‘</div>
               <span className="mt-5 ml-2">
-                Since joining CleanCrafters, I've seen a significant increase in
+                Since joining CleanCrafters, I&apos;ve seen a significant increase in
                 my bookings. The app is user-friendly, and I love how easy it is
                 to manage my schedule and connect with clients. ’’
               </span>

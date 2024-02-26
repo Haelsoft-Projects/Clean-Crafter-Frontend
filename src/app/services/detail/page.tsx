@@ -1,4 +1,4 @@
-"use"
+"use client"
 import Navbar from "@/components/servicespage/Nav";
 import Image from "next/image";
 import React from "react";
