@@ -14,23 +14,26 @@ const Clean = () => {
           </div>
         </div>
         <p className="text-[#0056B3] font-bold text-[26px]">Home Cleaning</p>
-        <div className="rounded-[9px] border border-[#A3A3A3] w-full px-4  gap-x-4">
+        <div className="rounded-[9px] border border-[#A3A3A3] w-full px-4  space-y-4 mt-6 py-4">
           <p className=" font-medium">Job Location</p>
-          <form action=" flex flex-col gap-y-8">
+          <form action=" flex flex-col gap-x-6">
             <input
               type="text"
               className="
-             text-I
-             w-full border border-[#121212C2]/[0.76] placeholder:text-[#A3A3A3] h-10"
+            text-sm focus:outline-0
+             w-full border border-[#121212C2]/[0.76] placeholder:text-[#A3A3A3] h-10 px-3"
               placeholder="city"
             />
             <input
               type="text"
               className="
-             text-sm
-             w-full border border-[#121212C2]/[0.76] placeholder:text-[#A3A3A3] h-10"
-              placeholder="city"
+             text-sm focus:outline-0
+             w-full border border-[#121212C2]/[0.76] mt-4 placeholder:text-[#A3A3A3] h-10 px-4"
+              placeholder="Street Address"
             />
+            <div className="w-full flex justify-end ">
+              <button></button>
+            </div>
           </form>
         </div>
       </div>

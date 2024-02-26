@@ -108,13 +108,13 @@ const Detail = () => {
             tidy can often fall by the wayside. Between work, family, and social
             commitments, finding the time and energy for a thorough home
             cleaning can feel like an insurmountable task. But what if we told
-            you that achieving a sparkling clean home doesn't have to be a
+            you that achieving a sparkling clean home doesn&apos;t have to be a
             daunting challenge?
           </p>{" "}
           <p className="text-base mt-8">
             The secret to maintaining a pristine home without sacrificing your
             precious time is leveraging professional cleaning services. With
-            platforms like CleanCrafters, Europe's leading online marketplace
+            platforms like CleanCrafters, Europe&apos;s leading online marketplace
             for domestic cleaning services, finding reliable and insured
             cleaners has never been easier. Whether you need a deep clean after
             a lively BBQ or your regular oven cleaning, no job is too big or too
@@ -123,7 +123,7 @@ const Detail = () => {
           <p className="text-base mt-8">
             The secret to maintaining a pristine home without sacrificing your
             precious time is leveraging professional cleaning services. With
-            platforms like CleanCrafters, Europe's leading online marketplace
+            platforms like CleanCrafters, Europe&apos;s leading online marketplace
             for domestic cleaning services, finding reliable and insured
             cleaners has never been easier. Whether you need a deep clean after
             a lively BBQ or your regular oven cleaning, no job is too big or too
@@ -163,13 +163,13 @@ const Detail = () => {
             tidy can often fall by the wayside. Between work, family, and social
             commitments, finding the time and energy for a thorough home
             cleaning can feel like an insurmountable task. But what if we told
-            you that achieving a sparkling clean home doesn't have to be a
+            you that achieving a sparkling clean home doesn&apos;t have to be a
             daunting challenge?
           </p>{" "}
           <p className="text-base mt-8">
             The secret to maintaining a pristine home without sacrificing your
             precious time is leveraging professional cleaning services. With
-            platforms like CleanCrafters, Europe's leading online marketplace
+            platforms like CleanCrafters, Europe&apos;s leading online marketplace
             for domestic cleaning services, finding reliable and insured
             cleaners has never been easier. Whether you need a deep clean after
             a lively BBQ or your regular oven cleaning, no job is too big or too
@@ -178,7 +178,7 @@ const Detail = () => {
           <p className="text-base mt-8">
             The secret to maintaining a pristine home without sacrificing your
             precious time is leveraging professional cleaning services. With
-            platforms like CleanCrafters, Europe's leading online marketplace
+            platforms like CleanCrafters, Europe&apos;s leading online marketplace
             for domestic cleaning services, finding reliable and insured
             cleaners has never been easier. Whether you need a deep clean after
             a lively BBQ or your regular oven cleaning, no job is too big or too
@@ -216,9 +216,9 @@ const Detail = () => {
             <p className="flex">
               <div className="text-[40px] "> ‘‘</div>
               <span className="mt-5 ml-2">
-                Since joining CleanCrafters, I've seen a significant increase in
+                Since joining CleanCrafters, I&apos;ve seen a significant increase in
                 my bookings. The app is user-friendly, and I love how easy it is
-                to manage my schedule and connect with clients. ’’
+                to manage my schedule and connect with clients. &apos;&apos;
               </span>
             </p>
             <div className="w-fit mt-5 flex gap-x-4  mx-auto">
@@ -248,9 +248,9 @@ const Detail = () => {
             <p className="flex">
               <div className="text-[40px] "> ‘‘</div>
               <span className="mt-5 ml-2">
-                Since joining CleanCrafters, I've seen a significant increase in
+                Since joining CleanCrafters, I&apos;ve seen a significant increase in
                 my bookings. The app is user-friendly, and I love how easy it is
-                to manage my schedule and connect with clients. ’’
+                to manage my schedule and connect with clients. &apos;&apos;
               </span>
             </p>
             <div className="w-fit mt-5 flex gap-x-4  mx-auto">
@@ -279,8 +279,8 @@ const Detail = () => {
           CleanCrafters can find home cleaning services anywhere
         </p>
         <p className="font-semibold text-xl text-center">
-          Whether you’re looking for oven cleaning in Nigeria, CleanCrafters can
-          help arrange a cleaner for you. We’ve already conquered all these
+          Whether you&apos;re looking for oven cleaning in Nigeria, CleanCrafters can
+          help arrange a cleaner for you. We&apos;ve already conquered all these
           major cities and urban areas
         </p>
         <div className="flex items-center gap-x-9 ">
