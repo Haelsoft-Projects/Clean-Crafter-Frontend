@@ -1,3 +1,4 @@
+"use client"
 import Navbar from "@/components/LandingPage/Navbar";
 import Image from "next/image";
 import React from "react";
@@ -5,7 +6,9 @@ import logo from "@/assets/logo.png";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import imgpace from "@/assets/pace.png";
 import Footer from "@/components/LandingPage/Footer";
+import { useRouter } from "next/navigation";
 const Clean = () => {
+  const router = useRouter();
   return (
     <div>
       <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto ">
@@ -16,26 +19,34 @@ const Clean = () => {
             <div className="bg-[#0056B3]  rounded-[20px]  w-[30%] h-6"></div>
           </div>
         </div>
-        <p className="text-[#0056B3] font-bold text-[26px] mt-8">Home Cleaning</p>
+        <p className="text-[#0056B3] font-bold text-[26px] mt-8">
+          Home Cleaning
+        </p>
         <div className="rounded-[9px] border border-[#A3A3A3] w-full px-4  space-y-4 mt-6 py-4">
           <p className=" font-medium">Job Location</p>
-          <form action=" flex flex-col gap-x-6">
+          <form action="" className=" flex flex-col gap-y-6">
             <input
               type="text"
               className="
             text-sm focus:outline-0
-             w-full border border-[#121212C2]/[0.76] placeholder:text-[#A3A3A3] h-10 px-3"
+             w-full border border-[#121212C2]/[0.76] placeholder:text-[#A3A3A3] h-16 px-3"
               placeholder="city"
             />
             <input
               type="text"
               className="
              text-sm focus:outline-0
-             w-full border border-[#121212C2]/[0.76] mt-4 placeholder:text-[#A3A3A3] h-10 px-4"
+             w-full border border-[#121212C2]/[0.76]  placeholder:text-[#A3A3A3] h-16 px-4"
               placeholder="Street Address"
             />
-            <div className="w-full flex justify-end  text-white mt-4 rounded-lg" >
-              <button className=" flex gap-x-2  w-[8%] py-2  bg-[#0056B3] rounded justify-center items-center">
+            <div className="w-full flex justify-end  text-white  rounded-lg h-16 p-2">
+              <button
+                onClick={() =>
+                  router.push("/services/job")
+                }
+                type="button"
+                className=" flex gap-x-2  w-[8%] py-2  bg-[#0056B3] rounded justify-center items-center"
+              >
                 Next <HiOutlineArrowLongRight />
               </button>
             </div>
@@ -76,6 +87,6 @@ const Clean = () => {
       </div>
     </div>
   );
-};  
+};
 
 export default Clean;
