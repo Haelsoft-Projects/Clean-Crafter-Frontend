@@ -24,7 +24,7 @@ const Login = () => {
     onSubmit: async (values) => {
       setisloading(true);
       axios
-        .post("/auth/jwt/create", {
+        .post("/api/login", {
           email: values.email,
           password: values.password,
         })
@@ -35,7 +35,7 @@ const Login = () => {
             autoClose: 2000,
             position: "top-right",
           });
-          router.push("/dashboard");
+          router.push("/services");
         })
         .catch((e) => {
           console.log(e);
@@ -50,7 +50,7 @@ const Login = () => {
 
   return (
     <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between    ">
-      <ToastContainer />
+     
       {isloading && (
         <div className="h-screen fixed w-screen  bg-black/[0.9] flex justify-center items-center ">
           <BeatLoader color="#4A9EED" size={30} />

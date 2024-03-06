@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Navbar from "@/components/LandingPage/Navbar";
 import Image from "next/image";
 import React from "react";
@@ -7,8 +7,25 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import imgpace from "@/assets/pace.png";
 import Footer from "@/components/LandingPage/Footer";
 import { useRouter } from "next/navigation";
+import { addressValidation } from "@/Services/validation";
+import { useFormik } from "formik";
+import { useAppContext } from "@/Services/context";
 const Clean = () => {
   const router = useRouter();
+  const { name, setName } = useAppContext();
+  const formik = useFormik({
+    initialValues: {
+      city: name.city,
+      address: name.street,
+    },
+    validationSchema: addressValidation,
+    onSubmit: (values) => {
+  
+      
+      setName((prev:object) =>({...prev, city:values.city, street:values.address}));
+      router.push("/services/job")
+    },
+  });
   return (
     <div>
       <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto ">
@@ -19,33 +36,50 @@ const Clean = () => {
             <div className="bg-[#0056B3]  rounded-[20px]  w-[30%] h-6"></div>
           </div>
         </div>
-        <p className="text-[#0056B3] font-bold text-[26px] mt-8">
-          Home Cleaning
-        </p>
+        <p className="text-[#0056B3] font-bold text-[26px] mt-8">{name.type}</p>
         <div className="rounded-[9px] border border-[#A3A3A3] w-full px-4  space-y-4 mt-6 py-4">
           <p className=" font-medium">Job Location</p>
-          <form action="" className=" flex flex-col gap-y-6">
+          <form
+            onSubmit={formik.handleSubmit}
+            className=" flex flex-col gap-y-6"
+          >
+            <select
+              name="city"
+              id="city"
+              className={` text-sm focus:outline-0
+             w-full border ${
+               formik.errors.city && formik.touched.city
+                 ? "border-red-500"
+                 : " border-[#121212C2]/[0.76]"
+             } h-16 px-3 bg-white`}
+              onChange={formik.handleChange}
+              value={formik.values.city}
+              onBlur={formik.handleBlur}
+            >
+              <option value="" disabled selected hidden>
+                <p className="text-black">City</p>
+              </option>
+              <option value="Lagos">Lagos</option>
+            </select>
             <input
               type="text"
-              className="
-            text-sm focus:outline-0
-             w-full border border-[#121212C2]/[0.76] placeholder:text-[#A3A3A3] h-16 px-3"
-              placeholder="city"
-            />
-            <input
-              type="text"
-              className="
+              name="address"
+              className={`
              text-sm focus:outline-0
-             w-full border border-[#121212C2]/[0.76]  placeholder:text-[#A3A3A3] h-16 px-4"
+             w-full border ${
+               formik.errors.address && formik.touched.address
+                 ? "border-red-500"
+                 : "border-[#121212C2]/[0.76]"
+             }  placeholder:text-[#A3A3A3] h-16 px-4`}
               placeholder="Street Address"
+              onChange={formik.handleChange}
+              value={formik.values.address}
+              onBlur={formik.handleBlur}
             />
             <div className="w-full flex justify-end  text-white  rounded-lg h-16 p-2">
               <button
-                onClick={() =>
-                  router.push("/services/job")
-                }
-                type="button"
-                className=" flex gap-x-2  w-[8%] py-2  bg-[#0056B3] rounded justify-center items-center"
+                type="submit"
+                className=" flex gap-x-2 px-4  lg:w-[8%] py-2  bg-[#0056B3] rounded justify-center items-center"
               >
                 Next <HiOutlineArrowLongRight />
               </button>
@@ -54,13 +88,13 @@ const Clean = () => {
         </div>
       </div>
 
-      <div className=" mt-20 relative  h-[30rem]">
+      <div className=" mt-20 relative  h-[30rem] w-full">
         <Image
           src={imgpace}
           alt=""
-          className="absolute object-cover h-[30rem]"
+          className="absolute object-cover h-[30rem] w-full"
         />
-        <div className="absolute flex flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
+        <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0   absolute flex flex-col text-center gap-y-8 justify-center items-center  left-0 right-0 mx-auto h-[30rem]  text-white   ">
           <p className="text-[30px] font-semibold">
             Subscribe to our Newsletter
           </p>

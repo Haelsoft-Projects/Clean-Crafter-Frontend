@@ -15,6 +15,7 @@ import {
   HiOutlineArrowCircleRight,
 } from "react-icons/hi";
 import { useRouter } from "next/navigation";
+import { useAppContext } from "@/Services/context";
 const Services = () => {
   const router = useRouter();
   type service = {
@@ -79,17 +80,18 @@ const Services = () => {
       image: img3,
     },
   ];
+  const { name, setName } = useAppContext();
   return (
     <div>
       <nav>
         <Navbar />
       </nav>
-      <div className="h-[30rem] relative ">
+      <div className="h-[30rem] relative w-full ">
         <Image
           src={img}
           loading="lazy"
           alt="img"
-          className="object-cover h-[30rem] absolute "
+          className="object-cover h-[30rem]  w-full absolute "
         />
         <div className="h-[30rem] gap-y-10 w-full bg-black/[0.4] px-4 absolute z-50 text-white flex flex-col justify-center items-center">
           <p className="font-bold text-2xl xl:text-[36px]">Our Services</p>
@@ -102,12 +104,15 @@ const Services = () => {
       <h1 className="font-semibold text-2xl lg:text-xl xl:text-[32px] text-center text-[#0056B3] m-10">
         Our Services
       </h1>
+     
+
       {/* List of Services */}
       <div className="grid lg:grid-cols-3 gap-10  max-w-[1240px] px-4 lg:px-10 xl:px-0 mx-auto">
         {data.map((item, index) => (
           <div
             key={index}
             onClick={() => {
+              setName((prev:object) =>({...prev, type:item.name}));
               router.push("/services/detail");
             }}
             className="rounded-md  bg-[#F2F2F2]  flex flex-col   min-h-[521px] relative   pb-4 cursor-pointer hover:shadow-xl hover:scale-105 hover:bg-brand-color duration-500   z-[2] ease-in-out"
@@ -157,9 +162,10 @@ const Services = () => {
             <p className="flex">
               <div className="text-[40px] "> ‘‘</div>
               <span className="mt-5 ml-2">
-                Since joining CleanCrafters, I&apos;ve seen a significant increase in
-                my bookings. The app is user-friendly, and I love how easy it is
-                to manage my schedule and connect with clients. ’’
+                Since joining CleanCrafters, I&apos;ve seen a significant
+                increase in my bookings. The app is user-friendly, and I love
+                how easy it is to manage my schedule and connect with clients.
+                ’’
               </span>
             </p>
             <div className="w-fit mt-5 flex gap-x-4  mx-auto">
@@ -189,9 +195,10 @@ const Services = () => {
             <p className="flex">
               <div className="text-[40px] "> ‘‘</div>
               <span className="mt-5 ml-2">
-                Since joining CleanCrafters, I&apos;ve seen a significant increase in
-                my bookings. The app is user-friendly, and I love how easy it is
-                to manage my schedule and connect with clients. ’’
+                Since joining CleanCrafters, I&apos;ve seen a significant
+                increase in my bookings. The app is user-friendly, and I love
+                how easy it is to manage my schedule and connect with clients.
+                ’’
               </span>
             </p>
             <div className="w-fit mt-5 flex gap-x-4  mx-auto">
@@ -214,11 +221,11 @@ const Services = () => {
           <HiOutlineArrowCircleRight className="text-3xl cursor-pointer" />
         </div>
       </div>
-      <div className=" mt-20 relative  h-[30rem]">
+      <div className=" mt-20 relative  h-[30rem] w-full">
         <Image
           src={imgpace}
           alt=""
-          className="absolute object-cover h-[30rem]"
+          className="absolute object-cover h-[30rem] w-full"
         />
         <div className="absolute flex flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
           <p className="text-[30px] font-semibold">

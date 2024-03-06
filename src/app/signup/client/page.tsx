@@ -29,7 +29,7 @@ const Clients = () => {
       //   router.push("/dashboard");
       setisloading(true);
       axios
-        .post("/auth/users/", {
+        .post("/api/register", {
           first_name: values.firstName,
           last_name: values.lastName,
           email: values.email,
@@ -44,21 +44,27 @@ const Clients = () => {
             autoClose: 2000,
             position: "top-right",
           });
-          router.push("/login/cleaners");
+          router.push("/services");
         })
         .catch((e) => {
           console.log(e);
           setisloading(false);
+         if(e.response.data.email[0]){
+          toast.error(e.response.data.email[0], {
+            autoClose: 2000,
+            position: "top-right",
+          });
+         }else{
           toast.error("An error occurred", {
             autoClose: 2000,
             position: "top-right",
           });
+         }
         });
     },
   });
   return (
     <div>
-      <ToastContainer />
       {isloading && (
         <div className="h-screen fixed w-screen  bg-black/[0.9] flex justify-center items-center ">
           <BeatLoader color="#4A9EED" size={30} />

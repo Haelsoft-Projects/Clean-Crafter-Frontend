@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import logo from "@/assets/logo.png";
 import {
   HiOutlineArrowLongLeft,
@@ -16,10 +16,29 @@ import { useRouter } from "next/navigation";
 import { LuPen } from "react-icons/lu";
 import { IoMdCheckmark } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
+import { useAppContext } from "@/Services/context";
+import { useFormik } from "formik";
+import { addressValidation, job_descripValidation } from "@/Services/validation";
 type Props = {};
 
 const Job = (props: Props) => {
   const router = useRouter();
+  const { name, setName } = useAppContext();
+  const formik = useFormik({
+    initialValues: {
+      job_decription:name. job_decription
+    },
+    validationSchema: job_descripValidation,
+    onSubmit: (values) => {
+      setName((prev: object) => ({
+        ...prev,
+        job_decription:values. job_decription
+      }));
+      router.push("/services/finish")
+    },
+  });
+
+
   return (
     <div>
       <div>
@@ -32,7 +51,7 @@ const Job = (props: Props) => {
             </div>
           </div>
           <p className="text-[#0056B3] font-bold text-[26px] mt-8">
-            Home Cleaning
+            {name.type}
           </p>
           <div className=" w-full px-4  space-y-4 mt-6 py-4">
             <div className="w-full border border-[#121212] rounded-[9px] p-6 flex flex-col gap-y-8">
@@ -46,33 +65,40 @@ const Job = (props: Props) => {
               <div className="w-full items-center flex justify-between">
                 <span className="flex items-center gap-x-1   text-[#77777A] font-medium">
                   <IoLocationOutline />
-                  Lagos, Nigeria
+                 {name.city}, Nigeria
                 </span>
                 <span>Cleaners are available in the area</span>
               </div>
             </div>
             <div className="w-full border border-[#121212] rounded-[9px] p-4 ">
-              <form className=" flex flex-col gap-x-6">
+              <form onSubmit={formik.handleSubmit} className=" flex flex-col gap-x-6">
                 <input
                   type="text"
-                  className="
+                  name="job_decription"
+                  className={`
              text-sm focus:outline-0
-             w-full border border-[#121212C2]/[0.76] mt-4 placeholder:text-[#A3A3A3] h-10 px-4"
-                  placeholder="Street Address"
+             w-full border ${
+               formik.errors.job_decription && formik.touched.job_decription
+                 ? "border-red-500"
+                 : "border-[#121212C2]/[0.76]"
+             }  placeholder:text-[#A3A3A3] h-16 px-4`}
+                  placeholder="Enter Job Description"
+                  onChange={formik.handleChange}
+                  value={formik.values.job_decription}
+                  onBlur={formik.handleBlur}
                 />
                 <div className="w-full flex justify-end  mt-4 rounded-lg gap-x-4">
                   <button
-                  type="button"
+                    type="button"
                     onClick={() => router.back()}
-                    className=" flex gap-x-2  w-[8%] py-2  border border-[#007BFF] rounded-[2px] justify-center items-center"
+                    className=" flex gap-x-2  px-2  lg:w-[8%] py-2  border border-[#007BFF] rounded-[2px] justify-center items-center"
                   >
                     <HiOutlineArrowLongLeft />
                     Back
                   </button>
                   <button
-                     type="button"
-                    onClick={() => router.push("/services/finish")}
-                    className=" flex gap-x-2  w-[8%] py-2 text-white  bg-[#0056B3] rounded justify-center items-center"
+                    type="submit"
+                    className=" flex gap-x-2 px-2  lg:w-[8%] py-2 text-white  bg-[#0056B3] rounded justify-center items-center"
                   >
                     Next <HiOutlineArrowLongRight />
                   </button>
@@ -82,11 +108,11 @@ const Job = (props: Props) => {
           </div>
         </div>
 
-        <div className=" mt-20 relative  h-[30rem]">
+        <div className=" mt-20 relative   h-[30rem] w-full">
           <Image
             src={imgpace}
             alt=""
-            className="absolute object-cover h-[30rem]"
+            className="absolute object-cover  h-[30rem] w-full"
           />
           <div className="absolute flex flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
             <p className="text-[30px] font-semibold">

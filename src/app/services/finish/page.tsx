@@ -16,13 +16,18 @@ import Footer from "@/components/LandingPage/Footer";
 import { LuPen } from "react-icons/lu";
 import { IoMdCheckmark } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
+import { useAppContext } from "@/Services/context";
 const Finish = () => {
   const router = useRouter();
+  const { name, setName } = useAppContext();
+  console.log(name);
+
+  
   return (
     <div>
       <div>
         <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto ">
-          {" "}
+    
           <div className="flex items-center  justify-between border-b border-b-[#A3A3A3]  py-3 ">
             <Image src={logo} alt="logo" className="object-contain" />{" "}
             <div className="bg-[#FFC107]  w-[50%] rounded-[20px]  h-6">
@@ -30,14 +35,16 @@ const Finish = () => {
             </div>
           </div>
           <p className="text-[#0056B3] font-bold text-[26px] mt-8">
-            Home Cleaning
+          {name.type}
           </p>
           <div className=" w-full px-4  space-y-4 mt-6 py-4">
             <div className="w-full border border-[#121212] rounded-[9px] p-6 flex flex-col gap-y-8">
               <div className="flex justify-between ">
                 <p className=" font-medium">Job Location</p>
-                <div className="flex gap-x-4 text-2xl">
-                  <LuPen />
+                <div className="flex gap-x-4 text-2xl cursor-pointer">
+                <LuPen onClick={()=>{
+                    router.replace("/services/clean")
+                  }} />
                   <IoMdCheckmark />
                 </div>
               </div>{" "}
@@ -52,12 +59,18 @@ const Finish = () => {
             <div className="w-full border border-[#121212] rounded-[9px] p-6 flex flex-col gap-y-8 h-[69px]">
               <div className="flex justify-between ">
                 <p className=" font-medium">Job Description</p>
-                <div className="flex gap-x-4 text-2xl">
-                  <LuPen />
+                <div className="flex gap-x-4 text-2xl cursor-pointer">
+                  <LuPen onClick={()=>{
+                    router.replace("/services/job")
+                  }} />
                   <IoMdCheckmark />
                 </div>
               </div>{" "}
-              <div className="w-full flex justify-end  mt-4 rounded-lg gap-x-4">
+            
+            </div>
+     
+            <div className="w-full flex flex-col justify-end mb-10 items-end gap-y-3 mt-4 rounded-lg gap-x-4">
+              <p className="text-end text-xl">$500</p>
                 <button
                   type="button"
                   onClick={() => router.replace("/services")}
@@ -66,15 +79,14 @@ const Finish = () => {
                   Finish
                 </button>
               </div>
-            </div>
           </div>
         </div>
 
-        <div className=" mt-20 relative  h-[30rem]">
+        <div className=" mt-20 relative   h-[30rem] w-full">
           <Image
             src={imgpace}
             alt=""
-            className="absolute object-cover h-[30rem]"
+            className="absolute object-cover  h-[30rem] w-full"
           />
           <div className="absolute flex flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
             <p className="text-[30px] font-semibold">
