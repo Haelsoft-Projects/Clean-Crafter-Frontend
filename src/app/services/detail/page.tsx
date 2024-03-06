@@ -14,12 +14,22 @@ import {
 } from "react-icons/hi";
 import imgpace from "@/assets/pace.png";
 import Footer from "@/components/LandingPage/Footer";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useAppContext } from "@/Services/context";
 import { toast } from "react-toastify";
+import { data } from "@/Service";
 
 const Detail = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const reasonstr = searchParams.get("reason");
+  type Reason = {
+    reason: string;
+    explanation: string;
+  };
+  const reason: Array<Reason> = JSON.parse(reasonstr ?? "");
+  console.log(reason);
+
   const { name, setName } = useAppContext();
   const [city, setcity] = useState<string>("");
   return (
@@ -57,7 +67,6 @@ const Detail = () => {
                     autoClose: 1000,
                     hideProgressBar: true,
                     closeOnClick: true,
-
                   });
                 }
               }}
@@ -73,31 +82,35 @@ const Detail = () => {
         </div>
       </div>
 
-      <p className="text-[#0056B3] text-3xl font-bold text-center mt-20">
+      <h1 className="text-[#0056B3] text-3xl font-bold text-center mt-20">
         How it works
-      </p>
+      </h1>
 
       <div className="flex gap-x-2 flex-col lg:flex-row max-w-[1240px] mt-20 mx-auto items-center w-full px-4 lg:px-4 xl:px-0">
-        <div className="border-r border-r-[#121212] flex flex-col text-center  px-2">
+        <div className="flex flex-col text-center  w-96">
           <p className="text-[26px]">1</p>
           <p className="font-semibold mt-2">Enter Your Address </p>
           <p className="mt-4">
             Enter your address to check if we have cleaners in your area.
           </p>
         </div>
-        <div className="border-r border-r-[#121212] flex flex-col text-center  px-6">
+        <div className="h-32 w-[1px] bg-[#121212]"></div>
+        <div className=" flex flex-col text-center  w-96">
           <p className="text-[26px]">2</p>
           <p className="font-semibold mt-2">Enter Job Description </p>
           <p className="mt-4">Describe your job for the cleaners.</p>
         </div>{" "}
-        <div className="border-r border-r-[#121212] flex flex-col text-center  px-2">
+
+        <div className="h-32 w-[1px] bg-[#121212]"></div>
+        <div className=" flex flex-col text-center  w-96">
           <p className="text-[26px]">3</p>
           <p className="font-semibold mt-2">Pay Securely </p>
           <p className="mt-4">
             Enter your postcode to find cleaners available in your area
           </p>
         </div>{" "}
-        <div className=" flex flex-col text-center  px-2">
+        <div className="h-32 w-[1px] bg-[#121212]"></div>
+        <div className=" flex flex-col text-center  ">
           <p className="text-[26px]">4</p>
           <p className="font-semibold mt-2">Enjoy a Spotless Environment </p>
           <p className="mt-4">
@@ -120,35 +133,11 @@ const Detail = () => {
 
       <div className="flex flex-col gap-x-2 max-w-[1240px] mt-20 mx-auto  w-full px-4 lg:px-4 xl:px-0">
         <span className="text-[#0056B3] text-xl">
-          The Ultimate Guide to Stress-Free Home Cleaning
+          Understand Resisdential Cleaning
         </span>
         <div className="mt-4">
-          <p className="text-base ">
-            {" "}
-            In the hustle and bustle of daily life, keeping our homes clean and
-            tidy can often fall by the wayside. Between work, family, and social
-            commitments, finding the time and energy for a thorough home
-            cleaning can feel like an insurmountable task. But what if we told
-            you that achieving a sparkling clean home doesn&apos;t have to be a
-            daunting challenge?
-          </p>{" "}
-          <p className="text-base mt-8">
-            The secret to maintaining a pristine home without sacrificing your
-            precious time is leveraging professional cleaning services. With
-            platforms like CleanCrafters, Europe&apos;s leading online
-            marketplace for domestic cleaning services, finding reliable and
-            insured cleaners has never been easier. Whether you need a deep
-            clean after a lively BBQ or your regular oven cleaning, no job is
-            too big or too small.
-          </p>{" "}
-          <p className="text-base mt-8">
-            The secret to maintaining a pristine home without sacrificing your
-            precious time is leveraging professional cleaning services. With
-            platforms like CleanCrafters, Europe&apos;s leading online
-            marketplace for domestic cleaning services, finding reliable and
-            insured cleaners has never been easier. Whether you need a deep
-            clean after a lively BBQ or your regular oven cleaning, no job is
-            too big or too small.
+          <p className="text-base leading-[2.2] ">
+            {searchParams.get("meaning")}
           </p>
         </div>
       </div>
@@ -174,37 +163,34 @@ const Detail = () => {
         </div>
       </div>
       <div className="flex flex-col gap-x-2 max-w-[1240px] mt-20 mx-auto  w-full px-4 lg:px-4 xl:px-0">
-        <span className="text-[#0056B3] text-xl">
-          The Ultimate Guide to Stress-Free Home Cleaning
-        </span>
+        <h2 className="text-[#0056B3] text-xl">
+          Process Of Residential Cleaning
+        </h2>
         <div className="mt-4">
-          <p className="text-base ">
+          <p className="text-base leading-[2]">
             {" "}
-            In the hustle and bustle of daily life, keeping our homes clean and
-            tidy can often fall by the wayside. Between work, family, and social
-            commitments, finding the time and energy for a thorough home
-            cleaning can feel like an insurmountable task. But what if we told
-            you that achieving a sparkling clean home doesn&apos;t have to be a
-            daunting challenge?
+            {searchParams.get("process")}
           </p>{" "}
-          <p className="text-base mt-8">
-            The secret to maintaining a pristine home without sacrificing your
-            precious time is leveraging professional cleaning services. With
-            platforms like CleanCrafters, Europe&apos;s leading online
-            marketplace for domestic cleaning services, finding reliable and
-            insured cleaners has never been easier. Whether you need a deep
-            clean after a lively BBQ or your regular oven cleaning, no job is
-            too big or too small.
+        </div>
+      </div>
+      <div className="flex flex-col gap-x-2 max-w-[1240px] mt-20 mx-auto  w-full px-4 lg:px-4 xl:px-0">
+        <h2 className="text-[#0056B3] text-xl">
+          Why You Should Hire A Residential Cleaning Service
+        </h2>
+        <span className="mt-2 text-base"> {searchParams.get("reason_note")}</span>
+        <div className="mt-4">
+          <p className="text-base leading-[2]">
+            {" "}
+            {reason.map((item: Reason, index: number) => (
+              <div key={index} className="mb-6">
+                <div className="flex mt-6 gap-x-2 text-lg font-semibold">
+                  <span className="">{index + 1}. </span>
+                  <span className="">{item.reason}</span>
+                </div>
+                <p className="s">{item.explanation}</p>
+              </div>
+            ))}
           </p>{" "}
-          <p className="text-base mt-8">
-            The secret to maintaining a pristine home without sacrificing your
-            precious time is leveraging professional cleaning services. With
-            platforms like CleanCrafters, Europe&apos;s leading online
-            marketplace for domestic cleaning services, finding reliable and
-            insured cleaners has never been easier. Whether you need a deep
-            clean after a lively BBQ or your regular oven cleaning, no job is
-            too big or too small.
-          </p>
         </div>
       </div>
 

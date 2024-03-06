@@ -3,83 +3,21 @@ import Footer from "@/components/LandingPage/Footer";
 import Navbar from "@/components/servicespage/Nav";
 import React from "react";
 import img from "@/assets/hero.png";
-import img1 from "@/assets/servicesimages/image1.png";
-import img2 from "@/assets/servicesimages/image2.png";
-import img3 from "@/assets/servicesimages/image3.png";
 import imgpace from "@/assets/pace.png";
 import Image from "next/image";
 import { IoStarSharp } from "react-icons/io5";
-
+import { HiArrowLongRight } from "react-icons/hi2";
+import { useRouter } from "next/navigation";
 import {
   HiOutlineArrowCircleLeft,
   HiOutlineArrowCircleRight,
 } from "react-icons/hi";
-import { useRouter } from "next/navigation";
+
 import { useAppContext } from "@/Services/context";
+import { data } from "@/Service";
+import Link from "next/link";
 const Services = () => {
   const router = useRouter();
-  type service = {
-    name: string;
-    details: string;
-    image: any;
-  };
-  const data: Array<service> = [
-    {
-      name: "Home Cleaning",
-      details:
-        "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
-      image: img1,
-    },
-    {
-      name: "Office Cleaning",
-      details:
-        "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
-      image: img2,
-    },
-    {
-      name: "Residential Cleaning",
-      details:
-        "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
-      image: img3,
-    },
-    {
-      name: "Deep Cleaning",
-      details:
-        "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
-      image: img1,
-    },
-    {
-      name: "Janitorial Cleaning",
-      details:
-        "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
-
-      image: img2,
-    },
-    {
-      name: "Window Cleaning",
-      details:
-        "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
-      image: img3,
-    },
-    {
-      name: "Post-Construction Cleaning",
-      details:
-        "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
-      image: img1,
-    },
-    {
-      name: "Domestic Cleaning",
-      details:
-        "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
-      image: img2,
-    },
-    {
-      name: "Housekeeping",
-      details:
-        "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
-      image: img3,
-    },
-  ];
   const { name, setName } = useAppContext();
   return (
     <div>
@@ -104,18 +42,13 @@ const Services = () => {
       <h1 className="font-semibold text-2xl lg:text-xl xl:text-[32px] text-center text-[#0056B3] m-10">
         Our Services
       </h1>
-     
 
       {/* List of Services */}
       <div className="grid lg:grid-cols-3 gap-10  max-w-[1240px] px-4 lg:px-10 xl:px-0 mx-auto">
         {data.map((item, index) => (
           <div
             key={index}
-            onClick={() => {
-              setName((prev:object) =>({...prev, type:item.name}));
-              router.push("/services/detail");
-            }}
-            className="rounded-md  bg-[#F2F2F2]  flex flex-col   min-h-[521px] relative   pb-4 cursor-pointer hover:shadow-xl hover:scale-105 hover:bg-brand-color duration-500   z-[2] ease-in-out"
+            className="rounded-md  bg-[#F2F2F2]  flex flex-col   min-h-[521px] relative   pb-4 cursor-pointer  hover:bg-brand-color "
           >
             <Image
               src={item.image}
@@ -124,8 +57,28 @@ const Services = () => {
               className="object-cover w-full  h-[20rem] lg:h-[70%]  rounded-md rounded-b-none"
             />
             <div className="p-2 flex-1">
-              <h2 className="mt-2 text-2xl text-[#0056B3] ">{item.name}</h2>
+              <h2 className="mt-2 text-2xl  ">{item.name}</h2>
               <p className="text-base p-2 leading-[30.88px]">{item.details}</p>
+              <div className="w-full flex items-end justify-end">
+                <Link
+                  href={{
+                    pathname: "/services/detail",
+                    query: {
+                      meaning: item.meaning,
+                      process: item.process,
+                      reason_note: item.reason_note,
+                      index:index,
+                      reason:JSON.stringify(item.reason)
+                    },
+                  }}
+                  onClick={() => {
+                    setName((prev: object) => ({ ...prev, type: item.name }));
+                  }}
+                  className="py-3 px-8 flex items-center duration-500  mr-10  z-[2] ease-in-out gap-x-2 hover:shadow-md  hover:bg-[#c29204] bg-[#FFC107] text-white"
+                >
+                  Learn More <HiArrowLongRight />{" "}
+                </Link>
+              </div>
             </div>
           </div>
         ))}
