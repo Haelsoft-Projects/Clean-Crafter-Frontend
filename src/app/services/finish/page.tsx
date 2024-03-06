@@ -20,7 +20,7 @@ import { useAppContext } from "@/Services/context";
 const Finish = () => {
   const router = useRouter();
   const { name, setName } = useAppContext();
-  console.log(name);
+  // console.log(name);
 
   
   return (

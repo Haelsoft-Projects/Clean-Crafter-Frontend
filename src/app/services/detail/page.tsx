@@ -17,7 +17,7 @@ import Footer from "@/components/LandingPage/Footer";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAppContext } from "@/Services/context";
 import { toast } from "react-toastify";
-import { data } from "@/Service";
+
 
 const Detail = () => {
   const router = useRouter();
@@ -28,8 +28,6 @@ const Detail = () => {
     explanation: string;
   };
   const reason: Array<Reason> = JSON.parse(reasonstr ?? "");
-
-
   const { name, setName } = useAppContext();
   const [city, setcity] = useState<string>("");
   return (
