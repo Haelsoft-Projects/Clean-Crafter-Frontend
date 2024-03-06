@@ -28,7 +28,7 @@ const Detail = () => {
     explanation: string;
   };
   const reason: Array<Reason> = JSON.parse(reasonstr ?? "");
-  console.log(reason);
+
 
   const { name, setName } = useAppContext();
   const [city, setcity] = useState<string>("");
