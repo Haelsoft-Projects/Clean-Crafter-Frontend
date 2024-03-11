@@ -102,7 +102,7 @@ const Signup = () => {
             <Input
               label="Password"
               type="text"
-              name="Password"
+              name="password"
               value={formik.values.password}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
