@@ -28,7 +28,7 @@ const Cleaners = () => {
       //   router.push("/dashboard");
       setisloading(true);
       axios
-        .post("/auth/users/", {
+        .post("/api/register", {
           first_name: values.firstName,
           last_name: values.lastName,
           email: values.email,

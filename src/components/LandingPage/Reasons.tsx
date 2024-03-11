@@ -5,7 +5,7 @@ import img3 from "../../assets/landingpage/img3.png";
 export default function Reasons() {
   return (
     <div>
-      <div className="bg-[#F3F2F2] w-full  py-20 min-h-[590px] mt-20 ">
+      <div className="bg-[#F3F2F2] w-full  py-20 min-h-[590px] lg:mt-36  mt-20 ">
         <div className="container mx-auto flex flex-col gap-x-5">
           <p className="text-black text-[35px] lg:text-[46px] text-center ">
             Reasons To Book CleanCrafter

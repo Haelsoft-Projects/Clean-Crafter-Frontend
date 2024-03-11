@@ -4,25 +4,25 @@ import img2 from "../../assets/landingpage/sub2.png";
 export default function About() {
   return (
     <div>
-      <div className=" flex px-4  sm:px-10 md:px-8  container justify-between mx-auto mt-20">
-        <div className="hidden lg:block lg:w-1/2 ">
+      <div className=" flex px-4  sm:px-10 md:px-8 lg:px-0 gap-x-20  container justify-between mx-auto mt-20">
+        <div className="hidden lg:block lg:w-[50%] ">
           <Image
             src={img2}
             alt="A man cleaning "
             className="object-contain w-[40rem] "
           />
-          <Image
+          {/* <Image
             src={img1}
             alt="A woman cleaning  "
             className="-mt-32 ml-[18rem]  object-contain w-[26rem]"
-          />
+          /> */}
         </div>
-        <div className="flex flex-col h-full w-full lg:w-[40%] ">
+        <div className="flex flex-col h-full w-full lg:w-[50%] ">
           <div className="flex items-center gap-x-4">
             <span className=" h-2 w-[52.01px] bg-[#4A9EED] self-start"></span>
             <span>About CleanCrafters</span>
           </div>
-          <div className="flex text-center lg:text-start text-[40px] lg:text-[45px] font-bold mt-6 lg:mt-2">
+          <div className="flex text-center lg:text-start text-[40px] lg:text-[30px] xl:text-[40px] font-bold mt-6 lg:mt-2">
             Discover Highly Rated Cleaning
           </div>
           <p className="ss mt-10 text-base  text-start ">
@@ -40,15 +40,24 @@ export default function About() {
           </div>
           <div className="flex flex-col lg:flex-row text-center  justify-between mt-10 gap-y-8">
             <div className="flex flex-col ">
-              <span className="text-[40px]  font-semibold text-[#4A9EED]">100+</span>
+              <span className="text-[40px]  font-semibold text-[#4A9EED]">
+                100+
+              </span>
               <span className="text-xl text-black">Cleaning Services</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-[40px]  font-semibold text-[#4A9EED]">10+</span>
+              <span className="text-[40px]  font-semibold text-[#4A9EED]">
+                10+
+              </span>
               <span className="text-xl text-black">Trainees</span>
-            </div> <div className="flex flex-col">
-              <span className="text-[40px]  font-semibold text-[#4A9EED]">30+</span>
-              <span className="text-xl text-black">Happy <br /> Customers</span>
+            </div>{" "}
+            <div className="flex flex-col">
+              <span className="text-[40px]  font-semibold text-[#4A9EED]">
+                30+
+              </span>
+              <span className="text-xl text-black">
+                Happy Customers
+              </span>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ const Detail = () => {
     reason: string;
     explanation: string;
   };
-  const reason: Array<Reason> = JSON.parse(reasonstr ?? "");
+  const reason: Array<Reason> = JSON.parse(reasonstr ?? "")
   const { name, setName } = useAppContext();
   const [city, setcity] = useState<string>("");
   return (

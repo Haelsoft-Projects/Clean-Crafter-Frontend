@@ -3,7 +3,7 @@ import bg from "../../assets/landingpage/section.png";
 const Book = () => {
   return (
     <div>
-      <div className="relative  sm:px-10 md:px-8 container mx-auto mt-20 mb-32 w-full h-[564px] ">
+      <div className="relative  sm:px-10 md:px-8 container mx-auto lg:mt-36  mt-20 w-full h-[564px] ">
         <Image
           src={bg}
           alt="background"

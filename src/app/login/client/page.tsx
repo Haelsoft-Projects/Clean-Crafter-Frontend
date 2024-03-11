@@ -17,8 +17,8 @@ const Login = () => {
   const [isloading, setisloading] = useState<boolean>(false);
   const formik = useFormik({
     initialValues: {
-      email: "olaimarnoel@gmail.com",
-      password: "emma@123ASD",
+      email: "",
+      password: "",
     },
     validationSchema: loginValidate,
     onSubmit: async (values) => {

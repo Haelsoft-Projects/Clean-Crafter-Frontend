@@ -11,7 +11,7 @@ const  router=useRouter();
   const [bool, setbool] = useState<boolean>(false);
   return (
     <div>
-      <div className=" container lg:px-2 xl:px-0 mx-auto p lg:flex hidden justify-between items-center ">
+      <div className=" container lg:px-2 xl:px-0 mx-auto py-6 lg:flex hidden justify-between items-center ">
         <Image src={logo} alt="logo" className="object-contain" />
         {/* <img src={logo} alt="" /> */}
         <div className="gap-x-14 flex ">

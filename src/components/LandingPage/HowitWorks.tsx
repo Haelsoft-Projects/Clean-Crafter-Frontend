@@ -3,9 +3,9 @@
 const HowitWorks = () => {
   return (
     <div>
-      <div className="mt-20 bg-[#F3F2F2] min-h-[331px] py-6 Pb-8  w-full px-4  sm:px-10 md:px-8">
+      <div className="lg:mt-36  mt-20 bg-[#F3F2F2] min-h-[331px] py-6 Pb-8 lg:pb-0  w-full px-4  sm:px-10 md:px-8">
         <div className="container mx-auto flex flex-col items-center px-2   sm:px-10 md:px-8">
-          <p className="text-center text-[46px] font-medium mt-8">
+          <p className="text-center text-[46px] font-medium mt-8 lg:mt-0">
             How it works
           </p>
           <div className="flex flex-col sm:flex-row items-center  justify-evenly gap-y-8 sm:gap-x-10 mt-8 w-full">

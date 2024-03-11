@@ -8,12 +8,12 @@ export default function Hero() {
         {" "}
         <div className="container lg:px-2 xl:px-0 lg:pt-20 pb-1 mt-0   mx-auto flex flex-col lg:flex-row lg:justify-between items-center text-center px-2  sm:px-10 md:px-8">
           <div className="mt-4 text-center flex-col lg:mt-6 xl:mt-0 lg:pl-8 lg:w-full">
-            <p className="text-[#292450] self-stretch xl:text-5xl md:text-[45px] lg:text-[28px] text-[35px] lg:text-left w-full font-bold">
-              Discover <br className=" lg:hidden " />
+            <p className="text-[#292450]  self-stretch xl:text-5xl md:text-[45px] lg:text-[28px] text-[35px] lg:text-left w-full font-bold">
+             <span> Discover</span> <br className=" lg:hidden " />
               <span className="text-[#4A9EED]">Highly-Rated</span>
-              <br className=" hidden " /> <span>Cleaning</span>{" "}
+              <br className=" hidden " /> <span className="">Cleaning</span>{" "}
               <br className="lg:block hidden" />
-              Professionals
+             <span className="p-3"> Professionals</span>
             </p>
             <div className="flex flex-col text-left gap-y-8 md:gap-y-8 lg:gap-y-4 md:mt-10 mt-8 text-base lg:mt-10 ">
               <div className="flex items-center">
