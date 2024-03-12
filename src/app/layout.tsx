@@ -5,7 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { Appwrapper } from "@/Services/context";
 
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
+import { Providers } from "./providers";
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <ToastContainer />
-        <Appwrapper> {children}</Appwrapper>
+        <Appwrapper>
+          <Providers> {children} </Providers>
+        </Appwrapper>
       </body>
     </html>
   );

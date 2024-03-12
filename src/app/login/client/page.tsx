@@ -9,8 +9,8 @@ import img from "../../../assets/img.png";
 import Input from "@/components/common/Input";
 import axios from "axios";
 import BeatLoader from "react-spinners/BeatLoader";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast} from "react-toastify";
+
 const Login = () => {
   const router = useRouter();
    

@@ -56,18 +56,18 @@ export const signUpcleanersValidate = yup.object().shape({
     .required("Please fill up this field")
     .matches(phoneRegExp, "Phone number is not valid")
     .max(15, "too long"),
-  // password: yup
-  //   .string()
-  //   .min(8, "password must containat least 8 characters ")
-  //   .matches(
-  //     passwordRegExp,
-  //     "characters with at least one of each: uppercase, lowercase, number and special"
-  //   )
-  //   .required("Please fill up this field"),
-  // passwordConfirmation: yup
-  //   .string()
-  //   .oneOf([yup.ref("password")], "Passwords must match")
-  //   .required("Please fill up this field"),
+  password: yup
+    .string()
+    .min(8, "password must containat least 8 characters ")
+    .matches(
+      passwordRegExp,
+      "characters with at least one of each: uppercase, lowercase, number and special"
+    )
+    .required("Please fill up this field"),
+  passwordConfirmation: yup
+    .string()
+    .oneOf([yup.ref("password")], "Passwords must match")
+    .required("Please fill up this field"),
 });
 
 export const loginValidate = yup.object().shape({
@@ -98,7 +98,8 @@ export const data: Array<service> = [
       "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
-    reason_note: "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
+    reason_note:
+      "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
     reason: [
       {
         reason: "Busy Schedules",
@@ -126,7 +127,8 @@ export const data: Array<service> = [
       "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
-    reason_note: "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
+    reason_note:
+      "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
     reason: [
       {
         reason: "Busy Schedules",
@@ -154,7 +156,8 @@ export const data: Array<service> = [
       "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
-    reason_note: "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
+    reason_note:
+      "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
     reason: [
       {
         reason: "Busy Schedules",
@@ -182,7 +185,8 @@ export const data: Array<service> = [
       "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
-    reason_note: "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
+    reason_note:
+      "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
     reason: [
       {
         reason: "Busy Schedules",
@@ -211,7 +215,8 @@ export const data: Array<service> = [
       "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
-    reason_note: "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
+    reason_note:
+      "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
     reason: [
       {
         reason: "Busy Schedules",
@@ -239,7 +244,8 @@ export const data: Array<service> = [
       "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
-    reason_note: "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
+    reason_note:
+      "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
     reason: [
       {
         reason: "Busy Schedules",
@@ -267,7 +273,8 @@ export const data: Array<service> = [
       "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
-    reason_note: "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
+    reason_note:
+      "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
     reason: [
       {
         reason: "Busy Schedules",
@@ -295,7 +302,8 @@ export const data: Array<service> = [
       "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
-    reason_note: "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
+    reason_note:
+      "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
     reason: [
       {
         reason: "Busy Schedules",
@@ -323,7 +331,8 @@ export const data: Array<service> = [
       "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
-    reason_note: "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
+    reason_note:
+      "While cleaning the house can be stressful and time-consuming, hiring a residential cleaning service would be a better option. These are reasons why you may need one.",
     reason: [
       {
         reason: "Busy Schedules",

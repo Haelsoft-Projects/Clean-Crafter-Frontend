@@ -40,10 +40,7 @@ const Clients = () => {
         .then((res) => {
           console.log(res);
           setisloading(false);
-          toast.success("Success", {
-            autoClose: 2000,
-            position: "top-right",
-          });
+         
           router.push("/services");
         })
         .catch((e) => {
@@ -77,7 +74,7 @@ const Clients = () => {
               alt="dfasfasd"
               className="object-cover  w-[50%] hidden lg:block  rounded-r-[50px] "
             /> */}
-        <div className="w-[80%] lg:w-[57%] xl:w-[55%] lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
+       <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
           <div className="flex flex-col">
             <Image src={img} alt="image" />
             <p className="mt-2 text-center text-white text-[20px] font-medium">
@@ -85,15 +82,15 @@ const Clients = () => {
             </p>
           </div>
         </div>
-        <div className=" lg:w-[43%] xl:w-[45%] flex  justify-center items-center lg:px-10 xl:px-20">
+        <div className=" lg:w-full xl:w-[45%]  2xl:w-full  flex  justify-center items-center lg:px-10 xl:px-20">
           <div className="flex  flex-col justify-center items-center w-full mt-10 mb-4">
-            <p className=" w-full font-medium mt-8 lg:mt-0  text-center text-2xl lg:text-4xl text-[#242424] ">
-              Register As A Client
+            <p className=" w-full font-medium mt-8 lg:mt-0  text-center text-xl xl:text-2xl lg:text-4xl text-[#242424] ">
+              Register As A Cleaner
             </p>
             <form
               onSubmit={formik.handleSubmit}
               action=""
-              className="flex  flex-col gap-y-4    mt-5 w-full "
+              className="flex  flex-col gap-y-4    mt-5 w-full  2xl:max-w-[600px]"
             >
               <Input
                 label="First Name"
