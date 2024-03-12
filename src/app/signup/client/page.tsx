@@ -36,6 +36,7 @@ const Clients = () => {
           nin: values.nin,
           phone_number: values.phoneNumber,
           password: values.password,
+          user_type:"client"
         })
         .then((res) => {
           console.log(res);

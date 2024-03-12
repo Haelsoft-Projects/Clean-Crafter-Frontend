@@ -17,7 +17,15 @@ const ModalComponent = ({ isOpen, onClose }: props) => {
   return (
     <div>
       {" "}
-      <Modal size={"lg"} isOpen={isOpen} onClose={onClose} placement="center">
+      <Modal
+        size={"lg"}
+        isOpen={isOpen}
+        onClose={() => {
+          router.push("/");
+          onClose();
+        }}
+        placement="center"
+      >
         <ModalContent className="py-20">
           {(onClose) => (
             <>

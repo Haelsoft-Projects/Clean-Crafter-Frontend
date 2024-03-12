@@ -39,14 +39,11 @@ const Cleaners = () => {
           nin: values.nin,
           phone_number: values.phoneNumber,
           password: values.password,
-          // user_type: "Cleaners",
+          user_type: "Cleaners",
         })
         .then((res) => {
           console.log(res);
-          setisloading(false); toast.success("Success", {
-            autoClose: 2000,
-            position: "top-right",
-          });
+          setisloading(false);
           onOpen();
         })
         .catch((e) => {
