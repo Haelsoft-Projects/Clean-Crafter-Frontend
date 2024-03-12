@@ -44,7 +44,7 @@ const Services = () => {
       </h1>
 
       {/* List of Services */}
-      <div className="grid lg:grid-cols-3 gap-10  max-w-[1240px] px-4 lg:px-10 xl:px-0 mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10  max-w-[1240px] px-4 lg:px-10 xl:px-0 mx-auto">
         {data.map((item, index) => (
           <div
             key={index}

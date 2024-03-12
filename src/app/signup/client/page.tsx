@@ -40,8 +40,7 @@ const Clients = () => {
         .then((res) => {
           console.log(res);
           setisloading(false);
-         
-          router.push("/services");
+          router.push("/login/client");
         })
         .catch((e) => {
           console.log(e);
@@ -69,11 +68,6 @@ const Clients = () => {
       )}
 
       <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between  gap-x-0 ">
-        {/* <Image
-              src={img}
-              alt="dfasfasd"
-              className="object-cover  w-[50%] hidden lg:block  rounded-r-[50px] "
-            /> */}
        <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
           <div className="flex flex-col">
             <Image src={img} alt="image" />
@@ -85,12 +79,12 @@ const Clients = () => {
         <div className=" lg:w-full xl:w-[45%]  2xl:w-full  flex  justify-center items-center lg:px-10 xl:px-20">
           <div className="flex  flex-col justify-center items-center w-full mt-10 mb-4">
             <p className=" w-full font-medium mt-8 lg:mt-0  text-center text-xl xl:text-2xl lg:text-4xl text-[#242424] ">
-              Register As A Cleaner
+              Register As A Client
             </p>
             <form
               onSubmit={formik.handleSubmit}
               action=""
-              className="flex  flex-col gap-y-4    mt-5 w-full  2xl:max-w-[600px]"
+              className="flex flex-col gap-y-4 mt-5 w-full  2xl:max-w-[600px]"
             >
               <Input
                 label="First Name"
