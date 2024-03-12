@@ -31,10 +31,7 @@ const Login = () => {
         .then((res) => {
           console.log(res);
           setisloading(false);
-          toast.success("Success", {
-            autoClose: 2000,
-            position: "top-right",
-          });
+        
           router.push("/services");
         })
         .catch((e) => {
