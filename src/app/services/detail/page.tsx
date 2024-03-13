@@ -18,16 +18,17 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useAppContext } from "@/Services/context";
 import { toast } from "react-toastify";
 
-
 const Detail = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const reasonstr = searchParams.get("reason");
+  console.log(searchParams.get("name"));
+
   type Reason = {
     reason: string;
     explanation: string;
   };
-  const reason: Array<Reason> = JSON.parse(reasonstr ?? "")
+  const reason: Array<Reason> = JSON.parse(reasonstr ?? "");
   const { name, setName } = useAppContext();
   const [city, setcity] = useState<string>("");
   return (
@@ -49,7 +50,7 @@ const Detail = () => {
           <div className="flex gap-x-3 w-full items-center justify-center">
             <input
               type="text"
-              placeholder="Enter Your Address"
+              placeholder="Enter Your City"
               value={city}
               onChange={(e) => setcity(e.target.value)}
               className="placeholder:text-[#FFFFFF] placeholder:font-semibold placeholder:text-center placeholder:text-[13px] px-4 w-1/6 bg-transparent h-[51px]  rounded-[4px] outline-none   border-2 border-[#FFD54F]"
@@ -57,7 +58,11 @@ const Detail = () => {
             <button
               onClick={() => {
                 if (city.length !== 0) {
-                  setName((prev: object) => ({ ...prev, city: city }));
+                  setName((prev: object) => ({
+                    ...prev,
+                    city: city,
+                    type: searchParams.get("name"),
+                  }));
                   router.push("/services/clean");
                 } else {
                   toast.error("Fill the field", {
@@ -98,7 +103,6 @@ const Detail = () => {
           <p className="font-semibold mt-2">Enter Job Description </p>
           <p className="mt-4">Describe your job for the cleaners.</p>
         </div>{" "}
-
         <div className="h-32 w-[1px] bg-[#121212]"></div>
         <div className=" flex flex-col text-center  w-96">
           <p className="text-[26px]">3</p>
@@ -175,7 +179,10 @@ const Detail = () => {
         <h2 className="text-[#0056B3] text-xl">
           Why You Should Hire A Residential Cleaning Service
         </h2>
-        <span className="mt-2 text-base"> {searchParams.get("reason_note")}</span>
+        <span className="mt-2 text-base">
+          {" "}
+          {searchParams.get("reason_note")}
+        </span>
         <div className="mt-4">
           <p className="text-base leading-[2]">
             {" "}

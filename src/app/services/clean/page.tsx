@@ -13,6 +13,8 @@ import { useAppContext } from "@/Services/context";
 const Clean = () => {
   const router = useRouter();
   const { name, setName } = useAppContext();
+  console.log(name);
+
   const formik = useFormik({
     initialValues: {
       city: name.city,
@@ -20,10 +22,11 @@ const Clean = () => {
     },
     validationSchema: addressValidation,
     onSubmit: (values) => {
-  
-      
-      setName((prev:object) =>({...prev, city:values.city, street:values.address}));
-      router.push("/services/job")
+      setName((prev: object) => ({
+        ...prev,
+        street: values.address,
+      }));
+      router.push("/services/job");
     },
   });
   return (
@@ -46,11 +49,11 @@ const Clean = () => {
             <select
               name="city"
               id="city"
-              className={` text-sm focus:outline-0
-             w-full border ${
+              className={` text-sm focus:outline-0 form-select focus:ring-0  focus:border-[#121212C2]/[0.76] outline-none
+             w-full border  ${
                formik.errors.city && formik.touched.city
                  ? "border-red-500"
-                 : " border-[#121212C2]/[0.76]"
+                 : " border-[#121212C2]/[0.76] "
              } h-16 px-3 bg-white`}
               onChange={formik.handleChange}
               value={formik.values.city}

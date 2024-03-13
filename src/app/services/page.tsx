@@ -68,6 +68,7 @@ const Services = () => {
                       process: item.process,
                       reason_note: item.reason_note,
                       index:index,
+                      name:item.name,
                       reason:JSON.stringify(item.reason)
                     },
                   }}

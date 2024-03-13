@@ -9,11 +9,12 @@ import img from "../../../assets/img.png";
 import Input from "@/components/common/Input";
 import axios from "axios";
 import BeatLoader from "react-spinners/BeatLoader";
-import { toast} from "react-toastify";
+import { toast } from "react-toastify";
+import secureLocalStorage from "react-secure-storage";
 
 const Login = () => {
   const router = useRouter();
-   
+
   const [isloading, setisloading] = useState<boolean>(false);
   const formik = useFormik({
     initialValues: {
@@ -29,9 +30,10 @@ const Login = () => {
           password: values.password,
         })
         .then((res) => {
-          console.log(res);
+          console.log(res.data.user);
           setisloading(false);
-        
+          secureLocalStorage.setItem("token", res.data.access);
+          secureLocalStorage.setItem("user", res.data.user);
           router.push("/services");
         })
         .catch((e) => {
@@ -47,7 +49,6 @@ const Login = () => {
 
   return (
     <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between    ">
-     
       {isloading && (
         <div className="h-screen fixed w-screen  bg-black/[0.9] flex justify-center items-center ">
           <BeatLoader color="#4A9EED" size={30} />

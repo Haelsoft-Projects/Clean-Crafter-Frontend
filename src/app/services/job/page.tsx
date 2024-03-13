@@ -32,7 +32,7 @@ const Job = (props: Props) => {
     onSubmit: (values) => {
       setName((prev: object) => ({
         ...prev,
-        job_decription:values. job_decription
+        job_decription:values.job_decription
       }));
       router.push("/services/finish")
     },

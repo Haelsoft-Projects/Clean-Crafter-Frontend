@@ -1,4 +1,4 @@
-import {nextui} from "@nextui-org/react";
+import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -18,6 +18,11 @@ const config: Config = {
     },
   },
   // darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui(),
+    require("@tailwindcss/forms")({
+      strategy: "class", // only generate classes
+    }),
+  ],
 };
 export default config;
