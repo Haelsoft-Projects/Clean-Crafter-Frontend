@@ -40,7 +40,7 @@ const Reviews = () => {
   ];
   return (
     <div className="bg-[#F3F3F3]  lg:mt-36  mt-20">
-      <div className="container mx-auto py-10 px-4  sm:px-10 md:px-8    text-center mt-20">
+      <div className="max-w-[1240px] w-full  mx-auto py-10 px-4  sm:px-10 md:px-8    text-center mt-20">
         <p className="font-medium text-2xl lg:text-[46px] text-center">
           Nigeria’s leading marketplace for cleaning services
         </p>

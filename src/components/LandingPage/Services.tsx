@@ -11,7 +11,7 @@ import img7 from "../../assets/landingpage/services/7.png";
 const Services = () => {
   return (
     <div>
-      <div className="container px-4 lg:mt-36  mt-20  sm:px-10 md:px-8  mx-auto   flex flex-col gap-y-8 lg:gap-y-10 ">
+      <div className="max-w-[1240px] w-full px-4 lg:mt-36  mt-20  sm:px-10 md:px-8  mx-auto   flex flex-col gap-y-8 lg:gap-y-10 ">
         <p className="text-2xl lg:text-[46px] font-medium text-center">
           Cleaning Services{" "}
         </p>

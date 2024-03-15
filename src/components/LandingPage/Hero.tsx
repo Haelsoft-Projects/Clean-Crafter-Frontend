@@ -2,11 +2,12 @@ import Image from "next/image";
 import heroimage from "../../assets/landingpage/hero.png";
 import { CgCheck } from "react-icons/cg";
 export default function Hero() {
+  
   return (
     <div>
       <div className=" w-full  bg-[#F3F2F2]">
         {" "}
-        <div className="container lg:px-2 xl:px-0 lg:pt-20 pb-1 mt-0   mx-auto flex flex-col lg:flex-row lg:justify-between items-center text-center px-2  sm:px-10 md:px-8">
+        <div className="max-w-[1240px] lg:px-2 xl:px-0 lg:pt-20 pb-1 mt-0   mx-auto flex flex-col lg:flex-row lg:justify-between items-center text-center px-2  sm:px-10 md:px-8">
           <div className="mt-4 text-center flex-col lg:mt-6 xl:mt-0 lg:pl-8 lg:w-full">
             <p className="text-[#292450]  self-stretch xl:text-5xl md:text-[45px] lg:text-[28px] text-[35px] lg:text-left w-full font-bold">
              <span> Discover</span> <br className=" lg:hidden " />

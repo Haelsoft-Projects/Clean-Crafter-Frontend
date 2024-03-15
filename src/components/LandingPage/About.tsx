@@ -4,7 +4,7 @@ import img2 from "../../assets/landingpage/sub2.png";
 export default function About() {
   return (
     <div>
-      <div className=" flex px-4  sm:px-10 md:px-8 lg:px-0 gap-x-20  container justify-between mx-auto mt-20">
+      <div className=" flex px-4  sm:px-10 md:px-8 lg:px-0 gap-x-20  max-w-[1240px] w-full  justify-between mx-auto mt-20">
         <div className="hidden lg:block lg:w-[50%] ">
           <Image
             src={img2}

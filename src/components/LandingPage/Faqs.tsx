@@ -12,7 +12,7 @@ const Faqs = () => {
   return (
     <div>
       <div className="py-5 px-4  sm:px-10 md:px-8 lg:mt-36  mt-20">
-        <div className="container mx-auto flex flex-col gap-y-5 lg:px-32">
+        <div className="max-w-[1240px] w-full  mx-auto flex flex-col gap-y-5 lg:px-32">
           <p className="text-black text-[35px] lg:text-[46px] text-center ">
             Frequently Asked Questions
           </p>

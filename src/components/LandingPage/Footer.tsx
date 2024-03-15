@@ -10,7 +10,7 @@ import store from "../../assets/common/store.png";
 const Footer = () => {
   return (
     <div className="bg-[#0056B3] flex flex-col lg:mt-36  mt-20 ">
-      <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto text-white flex flex-col lg:flex-row justify-between py-2 lg:pb-20 pt-10 text-center lg:text-start">
+      <div className="max-w-[1240px] w-full  px-4 lg:px-10 xl:px-0  mx-auto text-white flex flex-col lg:flex-row justify-between py-2 lg:pb-20 pt-10 text-center lg:text-start">
         <div className="flex flex-col justify-start gap-y-4">
           <p className="  font-bold text-lg xl:text-[22px] ">COMPANY</p>
           <p className="cursor-pointer text-sm xl:text-xl font-medium ">Our Services</p>

@@ -10,8 +10,8 @@ export default function Navbar() {
   const router = useRouter();
   const [bool, setbool] = useState<boolean>(false);
   return (
-    <div>
-      <div className=" container lg:px-2 xl:px-0 mx-auto py-6 lg:flex hidden justify-between items-center ">
+    <div className="fixed left-0 right-0  bg-white w-full  ">
+      <div className=" max-w-[1240px] lg:px-2 xl:px-0 mx-auto py-6 lg:flex hidden justify-between items-center ">
         <Image src={logo} alt="logo" className="object-contain" />
         {/* <img src={logo} alt="" /> */}
         <div className="gap-x-10 flex ">
