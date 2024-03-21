@@ -39,7 +39,7 @@ const Login = () => {
         .catch((e) => {
           console.log(e);
           setisloading(false);
-          toast.error("An error occurred", {
+          toast.error(e.response.data.error, {
             autoClose: 2000,
             position: "top-right",
           });
@@ -54,7 +54,7 @@ const Login = () => {
           <BeatLoader color="#4A9EED" size={30} />
         </div>
       )}
-      <div className="w-[80%] lg:w-[57%] xl:w-[55%] lg:px-10 xl:px-24 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
+      <div className="w-[80%] lg:w-[57%] xl:w-[55%] lg:px-10 xl:px-24 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden   lg:flex justify-center items-center">
         <div className="flex flex-col">
           <Image src={img} alt="image" />
           <p className="mt-2 text-center text-white text-[20px] font-medium">
@@ -104,7 +104,7 @@ const Login = () => {
               No Account yet?
               <button
                 type="button"
-                onClick={() => router.push("/signup")}
+                onClick={() => router.push("/signup/client")}
                 className="underline font-bold"
               >
                 Signup

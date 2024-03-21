@@ -70,10 +70,10 @@ const Cleaners = () => {
         {/* <Image
               src={img}
               alt="dfasfasd"
-              className="object-cover  w-[50%] hidden lg:block  rounded-r-[50px] "
+              className="object-cover  w-[50%] hidden lg:block  "
             /> */}
 
-        <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
+        <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden   lg:flex justify-center items-center">
           <div className="flex flex-col">
             <Image src={img} alt="image" />
             <p className="mt-2 text-center text-white text-[20px] font-medium">
@@ -171,7 +171,7 @@ const Cleaners = () => {
               >
                 Sign Up
               </button>
-              <p className="text-center flex gap-x-2 items-center justify-center text-base text-[#212121]">
+              {/* <p className="text-center flex gap-x-2 items-center justify-center text-base text-[#212121]">
                 Already have an account?
                 <button
                   type="button"
@@ -180,7 +180,7 @@ const Cleaners = () => {
                 >
                   Login
                 </button>
-              </p>
+              </p> */}
             </form>
           </div>
         </div>

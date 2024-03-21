@@ -69,7 +69,7 @@ const Clients = () => {
       )}
 
       <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between  gap-x-0 ">
-       <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  rounded-r-[50px] lg:flex justify-center items-center">
+       <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden   lg:flex justify-center items-center">
           <div className="flex flex-col">
             <Image src={img} alt="image" />
             <p className="mt-2 text-center text-white text-[20px] font-medium">
@@ -171,7 +171,7 @@ const Clients = () => {
                 Already have an account?
                 <button
                   type="button"
-                  onClick={() => router.push("/login/clients")}
+                  onClick={() => router.push("/login/client")}
                   className="underline font-bold"
                 >
                   Login

@@ -88,6 +88,7 @@ type service = {
   process?: string;
   reason_note: string;
   reason: Array<object>;
+  data?:string
 };
 
 export const data: Array<service> = [
@@ -96,8 +97,9 @@ export const data: Array<service> = [
     details:
       "In the hustle and bustle of daily life, keeping our homes clean and tidy can often fall by the wayside.",
     image: img1,
+    data:"Dirty Houses Are Our Specialty! We Can Fix Them",
     meaning:
-      "Residential cleaning involves the process of cleaning homes and apartments, which includes cleaning the kitchens and bathrooms as well as vacuuming, dusting, and mopping. This process is essential for homeowners as it maintains the property's value, adds to the visual appeal, and fosters a clean and healthy living environment.This type of cleaning is essential for more reasons than merely keeping the home neat and orderly; it also helps to protect the residents' health and well-being. The risk of illnesses and allergies is decreased by routine cleaning, which lowers the amount of dust, allergens, and microorganisms that cause sickness. Additionally, having a clean home promotes physical and mental relaxation, making it a cozy and inviting place for residents and visitors.",
+      "CleanCrafters understands the need for a clean and tidy home to relax and bond with family. So we provide a professional home cleaning solution to make your burden of cleaning your living room, kitchen, bedrooms, bathrooms, and other rooms ours. We tailor our services to your preference with different packages to get you connected with our trained and experienced cleaners. At CleanCrafter, we are not short of impressing our clients because their satisfaction is our pride.",
     process:
       "Residential cleaning is a meticulous and in-depth procedure that covers several sections of the house to guarantee that every nook and cranny is cleaned and sanitized. This entails beginning with the bigger chores, such as vacuuming and mopping the floors, and then on to the more intricate ones, like dusting furniture and cleaning appliances.",
     reason_note:
