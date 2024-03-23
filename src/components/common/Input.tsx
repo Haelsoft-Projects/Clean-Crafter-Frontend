@@ -10,12 +10,13 @@ type Props = {
   errorName: any;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   onBlur: React.FocusEventHandler<HTMLInputElement>;
+  className?: string;
 };
 const Input = ({
   label,
   value,
   type,
-
+  className,
   name,
   error,
   errorName,
@@ -29,7 +30,7 @@ const Input = ({
           {label}
         </label>
         <input
-          className={`appearance-none border ${
+          className={`appearance-none border ${className} ${
             error ? "border-red-500" : "border-[#717171]"
           } rounded-[10px] w-full py-2 px-3 text-gray-700 leading-7 focus:outline-none focus:shadow-outline`}
           type={type}

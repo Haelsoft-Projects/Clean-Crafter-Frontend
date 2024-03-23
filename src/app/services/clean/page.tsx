@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { addressValidation } from "@/Services/validation";
 import { useFormik } from "formik";
 import { useAppContext } from "@/Services/context";
+import Link from "next/link";
 const Clean = () => {
   const router = useRouter();
   const { name, setName } = useAppContext();
@@ -34,7 +35,9 @@ const Clean = () => {
       <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto ">
         {" "}
         <div className="flex items-center  justify-between border-b border-b-[#A3A3A3]  py-3 ">
-          <Image src={logo} alt="logo" className="object-contain" />{" "}
+        <Link href="/" className="cursor-pointer">
+          <Image src={logo} alt="logo" className="object-contain mt-4" />
+        </Link>
           <div className="bg-[#FFC107]  w-[50%] rounded-[20px]  h-6">
             <div className="bg-[#0056B3]  rounded-[20px]  w-[30%] h-6"></div>
           </div>

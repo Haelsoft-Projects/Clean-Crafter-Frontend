@@ -62,7 +62,7 @@ const Cleaners = () => {
       <ToastContainer />
       {isloading && (
         <div className="h-screen fixed w-screen  bg-black/[0.9] flex justify-center items-center ">
-          <BeatLoader color="#4A9EED" size={30} />
+          <BeatLoader color="#0056B3" size={30} />
         </div>
       )}
       <ModalComponent isOpen={isOpen} onClose={onClose} />
@@ -166,7 +166,7 @@ const Cleaners = () => {
               />
 
               <button
-                className="mt-2 bg-[#4A9EED] h-[44px]  focus:shadow-outline focus:outline-none text-white p-2 text-[12.8px] rounded-[10px]"
+                className="mt-2 bg-[#0056B3] h-[44px]  focus:shadow-outline focus:outline-none text-white p-2 text-[12.8px] rounded-[10px]"
                 type="submit"
               >
                 Sign Up

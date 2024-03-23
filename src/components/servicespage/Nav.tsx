@@ -14,7 +14,9 @@ export default function Navbar() {
   return (
     <div>
       <div className=" max-w-[1240px] lg:px-10 xl:px-0 mx-auto p lg:flex hidden justify-between items-center pb-4 ">
-        <Image src={logo} alt="logo" className="object-contain mt-4" />
+        <Link href="/" className="cursor-pointer">
+          <Image src={logo} alt="logo" className="object-contain mt-4" />
+        </Link>
         {/* <img src={logo} alt="" /> */}
         <div className="gap-x-14 flex mt-4 ">
           <span
@@ -46,12 +48,11 @@ export default function Navbar() {
         {/* <div className="w-full"></div> */}
       </div>
       <div className="  top-0  px-2  sm:px-10 md:px-8   w-full  lg:hidden   py-4 flex  z-[70] rounded-b-sm justify-between">
-        <Link href="">
+        <Link href="/">
           {" "}
           <Image src={logo} alt="" className="md:w-40 w-24 " />
         </Link>
         <span className="flex  items-center gap-x-2">
-        
           <HiMenu
             className="text-black font-bold text-xl  sm:text-3xl md:text-4xl"
             onClick={() => setbool(!bool)}
@@ -60,7 +61,7 @@ export default function Navbar() {
       </div>
       {bool && (
         <div
-          className="h-[7rem] md:h-[12rem] z-[100] lg:hidden w-full flex flex-col shadow text-base rounded-b-xl items-center justify-evenly text-white  bg-[#4A9EED] md:text-xl  lg:text-base
+          className="h-[7rem] md:h-[12rem] z-[100] lg:hidden w-full flex flex-col shadow text-base rounded-b-xl items-center justify-evenly text-white  bg-[#0056B3] md:text-xl  lg:text-base
          text-light fixed top-[3.1rem] md:top-[11.2rem] "
         >
           <Link

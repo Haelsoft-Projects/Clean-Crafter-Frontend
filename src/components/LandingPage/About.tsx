@@ -19,7 +19,7 @@ export default function About() {
         </div>
         <div className="flex flex-col h-full w-full lg:w-[50%] ">
           <div className="flex items-center gap-x-4">
-            <span className=" h-2 w-[52.01px] bg-[#4A9EED] self-start"></span>
+            <span className=" h-2 w-[52.01px] bg-[#0056B3] self-start"></span>
             <span>About CleanCrafters</span>
           </div>
           <div className="flex text-center lg:text-start text-[40px] lg:text-[30px] xl:text-[40px] font-bold mt-6 lg:mt-2">
@@ -31,7 +31,7 @@ export default function About() {
             ad minim veniam, quis nostrud.
           </p>
           <div className="flex ml-10 mt-10 gap-x-4 lg:gap-x-8">
-            <div className="h-[77px] w-[4px] bg-[#4A9EED]"></div>
+            <div className="h-[77px] w-[4px] bg-[#0056B3]"></div>
             <div className="text-justify">
               .Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -40,19 +40,19 @@ export default function About() {
           </div>
           <div className="flex flex-col lg:flex-row text-center  justify-between mt-10 gap-y-8">
             <div className="flex flex-col ">
-              <span className="text-[40px]  font-semibold text-[#4A9EED]">
+              <span className="text-[40px]  font-semibold text-[#0056B3]">
                 100+
               </span>
               <span className="text-xl text-black">Cleaning Services</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-[40px]  font-semibold text-[#4A9EED]">
+              <span className="text-[40px]  font-semibold text-[#0056B3]">
                 10+
               </span>
               <span className="text-xl text-black">Trainees</span>
             </div>{" "}
             <div className="flex flex-col">
-              <span className="text-[40px]  font-semibold text-[#4A9EED]">
+              <span className="text-[40px]  font-semibold text-[#0056B3]">
                 30+
               </span>
               <span className="text-xl text-black">

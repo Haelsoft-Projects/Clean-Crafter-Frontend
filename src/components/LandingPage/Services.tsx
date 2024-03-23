@@ -28,7 +28,7 @@ const Services = () => {
             placeholder="Enter Email Address"
             className="border px-2 placeholder:text-center text-center focus:outline-none border-[#292450] rounded-[10px] w-full lg:w-[208px] h-[60px]"
           />
-          <button className="rounded-[10px] text-white bg-[#4A9EED] w-full lg:w-[208px] h-[60px]">
+          <button className="rounded-[10px] text-white bg-[#0056B3] w-full lg:w-[208px] h-[60px]">
             Let’s go
           </button>
         </div>

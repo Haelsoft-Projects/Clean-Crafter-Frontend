@@ -33,7 +33,7 @@ const Login = () => {
           console.log(res.data.user);
           setisloading(false);
           secureLocalStorage.setItem("token", res.data.access);
-          secureLocalStorage.setItem("user", res.data.user);
+          secureLocalStorage.setItem("user", JSON.stringify(res.data.user));
           router.push("/services");
         })
         .catch((e) => {
@@ -51,7 +51,7 @@ const Login = () => {
     <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between    ">
       {isloading && (
         <div className="h-screen fixed w-screen  bg-black/[0.9] flex justify-center items-center ">
-          <BeatLoader color="#4A9EED" size={30} />
+          <BeatLoader color="#0056B3" size={30} />
         </div>
       )}
       <div className="w-[80%] lg:w-[57%] xl:w-[55%] lg:px-10 xl:px-24 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden   lg:flex justify-center items-center">
@@ -95,7 +95,7 @@ const Login = () => {
             />
 
             <button
-              className="mt-2 bg-[#4A9EED] h-[44px]  focus:shadow-outline focus:outline-none text-white p-2 text-[12.8px] rounded-[10px]"
+              className="mt-2 bg-[#0056B3] h-[44px]  focus:shadow-outline focus:outline-none text-white p-2 text-[12.8px] rounded-[10px]"
               type="submit"
             >
               LOG IN

@@ -78,14 +78,14 @@ const Reviews = () => {
                   {item.message}
                 </div>
                 <div className="flex justify-end w-full ">
-                  <FiPlusCircle className=" text-2xl text-[#4A9EED] font-bold" />
+                  <FiPlusCircle className=" text-2xl text-[#0056B3] font-bold" />
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <button className="w-full mt-20 lg:w-[190px] rounded-[5px] h-[60px] bg-[#4A9EED] text-white">
+        <button className="w-full mt-20 lg:w-[190px] rounded-[5px] h-[60px] bg-[#0056B3] text-white">
           All reviews
         </button>
       </div>

@@ -1,12 +1,14 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import {
   HiOutlineArrowLongLeft,
   HiOutlineArrowLongRight,
 } from "react-icons/hi2";
 import logo from "@/assets/logo.png";
+import { PaystackButton } from "react-paystack";
 import {
   HiOutlineArrowCircleLeft,
   HiOutlineArrowCircleRight,
@@ -22,18 +24,55 @@ import BeatLoader from "react-spinners/BeatLoader";
 import { toast } from "react-toastify";
 import secureLocalStorage from "react-secure-storage";
 import { baseURL } from "@/Service";
+import Link from "next/link";
 const Finish = () => {
   const router = useRouter();
+  const publicKey = "pk_test_a6b12672f6f5e47d9349a0f015d87d7e71c1dd05";
+  const amount = 1000000; // Remember, set in kobo!
+  const [email, setEmail] = useState("olaimarne@gmail.com");
+  const [namer, setNamer] = useState("Emmanuel");
+  const [phone, setPhone] = useState("08088443186");
   const { name, setName } = useAppContext();
   const currentDate = new Date();
   const [isloading, setisloading] = React.useState<boolean>(false);
   console.log(name);
   useEffect(() => {
-   if(name.city.length==0||name.city.length==0||name.street.length==0||name.job_decription.length==0){
-    router.replace("/services");
-   }
-  }, [])
-  
+    if (
+      name.city.length == 0 ||
+      name.city.length == 0 ||
+      name.street.length == 0 ||
+      name.job_decription.length == 0
+    ) {
+      router.replace("/services");
+    }
+  }, []);
+  interface User {
+    email: string;
+    first_name: string;
+    id: number;
+    job: [];
+    last_name: string;
+    nin: string;
+    phone_number: string;
+    user_type: string;
+  }
+
+  const userstr = secureLocalStorage.getItem("user");
+  const user: User = JSON.parse(userstr?.toString() ?? "");
+  // ??{
+  //     email: "",
+  //     first_name: "",
+  //     id: 0,
+  //     job: [],
+  //     last_name:"",
+  //     nin: "",
+  //     phone_number: "",
+  //     user_type: ""
+  //   };
+  // ;
+  //   // const email =user?.email??""
+  //   console.log("user", user.email);
+
   const createJob = () => {
     setisloading(true);
     axios
@@ -63,7 +102,7 @@ const Finish = () => {
       })
       .catch((e) => {
         console.log(e);
-        
+
         toast.error("An error occurred", {
           autoClose: 2000,
           position: "top-right",
@@ -73,18 +112,33 @@ const Finish = () => {
         setisloading(false);
       });
   };
-
+  const componentProps = {
+    email: user.email,
+    amount: 500000,
+    custom_fields: {
+      name: user.first_name + " " + user.last_name,
+      phone: user.phone_number,
+    },
+    publicKey,
+    text: "Pay Now",
+    onSuccess: () => {
+      
+    },
+    onClose: () => alert(""),
+  };
   return (
     <div>
       <div>
         <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto ">
           {isloading && (
             <div className="h-screen fixed w-screen left-0 z-50  bg-black/[0.9] flex justify-center items-center ">
-              <BeatLoader color="#4A9EED" size={30} />
+              <BeatLoader color="#0056B3" size={30} />
             </div>
           )}
           <div className="flex items-center  justify-between border-b border-b-[#A3A3A3]  py-3 ">
-            <Image src={logo} alt="logo" className="object-contain" />{" "}
+            <Link href="/" className="cursor-pointer">
+              <Image src={logo} alt="logo" className="object-contain mt-4" />
+            </Link>
             <div className="bg-[#FFC107]  w-[50%] rounded-[20px]  h-6">
               <div className="bg-[#0056B3]  rounded-[20px]  w-[100%] h-6"></div>
             </div>
@@ -141,7 +195,10 @@ const Finish = () => {
             </div>
           </div>
         </div>
-
+        <PaystackButton
+          className="paystack-button bg-red-500 px-10 py-4 text-white"
+          {...componentProps}
+        />
         <div className=" mt-20 relative   h-[30rem] w-full">
           <Image
             src={imgpace}
@@ -170,6 +227,7 @@ const Finish = () => {
             </div>
           </div>
         </div>
+
         <div className="w-full mt-20">
           <Footer />
         </div>

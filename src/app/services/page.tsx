@@ -14,7 +14,7 @@ import {
 } from "react-icons/hi";
 
 import { useAppContext } from "@/Services/context";
-import { data } from "@/Service";
+import { data, newData } from "@/Service";
 import Link from "next/link";
 import Layout from "./Layout";
 const Services = () => {
@@ -44,7 +44,7 @@ const Services = () => {
 
         {/* List of Services */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10  max-w-[1240px] px-4 lg:px-10 xl:px-0 mx-auto">
-          {data.map((item, index) => (
+          {newData.map((item, index) => (
             <div
               key={index}
               className="rounded-md  bg-[#F2F2F2]  flex flex-col   min-h-[521px] relative   pb-4 cursor-pointer  hover:bg-brand-color "
@@ -65,12 +65,12 @@ const Services = () => {
                     href={{
                       pathname: "/services/detail",
                       query: {
-                        meaning: item.meaning,
-                        process: item.process,
-                        reason_note: item.reason_note,
-                        index: index,
                         name: item.name,
-                        reason: JSON.stringify(item.reason),
+                        meaning: item.meaning,
+                        sub1: item.sub1,
+                        sub1explanation: item.sub1explanation,
+                        index: index,
+                        availability: JSON.stringify(item.availability),
                       },
                     }}
                     onClick={() => {

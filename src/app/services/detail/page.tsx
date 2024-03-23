@@ -22,14 +22,42 @@ import Layout from "../Layout";
 const Detail = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const reasonstr = searchParams.get("reason");
+  const availabilitystr = searchParams.get("availability");
+  const benefitstr = searchParams.get("benefits");
   console.log(searchParams.get("name"));
 
-  type Reason = {
-    reason: string;
+  type Availability = {
+    available: string;
     explanation: string;
   };
-  const reason: Array<Reason> = JSON.parse(reasonstr ?? "");
+
+  type Benefits = {
+    benefit: string;
+    explanation: string;
+  };
+  const availability: Array<Availability> = JSON.parse(availabilitystr ?? "");
+  const benefits: Array<Benefits> = [
+    {
+      benefit: "Excellent customer service",
+      explanation:
+        "You won't have the time or energy to clean your home after a long day at work if you're working hard. Many people may not leave for home straight away after work. You have folks to see or errands to run. As such, you won't have to rush home to finish your duties if you hire a cleaner. After working eight hours or longer, you deserve to relax.",
+    },
+    {
+      benefit: "Competitive rates",
+      explanation:
+        "Most people started to realize what cleaning supplies they needed. However, the price of regularly purchasing these cleaning supplies will increase with time. A cleaning business has its equipment and materials. You don't need to be concerned about the kind of sponges. Even before they reach your house, they are ready. Additionally, their supplies can be superior to yours. They also know which cleaning and sanitizing supplies work best.",
+    },
+    {
+      benefit: "Secure online payment ",
+      explanation:
+        "A professional cleaner can clean your house better than you can. They are equipped with the right tools and skills to perform thorough cleaning. The cleaners of today also provide disinfecting services. Knowing that most bacteria and viruses in your house are being eliminated gives you peace of mind. Reputable cleaning firms also use advanced cleaning supplies. ",
+    },
+    {
+      benefit: "Vetted cleaners",
+      explanation:
+        "A professional cleaner can clean your house better than you can. They are equipped with the right tools and skills to perform thorough cleaning. The cleaners of today also provide disinfecting services. Knowing that most bacteria and viruses in your house are being eliminated gives you peace of mind. Reputable cleaning firms also use advanced cleaning supplies. ",
+    },
+  ];
   const { name, setName } = useAppContext();
   const [city, setcity] = useState<string>("");
   return (
@@ -43,8 +71,8 @@ const Detail = () => {
             className="object-cover h-[30rem] absolute  w-full"
           />
           <div className="h-[30rem] gap-y-10 w-full  px-4 absolute z-50 text-white flex flex-col justify-center items-center">
-            <h1 className="font-bold text-2xl xl:text-[36h1x]">
-              Find a Top Rated Home Cleaner near you
+            <h1 className="font-bold text-2xl xl:text-[36px]">
+              {searchParams.get("name")} Services
             </h1>
             <div className="flex gap-x-3 w-full items-center justify-center">
               <input
@@ -128,25 +156,18 @@ const Detail = () => {
             className="object-cover  h-[30rem] w-full absolute "
           />
           <div className="h-[30rem] gap-y-10 w-full flex justify-center items-center absolute z-50 text-white font-bold text-3xl">
-            Book Your Home Cleaning Services with CleanCrafters today!
+            Book Your {searchParams.get("name")} Services with CleanCrafters
+            today!
           </div>
         </div>
 
         <div className="flex flex-col gap-x-2 max-w-[1240px] mt-20 mx-auto  w-full px-4 lg:px-4 xl:px-0">
           <span className="text-[#0056B3] text-xl">
-            Understand Resisdential Cleaning
+            Understand {searchParams.get("name")}
           </span>
           <div className="mt-4">
             <p className="text-base leading-[2.2] ">
-              {/* {searchParams.get("meaning")} */}
-              CleanCrafters understands the need for a clean and tidy home to
-              relax and bond with family. So we provide a professional home
-              cleaning solution to make your burden of cleaning your living
-              room, kitchen, bedrooms, bathrooms, and other rooms ours. We
-              tailor our services to your preference with different packages to
-              get you connected with our trained and experienced cleaners. At
-              CleanCrafter, we are not short of impressing our clients because
-              their satisfaction is our pride.
+              {searchParams.get("meaning")}
             </p>
           </div>
         </div>
@@ -175,23 +196,11 @@ const Detail = () => {
         </div>
         <div className="flex flex-col gap-x-2 max-w-[1240px] mt-20 mx-auto  w-full px-4 lg:px-4 xl:px-0">
           <h2 className="text-[#0056B3] text-xl">
-            Book Your Home Cleaning With CleanCrafters
+            Book Your {searchParams.get("name")} With CleanCrafters
           </h2>
           <div className="mt-4">
             <p className="text-base leading-[2]">
-              A clean home resonates with the perception of people living in the
-              house. It is also essential for good health. The advantages of
-              routine cleaning are numerous. Your living situation directly
-              impacts your family's physical and mental health. You can prevent
-              allergies, respiratory issues, and illness by cleaning regularly.
-              Careful upkeep and cleaning are even more crucial if you own pets.
-              Cleaning improves indoor air quality and leaves the space smelling
-              nice by removing dust and bacteria. Since the kitchen and bathroom
-              are believed to be the two germiest spaces in a home, they
-              typically need special attention. However, home cleaning may be
-              stressful if you are already busy with family or work. This is why
-              you need CleanCrafters to help keep your home clean, organized,
-              and germ-free.
+              {searchParams.get("sub1explanation")}
             </p>{" "}
           </div>
         </div>
@@ -199,27 +208,33 @@ const Detail = () => {
         <div className="flex flex-col gap-x-2 max-w-[1240px] mt-20 mx-auto  w-full px-4       lg:px-4 xl:px-0">
           <h2 className="text-[#0056B3] text-xl">We Are Available For:</h2>
           <div className="mt-5 flex flex-wrap w-full justify-between">
-            <div className="flex gap-x-4 items-center text-lg">
-              <span>1. </span>
-              <span>Homes or estate buildings</span>
-            </div>
+            {availability.map((item, index) => (
+              <div className="flex flex-col gap-y-2 mb-8 items-start text-lg">
+                <div className="flex gap-x-2 ">
+                  <span>{index + 1}. </span>
+                  <span>{item.available}:</span>
+                </div>
+                <p className="ssasa pl-4">{item.explanation}</p>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="flex flex-col gap-x-2 max-w-[1240px] mt-20 mx-auto  w-full px-4       lg:px-4 xl:px-0">
-          <h2 className="text-[#0056B3] text-xl">We Are Available For:</h2>
+          <h2 className="text-[#0056B3] text-xl">Our Benefits: </h2>
           <div className="mt-5 flex flex-wrap w-full justify-between">
-            <div className="flex flex-col gap-x-4 items-center text-lg">
-              <div className="flex">
-                {" "}
-                <span>1. </span>
-                <span>Enter your Postcode</span>
+            {benefits.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col gap-y-4 mb-8 items-start text-lg"
+              >
+                <div className="flex gap-x-2">
+                  <span>{index + 1}. </span>
+                  <span>{item.benefit}</span>
+                </div>
+                <p className="a pl-4">{item.explanation}</p>
               </div>
-              <span>
-                This is to confirm if we currently have cleaners around your
-                location.
-              </span>
-            </div>
+            ))}
           </div>
         </div>
 
