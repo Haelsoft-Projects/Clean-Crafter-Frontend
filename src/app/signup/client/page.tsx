@@ -16,9 +16,9 @@ const Clients = () => {
   const [isloading, setisloading] = useState<boolean>(false);
   const formik = useFormik({
     initialValues: {
-      firstName: "",
+      firstName:  "",
       lastName: "",
-      email: "",
+      email: localStorage.getItem("email") ?? "",
       phoneNumber: "",
       nin: "",
       password: "",
@@ -26,7 +26,7 @@ const Clients = () => {
     },
     validationSchema: signUpValidate,
     onSubmit: async (values) => {
-      //   router.push("/dashboard");
+      localStorage.removeItem("email")
       setisloading(true);
       axios
         .post("/api/register", {
@@ -69,15 +69,15 @@ const Clients = () => {
       )}
 
       <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between  gap-x-0 ">
-      <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  max-w-[824px]  2xl:max-w-[920px] lg:flex justify-center items-center">
-        <div className="flex flex-col">
-          <Image src={img} alt="image" />
-          <p className="mt-2 text-center text-white text-[20px] font-medium">
-            Elevating Cleanliness To A Craft
-          </p>
+        <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  max-w-[824px]  2xl:max-w-[920px] lg:flex justify-center items-center">
+          <div className="flex flex-col">
+            <Image src={img} alt="image" />
+            <p className="mt-2 text-center text-white text-[20px] font-medium">
+              Elevating Cleanliness To A Craft
+            </p>
+          </div>
         </div>
-      </div>
-      <div className=" lg:w-full xl:w-[45%] px-4 lg:px-0 2xl:w-full  flex  justify-center items-center  max-w-[463px] 2xl:max-w-[500px]  mx-auto">
+        <div className=" lg:w-full xl:w-[45%] px-4 lg:px-0 2xl:w-full  flex  justify-center items-center  max-w-[463px] 2xl:max-w-[500px]  mx-auto">
           <div className="flex  flex-col justify-center items-center w-full mt-10 mb-4">
             <p className=" w-full font-medium mt-8 lg:mt-0  text-center text-xl xl:text-2xl lg:text-4xl text-[#242424] ">
               Register As A Client
@@ -141,7 +141,7 @@ const Clients = () => {
                 label="Password"
                 type="password"
                 name="password"
-                value={formik.values.password}  
+                value={formik.values.password}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 error={formik.errors.password && formik.touched.password}

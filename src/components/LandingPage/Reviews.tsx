@@ -2,6 +2,7 @@ import { IoIosStar } from "react-icons/io";
 import { FiPlusCircle } from "react-icons/fi";
 import { useState } from "react";
 const Reviews = () => {
+
   const data = [
     {
       name: "Rauno",

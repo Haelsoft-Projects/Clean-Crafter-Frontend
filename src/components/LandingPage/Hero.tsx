@@ -1,7 +1,38 @@
+"use client";
 import Image from "next/image";
 import heroimage from "../../assets/landingpage/hero.png";
 import { CgCheck } from "react-icons/cg";
+import axios from "axios";
+import BeatLoader from "react-spinners/BeatLoader";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 export default function Hero() {
+  const router = useRouter();
+  const [email, setemail] = useState<string>("")
+  const [isloading, setisloading] = useState<boolean>(false);
+  const fetchData = (email: string) => {
+    setisloading(true);
+    axios
+      .post("/api/login", {
+        email,
+      })
+      .then((res) => {
+        console.log(res.data.user);
+        toast.success("registered successfully");
+      })
+      .catch((e) => {
+        console.log(e);
+
+        toast.error(e.response.data.error, {
+          autoClose: 2000,
+          position: "top-right",
+        });
+      })
+      .finally(() => {
+        setisloading(false);
+      });
+  };
   return (
     <div>
       <div className=" w-full  bg-[#F3F2F2] pt-20 ">
@@ -46,10 +77,14 @@ export default function Hero() {
               <input
                 type="email"
                 placeholder="Enter your Address"
+                onChange={(e)=>{setemail(e.target.value)}}
                 className="border px-2 text-base border-[#292450] w-1/2 lg:w-1/3 xl:w-1/3 py-3 bg-white rounded-[10px]"
               />
-              <button className="py-3 px-2 text-base text-white w-1/2  lg:w-1/3 xl:w-1/3  bg-[#0056B3] rounded-[10px]">
-                Let’s gos
+              <button onClick={()=>{
+                localStorage.setItem("email", email)
+                router.push("/signup/client")
+              }}  className="py-3 px-2 text-base text-white w-1/2  lg:w-1/3 xl:w-1/3  bg-[#0056B3] rounded-[10px]">
+                Let’s go
               </button>
             </div>
           </div>
