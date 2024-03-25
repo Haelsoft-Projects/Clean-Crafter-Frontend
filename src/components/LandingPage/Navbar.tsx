@@ -54,7 +54,7 @@ export default function Navbar() {
           />
         </span>
       </div>
-      {!bool && (
+      {bool && (
         <div
           className="h-[12rem] md:h-[14rem] lg:hidden w-full flex flex-col shadow text-base rounded-b-xl items-center justify-evenly text-white  bg-[#0056B3] md:text-xl  lg:text-base
          text-light z-50 fixed top-[4rem] md:top-[11.2rem] "

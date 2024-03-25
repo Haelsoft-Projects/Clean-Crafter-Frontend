@@ -36,7 +36,7 @@ const Clients = () => {
           nin: values.nin,
           phone_number: values.phoneNumber,
           password: values.password,
-          user_type:"client"
+          user_type: "client",
         })
         .then((res) => {
           console.log(res);
@@ -46,17 +46,17 @@ const Clients = () => {
         .catch((e) => {
           console.log(e);
           setisloading(false);
-         if(e.response.data.email[0]){
-          toast.error(e.response.data.email[0], {
-            autoClose: 2000,
-            position: "top-right",
-          });
-         }else{
-          toast.error("An error occurred", {
-            autoClose: 2000,
-            position: "top-right",
-          });
-         }
+          if (e.response.data.email[0]) {
+            toast.error(e.response.data.email[0], {
+              autoClose: 2000,
+              position: "top-right",
+            });
+          } else {
+            toast.error("An error occurred", {
+              autoClose: 2000,
+              position: "top-right",
+            });
+          }
         });
     },
   });
@@ -69,15 +69,15 @@ const Clients = () => {
       )}
 
       <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between  gap-x-0 ">
-       <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden   lg:flex justify-center items-center">
-          <div className="flex flex-col">
-            <Image src={img} alt="image" />
-            <p className="mt-2 text-center text-white text-[20px] font-medium">
-              Elevating Cleanliness To A Craft
-            </p>
-          </div>
+      <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  max-w-[824px]  2xl:max-w-[920px] lg:flex justify-center items-center">
+        <div className="flex flex-col">
+          <Image src={img} alt="image" />
+          <p className="mt-2 text-center text-white text-[20px] font-medium">
+            Elevating Cleanliness To A Craft
+          </p>
         </div>
-        <div className=" lg:w-full xl:w-[45%]  2xl:w-full  flex  justify-center items-center lg:px-10 xl:px-20">
+      </div>
+      <div className=" lg:w-full xl:w-[45%] px-4 lg:px-0 2xl:w-full  flex  justify-center items-center  max-w-[463px] 2xl:max-w-[500px]  mx-auto">
           <div className="flex  flex-col justify-center items-center w-full mt-10 mb-4">
             <p className=" w-full font-medium mt-8 lg:mt-0  text-center text-xl xl:text-2xl lg:text-4xl text-[#242424] ">
               Register As A Client
@@ -139,9 +139,9 @@ const Clients = () => {
               />
               <Input
                 label="Password"
-                type="text"
+                type="password"
                 name="password"
-                value={formik.values.password}
+                value={formik.values.password}  
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 error={formik.errors.password && formik.touched.password}
@@ -149,7 +149,7 @@ const Clients = () => {
               />
               <Input
                 label="Confirm Password"
-                type="text"
+                type="password"
                 name="passwordConfirmation"
                 value={formik.values.passwordConfirmation}
                 onChange={formik.handleChange}

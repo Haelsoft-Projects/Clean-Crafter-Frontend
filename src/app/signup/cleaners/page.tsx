@@ -73,15 +73,15 @@ const Cleaners = () => {
               className="object-cover  w-[50%] hidden lg:block  "
             /> */}
 
-        <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden   lg:flex justify-center items-center">
-          <div className="flex flex-col">
-            <Image src={img} alt="image" />
-            <p className="mt-2 text-center text-white text-[20px] font-medium">
-              Elevating Cleanliness To A Craft
-            </p>
-          </div>
+<div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  max-w-[824px]  2xl:max-w-[920px] lg:flex justify-center items-center">
+        <div className="flex flex-col">
+          <Image src={img} alt="image" />
+          <p className="mt-2 text-center text-white text-[20px] font-medium">
+            Elevating Cleanliness To A Craft
+          </p>
         </div>
-        <div className=" lg:w-full xl:w-[45%]  2xl:w-full  flex  justify-center items-center lg:px-10 xl:px-20">
+      </div>
+      <div className=" lg:w-full xl:w-[45%] px-4 lg:px-0 2xl:w-full  flex  justify-center items-center  max-w-[463px] 2xl:max-w-[500px]  mx-auto">
           <div className="flex  flex-col justify-center items-center w-full mt-10 mb-4">
             <p className=" w-full font-medium mt-8 lg:mt-0  text-center text-xl xl:text-2xl lg:text-4xl text-[#242424] ">
               Register As A Cleaner
@@ -123,7 +123,7 @@ const Cleaners = () => {
               />
               <Input
                 label="Phone Number"
-                type="text"
+                type="number"
                 name="phoneNumber"
                 value={formik.values.phoneNumber}
                 onChange={formik.handleChange}
@@ -133,7 +133,7 @@ const Cleaners = () => {
               />
               <Input
                 label="NIN(National Identification Number)"
-                type="text"
+                type="number"
                 name="nin"
                 value={formik.values.nin}
                 onChange={formik.handleChange}
@@ -143,7 +143,7 @@ const Cleaners = () => {
               />
               <Input
                 label="Password"
-                type="text"
+                type="password"
                 name="password"
                 value={formik.values.password}
                 onChange={formik.handleChange}
@@ -153,7 +153,7 @@ const Cleaners = () => {
               />
               <Input
                 label="Confirm Password"
-                type="text"
+                type="password"
                 name="passwordConfirmation"
                 value={formik.values.passwordConfirmation}
                 onChange={formik.handleChange}

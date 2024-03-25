@@ -54,7 +54,7 @@ const Login = () => {
           <BeatLoader color="#0056B3" size={30} />
         </div>
       )}
-      <div className="w-[80%] lg:w-[57%] xl:w-[55%] lg:px-10 xl:px-24 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden   lg:flex justify-center items-center">
+      <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  max-w-[824px]  2xl:max-w-[920px] lg:flex justify-center items-center">
         <div className="flex flex-col">
           <Image src={img} alt="image" />
           <p className="mt-2 text-center text-white text-[20px] font-medium">
@@ -62,7 +62,7 @@ const Login = () => {
           </p>
         </div>
       </div>
-      <div className=" lg:w-[43%] xl:w-[45%] flex  justify-center items-center lg:px-10 xl:px-20">
+      <div className=" lg:w-full xl:w-[45%] px-4 lg:px-0 2xl:w-full  flex  justify-center items-center  max-w-[463px] 2xl:max-w-[500px]  mx-auto">
         <div className="flex  flex-col justify-center items-center w-full">
           <p className=" w-full font-medium mt-8 lg:mt-0  text-center text-2xl lg:text-4xl text-[#242424] ">
             Welcome back
@@ -74,7 +74,7 @@ const Login = () => {
           >
             <Input
               label="Email"
-              type="text"
+              type="email"
               name="email"
               value={formik.values.email}
               onChange={formik.handleChange}
@@ -85,7 +85,7 @@ const Login = () => {
 
             <Input
               label="Password"
-              type="text"
+              type="password"
               name="password"
               value={formik.values.password}
               onChange={formik.handleChange}

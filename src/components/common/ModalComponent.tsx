@@ -25,8 +25,9 @@ const ModalComponent = ({ isOpen, onClose }: props) => {
           onClose();
         }}
         placement="center"
+        className="mx-3 lg:mx-0 "
       >
-        <ModalContent className="py-20">
+        <ModalContent className="py-20 ">
           {(onClose) => (
             <>
               <ModalBody className="flex flex-col justify-center  items-center gap-y-6">
