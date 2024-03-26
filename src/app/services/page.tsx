@@ -88,11 +88,11 @@ const Services = () => {
 
         {/* What customers says */}
 
-        <div className=" max-w-[1240px] mt-6 mx-auto items-center w-full px-4 lg:px-4 xl:px-0">
+        <div className=" max-w-[1240px] mt-6 mx-auto items-center w-full px-4 lg:px-4 xl:px-0 flex-col lg:flex-row">
           <h1 className="  text-3xl font-bold text-[#0056B3] text-center mt-20 ">
             What Our Customers Say About Us
           </h1>
-          <div className="mt-10 flex  lg:gap-x-7 xl:gap-x-0 items-center justify-between ">
+          <div className="mt-10 flex flex-col lg:flex-row px-4 lg:px-0 gap-y-7 lg:gap-x-7 xl:gap-x-0 items-center justify-between ">
             <div className="flex flex-col gap-x-4 w-fit text-center gap-y-2 mt-4">
               <p className="font-bold text-2xl">Excellent</p>
               <div className="flex items-center justify-center text-3xl  text-[#FFD54F] gap-x-2">
@@ -105,9 +105,9 @@ const Services = () => {
                 Based on 500+ Reviews
               </p>
             </div>
-            <HiOutlineArrowCircleLeft className="text-3xl cursor-pointer" />
+            <HiOutlineArrowCircleLeft className="text-3xl cursor-pointer hidden lg:block" />
 
-            <div className="min-h-[288px] w-[410.5px] space-y-3 p-4 border border-[#121212]">
+            <div className="min-h-[288px] w-full max-w-[410.5px] space-y-3 p-4 border border-[#121212]">
               <div className="flex items-center justify-center text-3xl  text-[#FFD54F] gap-x-2">
                 <IoStarSharp />
                 <IoStarSharp />
@@ -140,7 +140,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="min-h-[288px] p-4 w-[410.5px] border border-[#121212]">
+            <div className="min-h-[288px] p-4 w-full max-w-[410.5px] border border-[#121212]">
               <div className="flex items-center justify-center text-3xl  text-[#FFD54F] gap-x-2">
                 <IoStarSharp />
                 <IoStarSharp />
@@ -173,16 +173,16 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <HiOutlineArrowCircleRight className="text-3xl cursor-pointer" />
+            <HiOutlineArrowCircleRight className="text-3xl cursor-pointer hidden lg:block" />
           </div>
         </div>
-        <div className=" mt-20 relative  h-[30rem] w-full">
+        <div className=" mt-20 relative   min-h-[30rem] w-full">
           <Image
             src={imgpace}
             alt=""
             className="absolute object-cover h-[30rem] w-full"
           />
-          <div className="absolute flex flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
+          <div className="absolute text-center flex px-4 flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
             <p className="text-[30px] font-semibold">
               Subscribe to our Newsletter
             </p>
