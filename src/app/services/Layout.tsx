@@ -12,9 +12,8 @@ type Props = {
 const Layout: React.FC<Props> = ({ children }) => {
   const router = useRouter();
   const [bool, setbool] = useState<boolean>(false);
-  const [statecheck, setstatecheck] = useState<string>(
-    localStorage.getItem("state") ?? "services"
-  );
+  const value: string = localStorage.getItem("state") ?? "services";
+  const [statecheck, setstatecheck] = useState<string>(value);
   const [services, setservices] = useState<boolean>(true);
   const [account, setaccount] = useState<boolean>(false);
   const pathname = usePathname();
@@ -33,7 +32,7 @@ const Layout: React.FC<Props> = ({ children }) => {
               href="/services"
               onClick={() => {
                 setstatecheck("services");
-                localStorage.setItem("state", "services");
+            localStorage.setItem("state", "services");
               }}
               className={`${
                 statecheck === "services" && "border-b-2 "

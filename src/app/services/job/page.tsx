@@ -18,7 +18,11 @@ import { IoMdCheckmark } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 import { useAppContext } from "@/Services/context";
 import { useFormik } from "formik";
-import { addressValidation, job_descripValidation } from "@/Services/validation";
+import Link from "next/link";
+import {
+  addressValidation,
+  job_descripValidation,
+} from "@/Services/validation";
 type Props = {};
 
 const Job = (props: Props) => {
@@ -26,27 +30,28 @@ const Job = (props: Props) => {
   const { name, setName } = useAppContext();
   const formik = useFormik({
     initialValues: {
-      job_decription:name. job_decription
+      job_decription: name.job_decription,
     },
     validationSchema: job_descripValidation,
     onSubmit: (values) => {
       setName((prev: object) => ({
         ...prev,
-        job_decription:values.job_decription
+        job_decription: values.job_decription,
       }));
-      router.push("/services/finish")
+      router.push("/services/finish");
     },
   });
-
 
   return (
     <div>
       <div>
         <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto ">
           {" "}
-          <div className="flex items-center  justify-between border-b border-b-[#A3A3A3]  py-3 ">
-            <Image src={logo} alt="logo" className="object-contain" />{" "}
-            <div className="bg-[#FFC107]  w-[50%] rounded-[20px]  h-6">
+          <div className="flex flex-col lg:flex-row items-start  justify-center gap-y-4     lg:items-center  lg:justify-between border-b border-b-[#A3A3A3]  py-3 ">
+            <Link href="/" className="cursor-pointer">
+              <Image src={logo} alt="logo" className="object-contain mt-4" />
+            </Link>
+            <div className="bg-[#FFC107] w-full  lg:w-[50%] rounded-[20px]  h-6">
               <div className="bg-[#0056B3]  rounded-[20px]  w-[56%] h-6"></div>
             </div>
           </div>
@@ -62,18 +67,20 @@ const Job = (props: Props) => {
                   <IoMdCheckmark />
                 </div>
               </div>{" "}
-              <div className="w-full items-center flex justify-between">
+              <div className="w-full items-center flex flex-col lg:flex-row justify-between">
                 <span className="flex items-center gap-x-1   text-[#77777A] font-medium">
                   <IoLocationOutline />
-                 {name.city}, Nigeria
+                  {name.city}, Nigeria
                 </span>
                 <span>Cleaners are available in the area</span>
               </div>
             </div>
             <div className="w-full border border-[#121212] rounded-[9px] p-4 ">
-              <form onSubmit={formik.handleSubmit} className=" flex flex-col gap-x-6">
+              <form
+                onSubmit={formik.handleSubmit}
+                className=" flex flex-col gap-x-6"
+              >
                 <input
-                  type="text"
                   name="job_decription"
                   className={`
              text-sm focus:outline-0
@@ -114,7 +121,7 @@ const Job = (props: Props) => {
             alt=""
             className="absolute object-cover  h-[30rem] w-full"
           />
-          <div className="absolute flex flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
+          <div className="absolute flex px-4 text-center flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
             <p className="text-[30px] font-semibold">
               Subscribe to our Newsletter
             </p>

@@ -34,11 +34,11 @@ const Clean = () => {
     <div>
       <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto ">
         {" "}
-        <div className="flex flex-col lg:flex-row items-center  justify-between border-b border-b-[#A3A3A3]  py-3 ">
+        <div className="flex flex-col lg:flex-row items-start  justify-center gap-y-4     lg:items-center  lg:justify-between border-b border-b-[#A3A3A3]  py-3 ">
         <Link href="/" className="cursor-pointer">
           <Image src={logo} alt="logo" className="object-contain mt-4" />
         </Link>
-          <div className="bg-[#FFC107]  w-[50%] rounded-[20px]  h-6">
+          <div className="bg-[#FFC107] w-full  lg:w-[50%] rounded-[20px]  h-6">
             <div className="bg-[#0056B3]  rounded-[20px]  w-[30%] h-6"></div>
           </div>
         </div>
@@ -126,6 +126,7 @@ const Clean = () => {
         <Footer />
       </div>
     </div>
+    
   );
 };
 

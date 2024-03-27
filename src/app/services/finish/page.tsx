@@ -121,9 +121,7 @@ const Finish = () => {
     },
     publicKey,
     text: "Pay Now",
-    onSuccess: () => {
-      
-    },
+    onSuccess: () => {},
     onClose: () => alert(""),
   };
   return (
@@ -188,7 +186,7 @@ const Finish = () => {
                 onClick={() => {
                   createJob();
                 }}
-                className=" flex gap-x-2  w-[8%] py-2 text-white  bg-[#0056B3] rounded justify-center items-center"
+                className=" flex gap-x-2 w-full lg:w-[8%] py-2 text-white  bg-[#0056B3] rounded justify-center items-center"
               >
                 Finish
               </button>
@@ -205,7 +203,7 @@ const Finish = () => {
             alt=""
             className="absolute object-cover  h-[30rem] w-full"
           />
-          <div className="absolute flex flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
+          <div className="absolute flex px-4 text-center flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
             <p className="text-[30px] font-semibold">
               Subscribe to our Newsletter
             </p>
