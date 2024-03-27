@@ -23,7 +23,7 @@ export default function Navbar() {
             </Link>
             /
             <Link href={"/login/client"} className="  font-bold ">
-              LOG IN
+              Log In
             </Link>
           </div>{" "}
           <button

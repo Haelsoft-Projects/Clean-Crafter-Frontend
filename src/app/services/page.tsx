@@ -87,7 +87,6 @@ const Services = () => {
         </div>
 
         {/* What customers says */}
-
         <div className=" max-w-[1240px] mt-6 mx-auto items-center w-full px-4 lg:px-4 xl:px-0 flex-col lg:flex-row">
           <h1 className="  text-3xl font-bold text-[#0056B3] text-center mt-20 ">
             What Our Customers Say About Us

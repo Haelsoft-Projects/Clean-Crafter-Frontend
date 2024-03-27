@@ -53,7 +53,7 @@ const Reviews = () => {
           they’ll make your home shine.
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-y-2 lg:px-24 mt-8 justify-center place-items-center">
+        <div className="grid lg:grid-cols-2 gap-y-2  mt-8 justify-center max-w-[1204px] mx-auto place-items-center">
           {data.map((item, index) => (
             <div
               key={index}

@@ -209,7 +209,7 @@ const Detail = () => {
           <h2 className="text-[#0056B3] text-xl">We Are Available For:</h2>
           <div className="mt-5 flex flex-wrap w-full justify-between">
             {availability.map((item, index) => (
-              <div className="flex flex-col gap-y-2 mb-8 items-start text-lg">
+              <div key={index} className="flex flex-col gap-y-2 mb-8 items-start text-lg">
                 <div className="flex gap-x-2 ">
                   <span>{index + 1}. </span>
                   <span>{item.available}:</span>
