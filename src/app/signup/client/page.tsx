@@ -14,11 +14,12 @@ import "react-toastify/dist/ReactToastify.css";
 const Clients = () => {
   const router = useRouter();
   const [isloading, setisloading] = useState<boolean>(false);
+  const getEmail=localStorage.getItem("email")
   const formik = useFormik({
     initialValues: {
       firstName:  "",
       lastName: "",
-      email: localStorage.getItem("email") ?? "",
+      email: getEmail ?? "",
       phoneNumber: "",
       nin: "",
       password: "",
