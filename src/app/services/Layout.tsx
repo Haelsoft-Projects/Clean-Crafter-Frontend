@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode } from "react";
+import React, { ReactNode,useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import logo from "../../assets/logo.png";
@@ -12,8 +12,16 @@ type Props = {
 const Layout: React.FC<Props> = ({ children }) => {
   const router = useRouter();
   const [bool, setbool] = useState<boolean>(false);
-  const value: string = localStorage.getItem("state") ?? "services";
-  const [statecheck, setstatecheck] = useState<string>(value);
+
+  const [statecheck, setstatecheck] = useState<string>("");
+useEffect(() => {
+  if (typeof window !== 'undefined' && window.localStorage) {
+    // Access localStorage here
+   setstatecheck(localStorage.getItem("state") ?? "services");
+}
+}, [])
+
+  
   const [services, setservices] = useState<boolean>(true);
   const [account, setaccount] = useState<boolean>(false);
   const pathname = usePathname();
@@ -31,8 +39,15 @@ const Layout: React.FC<Props> = ({ children }) => {
             <Link
               href="/services"
               onClick={() => {
-                setstatecheck("services");
-            localStorage.setItem("state", "services");
+            //     setstatecheck("services");
+            // localStorage.setItem("state", "services");
+            if (typeof window !== 'undefined' && window.localStorage) {
+              localStorage.setItem("state", "services");
+              // Access localStorage here
+             setstatecheck( "services");
+          }
+
+
               }}
               className={`${
                 statecheck === "services" && "border-b-2 "
@@ -45,8 +60,13 @@ const Layout: React.FC<Props> = ({ children }) => {
             <Link
               href="/account"
               onClick={() => {
-                setstatecheck("account");
-                localStorage.setItem("state", "account");
+                // setstatecheck("account");
+                // localStorage.setItem("state", "account");
+                   if (typeof window !== 'undefined' && window.localStorage) {
+                    localStorage.setItem("state", "account");
+                    // Access localStorage here
+                   setstatecheck(localStorage.getItem("state") ?? "account");
+                }
               }}
               className={`${
                 statecheck === "account" && "border-b-2"

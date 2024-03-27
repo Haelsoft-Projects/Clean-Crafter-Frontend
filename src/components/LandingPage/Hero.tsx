@@ -81,7 +81,10 @@ export default function Hero() {
                 className="border px-2 text-base border-[#292450] w-1/2 lg:w-1/3 xl:w-1/3 py-3 bg-white rounded-[10px]"
               />
               <button onClick={()=>{
-                localStorage.setItem("email", email)
+                // localStorage.setItem("email", email)
+                if (typeof window !== 'undefined' && window.localStorage) {
+                  localStorage.setItem("email", email)
+              }
                 router.push("/signup/client")
               }}  className="py-3 px-2 text-base text-white w-1/2  lg:w-1/3 xl:w-1/3  bg-[#0056B3] rounded-[10px]">
                 Let’s go

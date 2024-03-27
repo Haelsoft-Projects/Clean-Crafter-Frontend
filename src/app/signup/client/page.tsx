@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import img from "../../../assets/img.png";
-
 import Input from "@/components/common/Input";
 import { useFormik } from "formik";
 import { signUpValidate } from "@/Service";
@@ -14,12 +13,22 @@ import "react-toastify/dist/ReactToastify.css";
 const Clients = () => {
   const router = useRouter();
   const [isloading, setisloading] = useState<boolean>(false);
-  const getEmail=localStorage.getItem("email")
+  const [emailData, setemailData] = useState<string>("");
+
+  useEffect(() => {
+    
+    // const getEmail=localStorage.getItem("email")
+    // setemailData(getEmail??"");
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const getEmail=localStorage.getItem("email")
+      setemailData(getEmail??"");
+  }
+  }, []);
   const formik = useFormik({
     initialValues: {
       firstName:  "",
       lastName: "",
-      email: getEmail ?? "",
+      email: emailData ?? "",
       phoneNumber: "",
       nin: "",
       password: "",
@@ -27,7 +36,10 @@ const Clients = () => {
     },
     validationSchema: signUpValidate,
     onSubmit: async (values) => {
-      localStorage.removeItem("email")
+      // localStorage.removeItem("email")
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.removeItem("email")
+    }
       setisloading(true);
       axios
         .post("/api/register", {
