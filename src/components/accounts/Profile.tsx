@@ -10,9 +10,16 @@ import { updateUserValidate } from "@/Service";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Input from "../common/Input";
+import secureLocalStorage from "react-secure-storage";
 type Props = {};
 
 const Profile = (props: Props) => {
+  const userstr = secureLocalStorage.getItem("user");
+  console.log("cool", userstr);
+
+  const user: any =
+    typeof window !== "undefined" ? JSON.parse(userstr?.toString() ?? "") : "";
+  console.log(user);
   const [updateAccount, setupdateAccount] = useState(false);
   const router = useRouter();
   const [isloading, setisloading] = useState<boolean>(false);
@@ -63,8 +70,8 @@ const Profile = (props: Props) => {
   return (
     <div>
       {" "}
-      <div className="w-full border border-black  justify-between items-center border-t-0 border-x-0 flex  px-8 py-3">
-        <p className="text-xl font-bold">
+      <div className="w-full border border-black  justify-between items-center border-t-1 lg:border-t-0 border-x-0 flex  px-8 py-3">
+        <p className=" text-lg lg:text-xl font-bold">
           {updateAccount ? (
             <span>Update Account</span>
           ) : (
@@ -82,7 +89,7 @@ const Profile = (props: Props) => {
           </button>
         )}
       </div>
-      <div className="flex items-center mt-8  w-full px-10 ">
+      <div className="flex items-center mt-8  w-full lg:px-10  ">
         {updateAccount ? (
           <div className="flex justify-center gap-x-10 ">
             <VscAccount className="text-[8rem]" />
@@ -196,26 +203,26 @@ const Profile = (props: Props) => {
             </div>
           </div>
         ) : (
-          <div className="flex justify-center gap-x-10 ">
-            <VscAccount className="text-[8rem]" />
+          <div className="flex justify-center gap-y-4 mb-4 gap-x-10 w-full lg:flex-row flex-col items-center  ">
+            <VscAccount className=" text-[4rem] lg:text-[8rem] " />
             <div className="flex flex-col items-start gap-y-8">
-              <div className="flex gap-x-2">
+              <div className="flex gap-x-2 items-center">
                 <BsFillPersonFill className="text-xl" />
-                <span className="text-[20px] font-medium">Chidera Dara</span>
+                <span className="text-[20px] font-medium">{user.first_name}  {user.last_name}</span>
               </div>
-              <div className="flex items-center gap-x-2">
+              <div className="flex items-center gap-x-2 ">
                 <FaEnvelope className="text-xl" />
                 <span className="text-[20px] font-medium">
-                  chidera dara@gmail.com
+                 {user.email}
                 </span>
               </div>
               <div className="flex items-center gap-x-4">
                 <MdLocalPhone className="text-xl" />
                 <span className="text-[20px] font-medium">
-                  +234 12 3456 7890
+                {user.phone_number}
                 </span>
               </div>
-              <button className="px-2 py-2 rounded-lg border  border-[#FFC107]">
+              <button className="px-2 py-2 rounded-lg border mx-auto lg:mx-0 border-[#FFC107]">
                 Logout
               </button>
             </div>
