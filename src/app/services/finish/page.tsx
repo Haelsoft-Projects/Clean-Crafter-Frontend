@@ -58,8 +58,24 @@ const Finish = () => {
   }
 
   const userstr = secureLocalStorage.getItem("user");
-  console.log(userstr);
-  const user: User = JSON.parse(userstr?.toString()??"") ;
+  console.log("cool", userstr);
+
+  const user: any =
+    typeof window !== "undefined" ? JSON.parse(userstr?.toString() ?? "") : "";
+  console.log(user);
+
+  const componentProps = {
+    email: user.email,
+    amount: 500000,
+    custom_fields: {
+      name: user.first_name + " " + user.last_name,
+      phone: user.phone_number,
+    },
+    publicKey,
+    text: "Pay Now",
+    onSuccess: () => {},
+    onClose: () => alert(""),
+  };
 
   // ??{
   //     email: "",
@@ -114,18 +130,7 @@ const Finish = () => {
         setisloading(false);
       });
   };
-  const componentProps = {
-    email: user.email,
-    amount: 500000,
-    custom_fields: {
-      name: user.first_name + " " + user.last_name,
-      phone: user.phone_number,
-    },
-    publicKey,
-    text: "Pay Now",
-    onSuccess: () => {},
-    onClose: () => alert(""),
-  };
+
   return (
     <div>
       <div>
