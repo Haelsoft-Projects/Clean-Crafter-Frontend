@@ -21,7 +21,7 @@ const Account = (props: Props) => {
                 onClick={() => {
                   setcheckstate("profile");
                 }}
-                className={`w-full text-center text-sm lg:text-sm lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer rounded-tl-[0.5rem] ${
+                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer rounded-tl-[0.5rem] ${
                   checkstate === "profile" && " bg-[#FFC107]   text-white"
                 }`}
               >
@@ -31,7 +31,7 @@ const Account = (props: Props) => {
                 onClick={() => {
                   setcheckstate("password");
                 }}
-                className={`w-full text-center text-sm lg:text-sm lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
+                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
                   checkstate === "password" && " bg-[#FFC107]   text-white"
                 }`}
               >
@@ -41,7 +41,7 @@ const Account = (props: Props) => {
                 onClick={() => {
                   setcheckstate("notification");
                 }}
-                className={`w-full text-center text-sm lg:text-sm lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
+                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
                   checkstate === "notification" && " bg-[#FFC107]   text-white"
                 }`}
               >
@@ -51,7 +51,7 @@ const Account = (props: Props) => {
                 onClick={() => {
                   setcheckstate("history");
                 }}
-                className={`w-full text-center text-sm lg:text-sm lg:pl-4 rounded-tr-[0.5rem] lg:rounded-tr-0   justify-center h-[61px] flex items-center cursor-pointer ${
+                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 rounded-tr-[0.5rem] lg:rounded-tr-0   justify-center h-[61px] flex items-center cursor-pointer ${
                   checkstate === "history" && " bg-[#FFC107]   text-white"
                 }`}
               >
@@ -61,7 +61,7 @@ const Account = (props: Props) => {
                 onClick={() => {
                   setcheckstate("account");
                 }}
-                className={`w-full text-center text-sm lg:text-sm lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
+                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
                   checkstate === "account" && " bg-[#FFC107]   text-white"
                 }`}
               >
