@@ -59,8 +59,8 @@ const Finish = () => {
 
   const userstr = secureLocalStorage.getItem("user");
   console.log(userstr);
-  
-  const user: User = JSON?.parse(userstr?.toString() ?? "")??"";
+  const user: User = JSON.parse(userstr?.toString()??"") ;
+
   // ??{
   //     email: "",
   //     first_name: "",

@@ -12,23 +12,23 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Clients = () => {
   const router = useRouter();
-  const [isloading, setisloading] = useState<boolean>(false);
+  const [isloading, setisloading] = useState<boolean>(false); 
   const [emailData, setemailData] = useState<string>("");
 
-  useEffect(() => {
+ 
     
     // const getEmail=localStorage.getItem("email")
-    // setemailData(getEmail??"");
+    // setemailData(getEmail??""); 
+   let getEmail="";
     if (typeof window !== 'undefined' && window.localStorage) {
-      const getEmail=localStorage.getItem("email")
-      setemailData(getEmail??"");
+      getEmail=localStorage.getItem("email")??""
   }
-  }, []);
+
   const formik = useFormik({
     initialValues: {
       firstName:  "",
       lastName: "",
-      email: emailData ?? "",
+      email: getEmail ?? "",
       phoneNumber: "",
       nin: "",
       password: "",
