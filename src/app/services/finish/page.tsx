@@ -63,17 +63,21 @@ const Finish = () => {
   const user: any =
     typeof window !== "undefined" ? JSON.parse(userstr?.toString() ?? "") : "";
   console.log(user);
-
+  const [amountData, setamountData] = useState<number>(500);
   const componentProps = {
     email: user.email,
-    amount: 500000,
+    amount: amountData * 100,
     custom_fields: {
       name: user.first_name + " " + user.last_name,
       phone: user.phone_number,
     },
     publicKey,
     text: "Pay Now",
-    onSuccess: () => {},
+    onSuccess: (reference:any) => {
+      // console.log(reference.reference);
+      
+      createJob(reference.reference);
+    },
     onClose: () => alert(""),
   };
 
@@ -91,17 +95,20 @@ const Finish = () => {
   //   // const email =user?.email??""
   //   console.log("user", user.email);
 
-  const createJob = () => {
+  const createJob = async(reference: string) => {
     setisloading(true);
     axios
       .post(
-        `${baseURL}/api/job`,
+        `${baseURL}/api/payment`,
         {
           job_type: name.type,
           city: name.city,
           street_adddress: name.street,
           job_description: name.job_decription,
           time: currentDate,
+          paystack_reference: reference,
+          amount: amountData,
+          status: "successful",
           completed: false,
         },
         {
@@ -188,22 +195,19 @@ const Finish = () => {
 
             <div className="w-full flex flex-col justify-end mb-10 items-end gap-y-3 mt-4 rounded-lg gap-x-4">
               <p className="text-end text-xl">$500</p>
-              <button
-                type="button"
-                onClick={() => {
-                  createJob();
-                }}
+              <PaystackButton
+                {...componentProps}
                 className=" flex gap-x-2 w-full lg:w-[8%] py-2 text-white  bg-[#0056B3] rounded justify-center items-center"
               >
                 Finish
-              </button>
+              </PaystackButton>
             </div>
           </div>
         </div>
-        <PaystackButton
+        {/* <PaystackButton
           className="paystack-button bg-red-500 px-10 py-4 text-white"
-          {...componentProps}
-        />
+         
+        /> */}
         <div className=" mt-20 relative   h-[30rem] w-full">
           <Image
             src={imgpace}

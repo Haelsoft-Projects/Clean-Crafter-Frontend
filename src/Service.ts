@@ -2,6 +2,7 @@ import * as yup from "yup";
 import axios from "axios";
 axios.defaults.baseURL = "https://real-vn5y.onrender.com";
 export const baseURL: string = "https://real-vn5y.onrender.com";
+
 import img1 from "@/assets/servicesimages/image1.png";
 import img2 from "@/assets/servicesimages/image2.png";
 import img3 from "@/assets/servicesimages/image3.png";
