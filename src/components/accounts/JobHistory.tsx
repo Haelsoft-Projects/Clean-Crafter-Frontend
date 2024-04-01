@@ -64,7 +64,7 @@ const JobHistory = () => {
         </div>
 
         {tableData.length === 0 ? (
-          <div className="text-3xl text-center  w-full mt-10">
+          <div className="lg:text-3xl text-center  w-full mt-10">
             No Job Created
           </div>
         ) : (

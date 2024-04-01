@@ -22,7 +22,7 @@ const Account = (props: Props) => {
                 onClick={() => {
                   setcheckstate("profile");
                 }}
-                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer rounded-tl-[0.5rem] ${
+                className={`w-full text-center lg:text-start lg:justify-start text-xs lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer rounded-tl-[0.5rem] ${
                   checkstate === "profile" && " bg-[#FFC107]   text-white"
                 }`}
               >
@@ -32,7 +32,7 @@ const Account = (props: Props) => {
                 onClick={() => {
                   setcheckstate("password");
                 }}
-                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
+                className={`w-full text-center lg:text-start lg:justify-start text-xs lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
                   checkstate === "password" && " bg-[#FFC107]   text-white"
                 }`}
               >
@@ -42,17 +42,17 @@ const Account = (props: Props) => {
                 onClick={() => {
                   setcheckstate("jobs");
                 }}
-                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
+                className={`w-full text-center lg:text-start lg:justify-start text-xs lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
                   checkstate === "jobs" && " bg-[#FFC107]   text-white"
                 }`}
               >
-                Job History
+                Jobs
               </div>
               <div
                 onClick={() => {
                   setcheckstate("transactions");
                 }}
-                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 rounded-tr-[0.5rem] lg:rounded-tr-none lg:rounded-bl-[0.5rem]   justify-center h-[61px] flex items-center cursor-pointer ${
+                className={`w-full text-center lg:text-start lg:justify-start text-xs lg:text-lg lg:pl-4 rounded-tr-[0.5rem] lg:rounded-tr-none lg:rounded-bl-[0.5rem]   justify-center h-[61px] flex items-center cursor-pointer ${
                   checkstate === "transactions" && " bg-[#FFC107]   text-white"
                 }`}
               >
@@ -62,7 +62,7 @@ const Account = (props: Props) => {
                 onClick={() => {
                   setcheckstate("account");
                 }}
-                className={`w-full text-center lg:text-start lg:justify-start text-sm lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
+                className={`w-full text-center lg:text-start lg:justify-start text-xs lg:text-lg lg:pl-4 justify-center h-[61px] flex items-center cursor-pointer ${
                   checkstate === "account" && " bg-[#FFC107]   text-white"
                 }`}
               >

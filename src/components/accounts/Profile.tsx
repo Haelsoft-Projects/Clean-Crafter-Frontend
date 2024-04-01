@@ -218,17 +218,17 @@ const Profile = (props: Props) => {
             <div className="flex flex-col items-start gap-y-8">
               <div className="flex gap-x-2 items-center">
                 <BsFillPersonFill className="text-xl" />
-                <span className="text-[20px] font-medium">
+                <span className="text-[15px] lg:text-[20px] font-medium">
                   {user.first_name} {user.last_name}
                 </span>
               </div>
               <div className="flex items-center gap-x-2 ">
                 <FaEnvelope className="text-xl" />
-                <span className="text-[20px] font-medium">{user.email}</span>
+                <span className="text-[15px] lg:text-[20px] font-medium">{user.email}</span>
               </div>
               <div className="flex items-center gap-x-4">
                 <MdLocalPhone className="text-xl" />
-                <span className="text-[20px] font-medium">
+                <span className="text-[15px] lg:text-[20px] font-medium">
                   {user.phone_number}
                 </span>
               </div>
