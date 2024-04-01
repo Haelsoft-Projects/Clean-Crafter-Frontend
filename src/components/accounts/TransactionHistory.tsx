@@ -89,7 +89,7 @@ const TransactionHistory = (props: Props) => {
                   <tbody>
                     {tableData.map((item: any, index) => {
                       return (
-                        <tr className="bg-white border-b duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
+                        <tr key={index} className="bg-white border-b duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
                           <td className="py-4 px-6">{index + 1}</td>
                           <td className="py-4 px-6">
                             {item.paystack_reference}
