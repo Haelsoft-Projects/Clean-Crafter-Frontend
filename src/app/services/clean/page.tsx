@@ -42,7 +42,7 @@ const Clean = () => {
             <div className="bg-[#0056B3]  rounded-[20px]  w-[30%] h-6"></div>
           </div>
         </div>
-        <p className="text-[#6d7c8b] font-bold text-[26px] mt-8">{name.type}</p>
+        <p className="text-[#0056B3] font-bold text-[26px] mt-8">{name.type}</p>
         <div className="rounded-[9px] border border-[#A3A3A3] w-full px-4  space-y-4 mt-6 py-4">
           <p className=" font-medium">Job Location</p>
           <form

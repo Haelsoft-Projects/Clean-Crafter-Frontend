@@ -27,7 +27,7 @@ export const signUpValidate = yup.object().shape({
     .string()
     .required("Please fill up this field")
     .matches(ninRegEx, "Nin is not valid")
-    .max(16, "too long"),
+    .max(12, "too long"),
   password: yup
     .string()
     .min(8, "password must containat least 8 characters ")
@@ -81,14 +81,17 @@ export const loginValidate = yup.object().shape({
   password: yup.string().required("Please fill up this field"),
 });
 
-
-
 export const updateUserValidate = yup.object().shape({
-  email: yup
+  firstName: yup.string(),
+  lastName: yup.string(),
+  phoneNumber: yup
     .string()
-    .email("please enter a valid email")
-    .required("Please fill up this field"),
-  password: yup.string().required("Please fill up this field"),
+    .matches(phoneRegExp, "Phone number is not valid")
+    .max(15, "too long"),
+  nin: yup
+    .string()
+    .matches(ninRegEx, "Nin is not valid")
+    .max(12, "too long"),
 });
 
 type service = {

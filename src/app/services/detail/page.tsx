@@ -74,14 +74,21 @@ const Detail = () => {
             <h1 className="font-bold text-2xl xl:text-[36px]">
               {searchParams.get("name")} Services
             </h1>
-            <div className="flex gap-x-3 w-full items-center  lg:flex-row justify-center">
-              <input
+            <div className="flex  gap-x-3 w-full items-center  lg:flex-row justify-center">
+              <select name="" id="" value={city}
+                onChange={(e) => setcity(e.target.value)}
+                className="placeholder:text-[#FFFFFF] bg-white text-black placeholder:font-semibold placeholder:text-center placeholder:text-[13px] px-4 lg:w-1/6 bg-transparent h-[51px] w-full  rounded-[4px] outline-none   border-2 border-[#FFD54F]"
+              >
+                <option value="Lagos">Lagos</option>
+                <option value=""></option>
+              </select>
+              {/* <input
                 type="text"
                 placeholder="Enter Your City"
                 value={city}
                 onChange={(e) => setcity(e.target.value)}
                 className="placeholder:text-[#FFFFFF] placeholder:font-semibold placeholder:text-center placeholder:text-[13px] px-4 lg:w-1/6 bg-transparent h-[51px]  rounded-[4px] outline-none   border-2 border-[#FFD54F]"
-              />
+              /> */}
               <button
                 onClick={() => {
                   if (city.length !== 0) {
@@ -335,7 +342,7 @@ const Detail = () => {
             CleanCrafters can help arrange a cleaner for you. We&apos;ve already
             conquered all these major cities and urban areas
           </p>
-          <div className="flex items-center w-full px-4 justify-between lg:justify-normal mx-auto text-center lg:text-start lg:gap-x-9  ">
+          <div className="flex items-center w-full px-4 justify-between lg:justify-normal mx-auto text-center lg:text-start lg:gap-x-9 lg:flex-row flex-col ">
             <div className="lg:border-r  lg:border-r-[#000000] pr-9 text-center">
               Lagos
             </div>

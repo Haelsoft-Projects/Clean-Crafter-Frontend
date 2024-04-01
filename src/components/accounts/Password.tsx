@@ -12,9 +12,10 @@ const Password = (props: Props) => {
             Edit
           </button>
         </div>
-        <div className="flex items-center mt-10 font-bold text-[20px]  w-full px-10 ">
+        <div className="mt-10 font-bold text-[20px] text-center  w-full px-10 ">
           Current Password: *****
         </div>
+        <div className="text-base text-center mt-4">Contact CleanCrafters Team to change Password</div>
       </div>
     </div>
   );
