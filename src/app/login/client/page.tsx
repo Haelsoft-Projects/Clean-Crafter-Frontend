@@ -14,7 +14,9 @@ import secureLocalStorage from "react-secure-storage";
 
 const Login = () => {
   const router = useRouter();
-  localStorage.removeItem("state");
+  if (typeof window !== 'undefined' && window.localStorage) {
+  localStorage.removeItem("state");}
+
   const [isloading, setisloading] = useState<boolean>(false);
   const formik = useFormik({
     initialValues: {
