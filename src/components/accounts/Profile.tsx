@@ -55,7 +55,7 @@ const Profile = (props: Props) => {
           console.log(res);
           setisloading(false);
           setupdateAccount(!updateAccount);
-          toast.success("Updated account successfully, login")
+          toast.success("Updated account successfully, login");
           router.replace("/login/client");
         })
         .catch((e) => {
@@ -97,15 +97,15 @@ const Profile = (props: Props) => {
       </div>
       <div className="flex items-center mt-8  w-full  lg:px-10  ">
         {updateAccount ? (
-          <div className="flex justify-center gap-x-10 w-full gap-y-4  flex-col lg:flex-row items-center ">
+          <div className="flex justify-center  gap-x-10 w-full gap-y-4 items-center lg:items-start  flex-col lg:flex-row  ">
             <VscAccount className="text-[8rem]" />
             <div className="">
               <form
                 onSubmit={formik.handleSubmit}
-                className="grid grid-cols-2 max-w-[435px] lg:border px-2 lg:px-4  gap-x-4 gap-y-4 mt-5 w-full  2xl:max-w-[600px]"
+                className="grid grid-cols-2 max-w-[435px]  lg:border  py-8 mb-4 border-[#969595] px-2 lg:px-4  gap-x-4 gap-y-4 mt-5 w-full  2xl:max-w-[600px]"
               >
                 <div className="mb-3">
-                  <label className="float-left  text-sm font-medium  mb-2">
+                  <label className="float-left  text-sm font-semibold  mb-2">
                     First Name
                   </label>
                   <input
@@ -129,7 +129,7 @@ const Profile = (props: Props) => {
                   )}
                 </div>
                 <div className="mb-3 ">
-                  <label className="float-left  text-sm font-medium  mb-2">
+                  <label className="float-left  text-sm font-semibold  mb-2">
                     Last Name
                   </label>
                   <input
@@ -153,7 +153,7 @@ const Profile = (props: Props) => {
                   )}
                 </div>
                 <div className="mb-3 ">
-                  <label className="float-left text-gray-700 text-sm font-medium  mb-2">
+                  <label className="float-left text-gray-700 text-sm font-semibold  mb-2">
                     Phone Number
                   </label>
                   <input
@@ -177,7 +177,7 @@ const Profile = (props: Props) => {
                   )}
                 </div>
                 <div className="mb-3 ">
-                  <label className="float-left text-gray-700 text-sm font-medium  mb-2">
+                  <label className="float-left text-gray-700 text-sm font-semibold  mb-2">
                     NIN
                   </label>
                   <input
@@ -200,22 +200,33 @@ const Profile = (props: Props) => {
                     </p>
                   )}
                 </div>
-                <button
-                  type="submit"
-                  // onClick={() => {
-                  //   setupdateAccount(!updateAccount);
-                  // }}
-                  className="px-10 py-2 mb-4 rounded-lg border col-span-2 w-fit mx-auto  border-[#0056B3]"
-                >
-                  Edit
-                </button>
+                <div className="flex items-center mb-4   w-full col-span-2   lg:px-20">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setupdateAccount(!updateAccount);
+                    }}
+                    className="w-full  py-2  max-w-[82px] font-medium rounded-lg border col-span-2  mx-auto  border-[#0056B3]"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    // onClick={() => {
+                    //   setupdateAccount(!updateAccount);
+                    // }}
+                    className="w-full  py-2  max-w-[82px] font-medium text-white rounded-lg border col-span-2  mx-auto  bg-[#0056B3]"
+                  >
+                    Save
+                  </button>
+                </div>
               </form>
             </div>
           </div>
         ) : (
-          <div className="flex justify-center gap-y-4 mb-4 gap-x-10 w-full lg:flex-row flex-col items-center  ">
+          <div className="flex justify-center gap-x-10 w-full gap-y-4 items-center lg:items-start  flex-col lg:flex-row mb-4 lg:mb-0  ">
             <VscAccount className=" text-[4rem] lg:text-[8rem] " />
-            <div className="flex flex-col items-start gap-y-8">
+            <div className="lg:flex flex-col grid justify-center lg:justify-start lg:items-start gap-y-8 max-w-[435px] w-full">
               <div className="flex gap-x-2 items-center">
                 <BsFillPersonFill className="text-xl" />
                 <span className="text-[15px] lg:text-[20px] font-medium">
@@ -224,7 +235,9 @@ const Profile = (props: Props) => {
               </div>
               <div className="flex items-center gap-x-2 ">
                 <FaEnvelope className="text-xl" />
-                <span className="text-[15px] lg:text-[20px] font-medium">{user.email}</span>
+                <span className="text-[15px] lg:text-[20px] font-medium">
+                  {user.email}
+                </span>
               </div>
               <div className="flex items-center gap-x-4">
                 <MdLocalPhone className="text-xl" />
@@ -236,7 +249,7 @@ const Profile = (props: Props) => {
                 onClick={() => {
                   secureLocalStorage.removeItem("user");
                   secureLocalStorage.removeItem("token");
-                  toast.success("Logged Out")
+                  toast.success("Logged Out");
                   router.replace("/login/client");
                 }}
                 className="px-2 py-2 rounded-lg border mx-auto lg:mx-0 border-[#0056B3]"

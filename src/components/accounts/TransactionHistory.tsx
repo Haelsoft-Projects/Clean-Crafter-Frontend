@@ -87,7 +87,7 @@ const TransactionHistory = (props: Props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {tableData.map((item: any, index) => {
+                    {tableData.slice().reverse().map((item: any, index) => {
                       return (
                         <tr key={index} className="bg-white border-b duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
                           <td className="py-4 px-6">{index + 1}</td>

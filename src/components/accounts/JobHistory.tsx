@@ -83,18 +83,18 @@ const JobHistory = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {tableData.map((item: any, index) => {
+                  {tableData.slice().reverse().map((item: any, index) => {
                   
                   
                     return (
                       <tr  key={index}className="bg-white border-b duration-300 ease-in-out hover:bg-gray-100 cursor-pointer">
-                        <td className="py-4 px-6">{index + 1}</td>
-                        <td className="py-4 px-6">{item.job_type}</td>
-                        <td className="py-4 px-6">{item.city}</td>
-                        <td className="py-4 px-6">{item.street_adddress}</td>
-                        <td className="py-4 px-6">{item.job_description}</td>
-                        <td className="py-4 px-1">{formatDate(item.time)}</td>
-                        <td className="py-4 px-6">
+                        <td className="py-6 px-6">{index + 1}</td>
+                        <td className="py-6 pl-2">{item.job_type}</td>
+                        <td className="py-6 px-6">{item.city}</td>
+                        <td className="py-6 px-6">{item.street_adddress}</td>
+                        <td className="py-6 px-6">{item.job_description}</td>
+                        <td className="py-6 pl-2">{formatDate(item.time)}</td>
+                        <td className="py-6 px-6">
                           {item.completed ? "True" : "False"}
                         </td>
                       </tr>
