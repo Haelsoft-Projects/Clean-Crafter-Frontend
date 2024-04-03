@@ -72,7 +72,7 @@ export default function Navbar() {
             }}
             className={`${
               services && "border-b-2 "
-            } border-b-[#0056B3] cursor-pointer`}
+            } border-b-white cursor-pointer`}
           >
             {" "}
             Services
@@ -86,7 +86,7 @@ export default function Navbar() {
             }}
             className={`${
               account && "border-b-2"
-            } border-b-[#0056B3] cursor-pointer`}
+            } border-b-white cursor-pointer`}
           >
             {" "}
             My Account

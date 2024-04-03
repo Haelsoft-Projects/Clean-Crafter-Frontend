@@ -18,9 +18,11 @@ import {  newData } from "@/Service";
 import Link from "next/link";
 import Layout from "./Layout";
 import NewsLetter from "@/components/common/NewsLetter";
+import AppFooter from "@/components/common/AppFooter";
 const Services = () => {
   const router = useRouter();
   const { name, setName } = useAppContext();
+
   return (
     <div>
       <Layout>
@@ -182,7 +184,7 @@ const Services = () => {
 
         <div className="mt-20">
           {" "}
-          <Footer />
+          <AppFooter />
         </div>
       </Layout>
     </div>

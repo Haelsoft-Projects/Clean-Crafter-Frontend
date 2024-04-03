@@ -38,25 +38,25 @@ export default function Navbar() {
       <div className="  top-0  px-2  sm:px-10 md:px-8   w-full  lg:hidden   py-4 flex  z-[70] rounded-b-sm justify-between items-center">
         <Link href="/">
           {" "}
-          <Image src={logo} alt="" className="md:w-40 w-24 object-contain " />
+          <Image src={logo} alt="" className="md:w-40 w-[8rem] object-contain " />
         </Link>
         <span className="flex  items-center gap-x-2">
           <button
             onClick={() => router.push("/signup/cleaners")}
-            className="bg-[#0056B3] text-sm text-white rounded-[10px] font-bold  px-3 py-2"
+            className="bg-[#0056B3] text-xs text-white rounded-[10px] font-bold  px-3 py-2"
           >
             Register as a Cleaner
           </button>
 
           <HiMenu
-            className="text-black font-bold text-xl  sm:text-3xl md:text-4xl"
+            className="text-black font-bold text-xl cursor-pointer  sm:text-3xl md:text-4xl"
             onClick={() => setbool(!bool)}
           />
         </span>
       </div>
       {bool && (
         <div
-          className="h-[12rem] md:h-[14rem] lg:hidden w-full flex flex-col shadow text-base rounded-b-xl items-center justify-evenly text-white  bg-[#0056B3] md:text-xl  lg:text-base
+          className="min-h-[8rem] md:min-h-[12rem] lg:hidden w-full flex flex-col shadow text-base rounded-b-xl items-center justify-evenly text-white  bg-[#0056B3] md:text-xl  lg:text-base
          text-light z-50 fixed top-[4rem] md:top-[11.2rem] "
         >
           <Link
@@ -67,7 +67,7 @@ export default function Navbar() {
             }}
           >
             {" "}
-            LOG IN
+           Login
           </Link>
           <Link href={"/signup/client"} className=" font-bold  ">
             Sign Up{" "}

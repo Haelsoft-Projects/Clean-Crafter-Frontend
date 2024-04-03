@@ -10,8 +10,8 @@ export default function Reasons() {
           <p className="text-black text-[35px] lg:text-[46px] text-center ">
             Reasons To Book CleanCrafter
           </p>
-          <div className="flex flex-col  px-4  sm:px-10 md:px-8 gap-y-10 lg:flex-row mt-10 lg:mt-20 justify-between items-center ">
-            <div className="h-[346px] w-full lg:w-[376px] flex flex-col items-center justify-center gap-y-4 bg-white p-5 rounded-lg ">
+          <div className="flex flex-col  px-4  sm:px-10 gap-x-4 xl:gap-x-0 md:px-8 gap-y-10 lg:flex-row mt-10 lg:mt-20 justify-between items-center ">
+            <div className="h-[346px] w-full lg:max-w-[376px] flex flex-col items-center justify-center gap-y-4 bg-white p-5 rounded-lg ">
               <Image src={img1} alt="paper" />
               <p className="text-[18px] font-medium">
                 Liability Insured Cleaners
@@ -22,7 +22,7 @@ export default function Reasons() {
                 self-employed and liability insured.{" "}
               </p>
             </div>
-            <div className="h-[346px] w-full lg:w-[376px] flex flex-col items-center  justify-center gap-y-6 bg-white p-5 rounded-lg ">
+            <div className="h-[346px] w-full lg:max-w-[376px] flex flex-col items-center  justify-center gap-y-6 bg-white p-5 rounded-lg ">
               <Image src={img2} alt="paper" />
               <p className="text-[18px] font-medium">
                 Reliable Customer Service
@@ -33,7 +33,7 @@ export default function Reasons() {
                 self-employed and liability insured.
               </p>
             </div>{" "}
-            <div className="h-[346px] w-full lg:w-[376px] flex flex-col items-center  justify-center gap-y-6 bg-white p-5 rounded-lg ">
+            <div className="h-[346px] w-full lg:max-w-[376px] flex flex-col items-center  justify-center gap-y-6 bg-white p-5 rounded-lg ">
               <Image src={img3} alt="paper" />
               <p className="text-[18px] font-medium">
                 A Price to Suit Your Needs

@@ -19,6 +19,7 @@ import { useAppContext } from "@/Services/context";
 import { toast } from "react-toastify";
 import Layout from "../Layout";
 import NewsLetter from "@/components/common/NewsLetter";
+import AppFooter from "@/components/common/AppFooter";
 
 const Detail = () => {
   const router = useRouter();
@@ -392,7 +393,7 @@ const Detail = () => {
           <NewsLetter />
         </div>
         <div className="w-full mt-20">
-          <Footer />
+          <AppFooter />
         </div>
       </Layout>
     </div>

@@ -24,6 +24,7 @@ import {
   job_descripValidation,
 } from "@/Services/validation";
 import NewsLetter from "@/components/common/NewsLetter";
+import AppFooter from "@/components/common/AppFooter";
 type Props = {};
 
 const Job = (props: Props) => {
@@ -125,7 +126,7 @@ const Job = (props: Props) => {
             <NewsLetter />
         </div>
         <div className="w-full mt-20">
-          <Footer />
+          <AppFooter   />
         </div>
       </div>
     </div>

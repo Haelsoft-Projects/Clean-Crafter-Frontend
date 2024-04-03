@@ -12,6 +12,7 @@ import { useFormik } from "formik";
 import { useAppContext } from "@/Services/context";
 import Link from "next/link";
 import NewsLetter from "@/components/common/NewsLetter";
+import AppFooter from "@/components/common/AppFooter";
 const Clean = () => {
   const router = useRouter();
   const { name, setName } = useAppContext();
@@ -104,7 +105,7 @@ const Clean = () => {
           <NewsLetter />
       </div>
       <div className="w-full mt-20">
-        <Footer />
+        <AppFooter />
       </div>
     </div>
     

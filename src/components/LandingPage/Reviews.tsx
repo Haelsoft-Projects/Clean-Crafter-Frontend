@@ -41,11 +41,11 @@ const Reviews = () => {
   ];
   return (
     <div className="bg-[#F3F3F3]  lg:mt-36  mt-20">
-      <div className="max-w-[1240px] w-full  mx-auto py-10 px-4  sm:px-10 md:px-8    text-center mt-20">
+      <div className="max-w-[1240px] w-full  mx-auto py-10 px-4  sm:px-10 md:px-8   lg:px-4 text-center mt-20">
         <p className="font-medium text-2xl lg:text-[46px] text-center">
           Nigeria’s leading marketplace for cleaning services
         </p>
-        <p className="text-center text-sm lg:text-xl lg:mt-10 mt-8 mx-auto lg:w-[994.31px]">
+        <p className="text-center text-sm lg:text-xl lg:mt-10 mt-8 mx-auto lg:max-w-[994.31px]">
           Whatever it is you need: a regular clean, a deep scrub of your oven or
           a one off deep clean - The cleaners registered on the Helpling
           platform offer every cleaning service you could need. After your
@@ -53,11 +53,11 @@ const Reviews = () => {
           they’ll make your home shine.
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-y-2  mt-8 justify-center max-w-[1204px] mx-auto place-items-center">
+        <div className="grid lg:grid-cols-2 gap-y-2 lg:gap-x-10 xl:gap-x-10 mt-8 justify-center max-w-[1204px] mx-auto place-items-center">
           {data.map((item, index) => (
             <div
               key={index}
-              className="flex min-h-[195px] mt-8  w-full lg:w-[500px] border border-[#DDD] shadow-[0_0_8px_4px_#EDEDED]"
+              className="flex min-h-[195px] mt-8  w-full lg:max-w-[500px] border border-[#DDD] shadow-[0_0_8px_4px_#EDEDED]"
             >
               <div className="w-2/4 py-4 bg-[#EEEE] flex-col flex  px-3 text-start">
                 {" "}
@@ -86,9 +86,9 @@ const Reviews = () => {
           ))}
         </div>
 
-        <button className="w-full mt-20 lg:w-[190px] rounded-[5px] h-[60px] bg-[#0056B3] text-white">
+        {/* <button className="w-full mt-20 lg:w-[190px] rounded-[5px] h-[60px] bg-[#0056B3] text-white">
           All reviews
-        </button>
+        </button> */}
       </div>
     </div>
   );

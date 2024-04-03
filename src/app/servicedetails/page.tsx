@@ -19,6 +19,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useAppContext } from "@/Services/context";
 import { toast } from "react-toastify";
 import NewsLetter from "@/components/common/NewsLetter";
+import AppFooter from "@/components/common/AppFooter";
 
 type Props = {};
 
@@ -329,7 +330,7 @@ const ServiceDetail = (props: Props) => {
 
     
       <div className="w-full mt-20">
-        <Footer />
+        <AppFooter />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import About from "@/components/LandingPage/About";
 import Hero from "@/components/LandingPage/Hero";
@@ -17,14 +17,22 @@ import NewsLetter from "@/components/common/NewsLetter";
 
 export default function Home() {
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.localStorage) {
-    localStorage.removeItem("email")
-  }
-  }, [])
-  
+    if (typeof window !== "undefined" && window.localStorage) {
+      localStorage.removeItem("email");
+    }
+  }, []);
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
+
   return (
     <>
-
       <div className="">
         <Navbar />
         <Hero />
@@ -35,7 +43,7 @@ export default function Home() {
         <Services />
         <Reviews />
         <Faqs />
-  
+
         <NewsLetter />
         <Footer />
       </div>

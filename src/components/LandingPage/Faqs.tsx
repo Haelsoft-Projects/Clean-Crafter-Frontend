@@ -82,7 +82,7 @@ const Faqs = () => {
                   <div
                     className={
                       activeIndex === index
-                        ? "text-lg top-[100%]  duration-300 ease-in-out  text-left mt-10 leading-6 "
+                        ? "text-lg text-justify mt-10 leading-6 "
                         : " "
                     }
                   >

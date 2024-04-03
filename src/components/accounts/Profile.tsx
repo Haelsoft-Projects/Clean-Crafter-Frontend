@@ -102,7 +102,7 @@ const Profile = (props: Props) => {
             <div className="">
               <form
                 onSubmit={formik.handleSubmit}
-                className="grid grid-cols-2 max-w-[435px] gap-x-4 gap-y-4 mt-5 w-full  2xl:max-w-[600px]"
+                className="grid grid-cols-2 max-w-[435px] lg:border px-2 lg:px-4  gap-x-4 gap-y-4 mt-5 w-full  2xl:max-w-[600px]"
               >
                 <div className="mb-3">
                   <label className="float-left  text-sm font-medium  mb-2">

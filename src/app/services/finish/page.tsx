@@ -26,6 +26,7 @@ import secureLocalStorage from "react-secure-storage";
 import { baseURL } from "@/Service";
 import Link from "next/link";
 import NewsLetter from "@/components/common/NewsLetter";
+import AppFooter from "@/components/common/AppFooter";
 const Finish = () => {
   const router = useRouter();
   const publicKey = "pk_test_a6b12672f6f5e47d9349a0f015d87d7e71c1dd05";
@@ -213,7 +214,7 @@ const Finish = () => {
       <NewsLetter/>
 
         <div className="w-full mt-20">
-          <Footer />
+          <AppFooter />
         </div>
       </div>
     </div>
