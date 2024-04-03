@@ -40,9 +40,9 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex flex-col justify-start gap-y-4 mt-8 lg:mt-0">
-          {/* <Link href={"/"} className="  font-bold text-lg xl:text-[22px] ">
+          <p  className="  font-bold text-lg xl:text-[22px] ">
             FURTHER INFORMATION
-          </Link> */}
+          </p>
           <Link
             href={"/signup/cleaners"}
             className="cursor-pointer font-medium text-sm xl:text-xl "
