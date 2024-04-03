@@ -18,6 +18,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useAppContext } from "@/Services/context";
 import { toast } from "react-toastify";
 import Layout from "../Layout";
+import NewsLetter from "@/components/common/NewsLetter";
 
 const Detail = () => {
   const router = useRouter();
@@ -75,20 +76,19 @@ const Detail = () => {
               {searchParams.get("name")} Services
             </h1>
             <div className="flex  gap-x-3 w-full items-center  lg:flex-row justify-center">
-              <select name="" id="" value={city}
-                onChange={(e) => setcity(e.target.value)}
-                className="placeholder:text-[#FFFFFF] bg-white text-black placeholder:font-semibold placeholder:text-center placeholder:text-[13px] px-4 lg:w-1/6 bg-transparent h-[51px] w-full  rounded-[4px] outline-none   border-2 border-[#FFD54F]"
-              >
-                <option value="Lagos">Lagos</option>
-                <option value=""></option>
-              </select>
-              {/* <input
-                type="text"
-                placeholder="Enter Your City"
+              <select
                 value={city}
                 onChange={(e) => setcity(e.target.value)}
-                className="placeholder:text-[#FFFFFF] placeholder:font-semibold placeholder:text-center placeholder:text-[13px] px-4 lg:w-1/6 bg-transparent h-[51px]  rounded-[4px] outline-none   border-2 border-[#FFD54F]"
-              /> */}
+                className="placeholder:text-[#FFFFFF]  text-white placeholder:font-semibold placeholder:text-center placeholder:text-[13px] px-4 lg:w-1/6 bg-transparent h-[51px] w-full  rounded-[4px] outline-none   border-2 border-[#FFD54F]"
+              >
+                <option value="" className="bg-transparent text-black">
+                  Select City
+                </option>
+                <option value="Lagos" className="bg-transparent text-black">
+                  Lagos
+                </option>
+              </select>
+
               <button
                 onClick={() => {
                   if (city.length !== 0) {
@@ -99,10 +99,10 @@ const Detail = () => {
                     }));
                     router.push("/services/clean");
                   } else {
-                    toast.error("Fill the field", {
+                    toast.error("Select a city", {
                       position: "top-center",
                       autoClose: 1000,
-                      hideProgressBar: true,
+                      hideProgressBar: false,
                       closeOnClick: true,
                     });
                   }
@@ -112,10 +112,10 @@ const Detail = () => {
                 Book Now
               </button>
             </div>
-            <div className="flex items-center gap-x-3">
+            {/* <div className="flex items-center gap-x-3">
               <IoMdCheckmark className="text-[#FFC107]" />
               <p className="s">Get 33% off your first clean with “CLEAN33”</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -190,12 +190,39 @@ const Detail = () => {
               Find a Top Rated Home Cleaner near you
             </div>
             <div className="flex gap-x-3 w-full items-center justify-center ">
-              <input
-                type="text"
-                placeholder="Enter Your Address"
-                className="placeholder:text-[#FFFFFF] placeholder:font-semibold placeholder:text-center placeholder:text-[13px] px-4 w-full lg:w-1/6 bg-transparent h-[51px]  rounded-[4px] outline-none   border-2 border-[#FFD54F]"
-              />
-              <button className="bg-[#FFC107] h-[51px] w-full lg:w-[12%] font-semibold rounded-[4px]  text-[13px]   text-white">
+              <select
+                value={city}
+                onChange={(e) => setcity(e.target.value)}
+                className="placeholder:text-[#FFFFFF]  text-white placeholder:font-semibold placeholder:text-center placeholder:text-[13px] px-4 lg:w-1/6 bg-transparent h-[51px] w-full  rounded-[4px] outline-none   border-2 border-[#FFD54F]"
+              >
+                <option value="" className="bg-transparent text-black">
+                  Select City
+                </option>
+                <option value="Lagos" className="bg-transparent text-black">
+                  Lagos
+                </option>
+              </select>
+
+              <button
+                onClick={() => {
+                  if (city.length !== 0) {
+                    setName((prev: object) => ({
+                      ...prev,
+                      city: city,
+                      type: searchParams.get("name"),
+                    }));
+                    router.push("/services/clean");
+                  } else {
+                    toast.error("Select a city", {
+                      position: "top-center",
+                      autoClose: 1000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                    });
+                  }
+                }}
+                className="bg-[#FFC107] h-[51px] w-full px-2 lg:w-[12%] font-semibold rounded-[4px]  text-[13px]   text-white"
+              >
                 Book Now
               </button>
             </div>
@@ -216,9 +243,11 @@ const Detail = () => {
           <h2 className="text-[#0056B3] text-xl">We Are Available For:</h2>
           <div className="mt-5 flex flex-wrap w-full justify-between">
             {availability.map((item, index) => (
-              <div key={index} className="flex flex-col gap-y-2 mb-8 items-start text-lg">
+              <div
+                key={index}
+                className="flex flex-col gap-y-2 mb-8 items-start text-lg"
+              >
                 <div className="flex gap-x-2 ">
-                  <span>{index + 1}. </span>
                   <span>{item.available}:</span>
                 </div>
                 <p className="ssasa pl-4">{item.explanation}</p>
@@ -236,7 +265,6 @@ const Detail = () => {
                 className="flex flex-col gap-y-4 mb-8 items-start text-lg"
               >
                 <div className="flex gap-x-2">
-                  <span>{index + 1}. </span>
                   <span>{item.benefit}</span>
                 </div>
                 <p className="a pl-4">{item.explanation}</p>
@@ -342,7 +370,7 @@ const Detail = () => {
             CleanCrafters can help arrange a cleaner for you. We&apos;ve already
             conquered all these major cities and urban areas
           </p>
-          <div className="flex items-center w-full px-4 justify-between lg:justify-normal mx-auto text-center lg:text-start lg:gap-x-9 lg:flex-row flex-col ">
+          <div className="flex items-center w-full px-4 justify-between lg:justify-center mx-auto text-center lg:text-start lg:gap-x-9 lg:flex-row flex-col ">
             <div className="lg:border-r  lg:border-r-[#000000] pr-9 text-center">
               Lagos
             </div>
@@ -361,27 +389,7 @@ const Detail = () => {
             alt=""
             className="absolute object-cover h-[30rem] w-full"
           />
-          <div className="absolute text-center flex px-4 flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
-            <p className="text-[30px] font-semibold">
-              Subscribe to our Newsletter
-            </p>
-            <p className="">
-              I would like to receive future updates, offers and promotions by
-              email from CleanCrafters. If at any time you would like to stop
-              receiving communication from us, you can unsubscribe at the end of
-              any promotional mail.
-            </p>
-            <div className="flex gap-x-3">
-              <input
-                type="text"
-                placeholder="Enter your email address here..."
-                className="placeholder:text-[#FFFFFF] bg-transparent h-[65px] w-full rounded-[10px] px-4  border-2 border-[#007BFF]"
-              />
-              <button className="bg-[#007BFF] h-[65px] w-[230px] rounded-[10px] text-[20px]  text-white">
-                Subscribe
-              </button>
-            </div>
-          </div>
+          <NewsLetter />
         </div>
         <div className="w-full mt-20">
           <Footer />

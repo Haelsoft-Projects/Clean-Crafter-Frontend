@@ -4,7 +4,6 @@ import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { Appwrapper } from "@/Services/context";
-
 import "react-toastify/dist/ReactToastify.css";
 import { Providers } from "./providers";
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });

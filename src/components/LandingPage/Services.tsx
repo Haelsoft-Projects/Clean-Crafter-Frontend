@@ -9,37 +9,13 @@ import img5 from "../../assets/landingpage/services/5.png";
 import img6 from "../../assets/landingpage/services/6.png";
 import img7 from "../../assets/landingpage/services/7.png";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
-import axios from "axios";
-import { toast } from "react-toastify";
 import Link from "next/link";
 import { newData } from "@/Service";
+
 const Services = () => {
   const router = useRouter();
-  const [email, setemail] = useState<string>("");
-  const [isloading, setisloading] = useState<boolean>(false);
-  const fetchData = (email: string) => {
-    setisloading(true);
-    axios
-      .post("/api/news_letter", {
-        email,
-      })
-      .then((res) => {
-        console.log(res.data.user);
-        toast.success("registered successfully");
-      })
-      .catch((e) => {
-        console.log(e);
 
-        toast.error(e.response.data.error, {
-          autoClose: 2000,
-          position: "top-right",
-        });
-      })
-      .finally(() => {
-        setisloading(false);
-      });
-  };
+
   return (
     <div>
       <div
@@ -56,30 +32,16 @@ const Services = () => {
           booking is confirmed, just let them know what your priorities are and
           they’ll make your home shine.
         </p>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            fetchData(email);
-          }}
-          className="w-full flex flex-col lg:flex-row items-center justify-center gap-x-10 gap-y-6"
-        >
-          <input
-            type="email"
-            placeholder="Enter Email Address"
-            value={email}
-            required
-            onChange={(e) => {
-              setemail(e.target.value);
-            }}
-            className="border px-2 placeholder:text-center text-center focus:outline-none border-[#292450] rounded-[10px] w-full lg:w-[208px] h-[60px]"
-          />
+        <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-x-10 gap-y-6">
           <button
-            type="submit"
+            onClick={() => {
+              router.push("/signup/client");
+            }}
             className="rounded-[10px] text-white bg-[#0056B3] w-full lg:w-[208px] h-[60px]"
           >
             Let’s go
           </button>
-        </form>
+        </div>
 
         <div className="flex  mt-8 flex-col-reverse lg:flex-row justify-between min-h-[530px] bg-[#F3F2F2]">
           <Image

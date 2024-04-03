@@ -3,7 +3,7 @@ import Image from "next/image";
 import heroimage from "../../assets/landingpage/hero.png";
 import { CgCheck } from "react-icons/cg";
 import axios from "axios";
-import BeatLoader from "react-spinners/BeatLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import { useState } from "react";

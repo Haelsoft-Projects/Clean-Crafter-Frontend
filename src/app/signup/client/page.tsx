@@ -7,7 +7,7 @@ import { signUpValidate } from "@/Service";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import BeatLoader from "react-spinners/BeatLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Clients = () => {
@@ -77,7 +77,7 @@ const Clients = () => {
     <div>
       {isloading && (
         <div className="h-screen fixed w-screen  bg-black/[0.9] flex justify-center items-center ">
-          <BeatLoader color="#0056B3" size={30} />
+          <ClipLoader color="#0056B3" size={70} />
         </div>
       )}
 

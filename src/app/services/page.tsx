@@ -17,6 +17,7 @@ import { useAppContext } from "@/Services/context";
 import {  newData } from "@/Service";
 import Link from "next/link";
 import Layout from "./Layout";
+import NewsLetter from "@/components/common/NewsLetter";
 const Services = () => {
   const router = useRouter();
   const { name, setName } = useAppContext();
@@ -175,34 +176,9 @@ const Services = () => {
             <HiOutlineArrowCircleRight className="text-3xl cursor-pointer hidden lg:block" />
           </div>
         </div>
-        <div className=" mt-20 relative   min-h-[30rem] w-full">
-          <Image
-            src={imgpace}
-            alt=""
-            className="absolute object-cover h-[30rem] w-full"
-          />
-          <div className="absolute text-center flex px-4 flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
-            <p className="text-[30px] font-semibold">
-              Subscribe to our Newsletter
-            </p>
-            <p className="">
-              I would like to receive future updates, offers and promotions by
-              email from CleanCrafters. If at any time you would like to stop
-              receiving communication from us, you can unsubscribe at the end of
-              any promotional mail.
-            </p>
-            <div className="flex gap-x-3">
-              <input
-                type="text"
-                placeholder="Enter your email address here..."
-                className="placeholder:text-[#FFFFFF] bg-transparent h-[65px] w-full rounded-[10px] px-4  border-2 border-[#007BFF]"
-              />
-              <button className="bg-[#007BFF] h-[65px] w-[230px] rounded-[10px] text-[20px]  text-white">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
+       
+          <NewsLetter />
+       
 
         <div className="mt-20">
           {" "}

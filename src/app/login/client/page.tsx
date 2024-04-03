@@ -8,14 +8,15 @@ import Image from "next/image";
 import img from "../../../assets/img.png";
 import Input from "@/components/common/Input";
 import axios from "axios";
-import BeatLoader from "react-spinners/BeatLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 import { toast } from "react-toastify";
 import secureLocalStorage from "react-secure-storage";
 
 const Login = () => {
   const router = useRouter();
-  if (typeof window !== 'undefined' && window.localStorage) {
-  localStorage.removeItem("state");}
+  if (typeof window !== "undefined" && window.localStorage) {
+    localStorage.removeItem("state");
+  }
 
   const [isloading, setisloading] = useState<boolean>(false);
   const formik = useFormik({
@@ -42,7 +43,6 @@ const Login = () => {
           console.log(e);
           setisloading(false);
           toast.error(e.response.data.error, {
-            autoClose: 2000,
             position: "top-right",
           });
         });
@@ -53,7 +53,7 @@ const Login = () => {
     <div className="bg-white flex flex-col lg:flex-row w-full min-h-screen  justify-between    ">
       {isloading && (
         <div className="h-screen fixed w-screen  bg-black/[0.9] flex justify-center items-center ">
-          <BeatLoader color="#0056B3" size={30} />
+          <ClipLoader  color="#0056B3" size={70} />
         </div>
       )}
       <div className="w-[80%] lg:w-full xl:w-[55%] 2xl:w-full lg:px-10 xl:px-20 min-h-screen bg-gradient-to-t from-blue-900 to-blue-500 hidden  max-w-[824px]  2xl:max-w-[920px] lg:flex justify-center items-center">

@@ -8,20 +8,22 @@ import { SiWhatsapp } from "react-icons/si";
 import play from "../../assets/common/play.png";
 import store from "../../assets/common/store.png";
 import Link from "next/link";
-const Footer = () => {
+type Props = {}
+
+const AppFooter = (props: Props) => {
   return (
-    <div className="bg-[#0056B3] flex flex-col lg:mt-36  mt-20 ">
+<div className="bg-[#0056B3] flex flex-col lg:mt-36  mt-20 ">
       <div className="max-w-[1240px] w-full  px-4 lg:px-10 xl:px-0  mx-auto text-white flex flex-col lg:flex-row justify-between py-2 lg:pb-20 pt-10 text-center lg:text-start">
         <div className="flex flex-col justify-start gap-y-4">
           <p className="  font-bold text-lg xl:text-[22px] ">COMPANY</p>
           <Link
-            href={"#services"}
+            href={"/#services"}
             className="cursor-pointer text-sm xl:text-xl font-medium "
           >
             Our Services
           </Link>
           <Link
-            href={"#aboutus"}
+            href={"/#aboutus"}
             className="cursor-pointer font-medium text-sm xl:text-xl"
           >
             About Us
@@ -33,7 +35,7 @@ const Footer = () => {
             Contact Us
           </Link> */}
           <Link
-            href={"#faqs"}
+            href={"/#faqs"}
             className="cursor-pointer font-medium text-sm xl:text-xl"
           >
             FAQs
@@ -138,6 +140,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default Footer;
+  )
+}
+
+export default AppFooter

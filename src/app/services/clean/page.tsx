@@ -11,6 +11,7 @@ import { addressValidation } from "@/Services/validation";
 import { useFormik } from "formik";
 import { useAppContext } from "@/Services/context";
 import Link from "next/link";
+import NewsLetter from "@/components/common/NewsLetter";
 const Clean = () => {
   const router = useRouter();
   const { name, setName } = useAppContext();
@@ -100,27 +101,7 @@ const Clean = () => {
           alt=""
           className="absolute object-cover h-[30rem] w-full"
         />
-        <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0   absolute flex flex-col text-center gap-y-8 justify-center items-center  left-0 right-0 mx-auto h-[30rem]  text-white   ">
-          <p className="text-[30px] font-semibold">
-            Subscribe to our Newsletter
-          </p>
-          <p className="">
-            I would like to receive future updates, offers and promotions by
-            email from CleanCrafters. If at any time you would like to stop
-            receiving communication from us, you can unsubscribe at the end of
-            any promotional mail.
-          </p>
-          <div className="flex gap-x-3">
-            <input
-              type="text"
-              placeholder="Enter your email address here..."
-              className="placeholder:text-[#FFFFFF] bg-transparent h-[65px] w-full rounded-[10px] px-4  border-2 border-[#007BFF]"
-            />
-            <button className="bg-[#007BFF] h-[65px] w-[230px] rounded-[10px] text-[20px]  text-white">
-              Subscribe
-            </button>
-          </div>
-        </div>
+          <NewsLetter />
       </div>
       <div className="w-full mt-20">
         <Footer />

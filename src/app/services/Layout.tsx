@@ -79,7 +79,7 @@ useEffect(() => {
           {/* <div className="w-full"></div> */}
         </div>
         <div className="  top-0  px-2  sm:px-10 md:px-8   w-full  lg:hidden   py-4 flex  z-[70] rounded-b-sm justify-between">
-          <Link href="">
+          <Link href="/">
             {" "}
             <Image src={logo} alt="" className="md:w-40 w-24 " />
           </Link>

@@ -8,7 +8,7 @@ import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { updateUserValidate } from "@/Service";
 import axios from "axios";
-import BeatLoader from "react-spinners/BeatLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 import { toast } from "react-toastify";
 
 import Input from "../common/Input";
@@ -73,7 +73,7 @@ const Profile = (props: Props) => {
     <div>
       {isloading && (
         <div className="h-screen fixed w-screen left-0 z-50 top-0  bg-black/[0.9] flex justify-center items-center ">
-          <BeatLoader color="#0056B3" size={30} />
+          <ClipLoader color="#0056B3" size={70} />
         </div>
       )}
       <div className="w-full border border-black  justify-between items-center border-t-1 lg:border-t-0 border-x-0 flex  px-8 py-3">

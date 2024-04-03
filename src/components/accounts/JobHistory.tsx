@@ -1,7 +1,7 @@
 "use Client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import BeatLoader from "react-spinners/BeatLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 import { toast } from "react-toastify";
 import secureLocalStorage from "react-secure-storage";
 import { baseURL } from "@/Service";
@@ -55,7 +55,7 @@ const JobHistory = () => {
     <div>
       {isloading && (
         <div className="h-screen fixed w-screen left-0 top-0  bg-black/[0.9] flex justify-center items-center ">
-          <BeatLoader color="#0056B3" size={30} />
+          <ClipLoader color="#0056B3" size={70} />
         </div>
       )}
       <div className="">

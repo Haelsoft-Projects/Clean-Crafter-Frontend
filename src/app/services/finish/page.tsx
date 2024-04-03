@@ -20,11 +20,12 @@ import { IoMdCheckmark } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 import { useAppContext } from "@/Services/context";
 import axios from "axios";
-import BeatLoader from "react-spinners/BeatLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 import { toast } from "react-toastify";
 import secureLocalStorage from "react-secure-storage";
 import { baseURL } from "@/Service";
 import Link from "next/link";
+import NewsLetter from "@/components/common/NewsLetter";
 const Finish = () => {
   const router = useRouter();
   const publicKey = "pk_test_a6b12672f6f5e47d9349a0f015d87d7e71c1dd05";
@@ -144,7 +145,7 @@ const Finish = () => {
         <div className="w-full  max-w-[1240px] px-4 lg:px-10 xl:px-0  mx-auto ">
           {isloading && (
             <div className="h-screen fixed w-screen left-0 z-50  bg-black/[0.9] flex justify-center items-center ">
-              <BeatLoader color="#0056B3" size={30} />
+              <ClipLoader  color="#0056B3" size={70} />
             </div>
           )}
           <div className="flex items-center  justify-between border-b border-b-[#A3A3A3]  py-3 ">
@@ -208,34 +209,8 @@ const Finish = () => {
           className="paystack-button bg-red-500 px-10 py-4 text-white"
          
         /> */}
-        <div className=" mt-20 relative   h-[30rem] w-full">
-          <Image
-            src={imgpace}
-            alt=""
-            className="absolute object-cover  h-[30rem] w-full"
-          />
-          <div className="absolute flex px-4 text-center flex-col gap-y-8 justify-center items-center lg:px-20 left-0 right-0 mx-auto h-[30rem]  text-white max-w-[1240px]  w-full ">
-            <p className="text-[30px] font-semibold">
-              Subscribe to our Newsletter
-            </p>
-            <p className="">
-              I would like to receive future updates, offers and promotions by
-              email from CleanCrafters. If at any time you would like to stop
-              receiving communication from us, you can unsubscribe at the end of
-              any promotional mail.
-            </p>
-            <div className="flex gap-x-3">
-              <input
-                type="text"
-                placeholder="Enter your email address here..."
-                className="placeholder:text-[#FFFFFF] bg-transparent h-[65px] w-full rounded-[10px] px-4  border-2 border-[#007BFF]"
-              />
-              <button className="bg-[#007BFF] h-[65px] w-[230px] rounded-[10px] text-[20px]  text-white">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
+       
+      <NewsLetter/>
 
         <div className="w-full mt-20">
           <Footer />

@@ -1,3 +1,5 @@
+"use client"
+
 import About from "@/components/LandingPage/About";
 import Hero from "@/components/LandingPage/Hero";
 import Navbar from "@/components/LandingPage/Navbar";
@@ -9,13 +11,20 @@ import Faqs from "@/components/LandingPage/Faqs";
 import Reviews from "@/components/LandingPage/Reviews";
 import Book from "@/components/LandingPage/Book";
 import Footer from "@/components/LandingPage/Footer";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+import { useEffect } from "react";
+import NewsLetter from "@/components/common/NewsLetter";
 
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+    localStorage.removeItem("email")
+  }
+  }, [])
+  
   return (
     <>
-    	<ToastContainer />
+
       <div className="">
         <Navbar />
         <Hero />
@@ -26,7 +35,8 @@ export default function Home() {
         <Services />
         <Reviews />
         <Faqs />
-        <Book />
+  
+        <NewsLetter />
         <Footer />
       </div>
     </>
