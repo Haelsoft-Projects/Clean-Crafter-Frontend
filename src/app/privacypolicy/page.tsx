@@ -9,7 +9,7 @@ const PrivacyPolicies = (props: Props) => {
         Privacy Policy
       </h1>
       <p className="text-xl mt-8">
-        This Privacy Policy describes how Cleancrafter{" "}
+        This Privacy Policy describes how Cleancrafters{" "}
         {"('we', 'us', or 'our')"} collects, uses, and discloses personal
         information when you use our website and services.
       </p>

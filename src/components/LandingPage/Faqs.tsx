@@ -7,14 +7,14 @@ const Faqs = () => {
   type value = Array<object>;
   const data: value = [
     {
-      name: "What is CleanCrafter",
+      name: "What is CleanCrafters",
       content:
-        "Cleancrafter is an organization dedicated to providing cleaning services while also creating job opportunities for cleaners.",
+        "Cleancrafters is an organization dedicated to providing cleaning services while also creating job opportunities for cleaners.",
     },
     {
-      name: "How does Cleancrafter operate?",
+      name: "How does Cleancrafters operate?",
       content:
-        "Cleancrafter facilitates the connection between clients in need of cleaning services and skilled cleaners seeking job opportunities.",
+        "Cleancrafters facilitates the connection between clients in need of cleaning services and skilled cleaners seeking job opportunities.",
     },
     {
       name: "Do I need to do anything before my cleaner arrives?",
@@ -29,7 +29,7 @@ const Faqs = () => {
     {
       name: "What cleaning supplies do I have to provide?",
       content:
-        "You don't have to worry about providing any cleaning supplies. Cleancrafter brings all the necessary equipment and supplies to ensure your space is thoroughly cleaned.",
+        "You don't have to worry about providing any cleaning supplies. Cleancrafters brings all the necessary equipment and supplies to ensure your space is thoroughly cleaned.",
     },
   ];
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

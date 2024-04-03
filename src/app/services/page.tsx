@@ -36,7 +36,7 @@ const Services = () => {
           <div className="h-[30rem] gap-y-10 w-full bg-black/[0.4] px-4 absolute z-50 text-white flex flex-col justify-center items-center">
             <p className="font-bold text-2xl xl:text-[36px]">Our Services</p>
             <p className="font-bold text-center text-xl xl:text-[32px]">
-              Hire a CleanCrafter to help with cleaning your Environment
+              Hire  CleanCrafters to help with cleaning your Environment
             </p>
           </div>
         </div>

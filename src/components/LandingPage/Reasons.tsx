@@ -8,7 +8,7 @@ export default function Reasons() {
       <div className="bg-[#F3F2F2] w-full  py-20 min-h-[590px] lg:mt-36  mt-20 ">
         <div className="max-w-[1240px] w-full  mx-auto flex flex-col gap-x-5">
           <p className="text-black text-[35px] lg:text-[46px] text-center ">
-            Reasons To Book CleanCrafter
+            Reasons To Book CleanCrafters
           </p>
           <div className="flex flex-col  px-4  sm:px-10 gap-x-4 xl:gap-x-0 md:px-8 gap-y-10 lg:flex-row mt-10 lg:mt-20 justify-between items-center ">
             <div className="h-[346px] w-full lg:max-w-[376px] flex flex-col items-center justify-center gap-y-4 bg-white p-5 rounded-lg ">

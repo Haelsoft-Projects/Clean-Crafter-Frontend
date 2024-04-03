@@ -26,12 +26,12 @@ export default function About() {
             Discover Highly Rated Cleaning Service
           </div>
           <p className="ss mt-10 text-base  text-start ">
-          Welcome to Cleancrafter, your trusted partner in cleaning services! At Cleancrafter, we understand the importance of a clean and organized environment for your home or business. Our mission is to provide top-quality cleaning services while also creating job opportunities for skilled cleaners in our community
+          Welcome to Cleancrafters, your trusted partner in cleaning services! At Cleancrafters, we understand the importance of a clean and organized environment for your home or business. Our mission is to provide top-quality cleaning services while also creating job opportunities for skilled cleaners in our community
           </p>
           <div className="flex ml-10 mt-10 gap-x-4 lg:gap-x-8">
             <div className="h-[77px] w-[4px] bg-[#0056B3]"></div>
             <div className="text-justify">
-            Whether you&lsquo;re looking for a one-time deep clean or regular maintenance services, Cleancrafter is here to help. Let us handle the dirty work so you can enjoy a clean and comfortable space without the hassle.
+            Whether you&lsquo;re looking for a one-time deep clean or regular maintenance services, Cleancrafters is here to help. Let us handle the dirty work so you can enjoy a clean and comfortable space without the hassle.
             </div>
           </div>
           <div className="flex flex-col lg:flex-row text-center  justify-between mt-10 gap-y-8">
