@@ -92,13 +92,13 @@ const Clients = () => {
         </div>
         <div className=" lg:w-full xl:w-[45%] px-4 lg:px-0 2xl:w-full  flex  justify-center items-center  max-w-[463px] 2xl:max-w-[500px]  mx-auto">
           <div className="flex  flex-col justify-center items-center w-full mt-10 mb-4">
-            <p className=" w-full font-medium mt-8 lg:mt-0  text-center text-xl xl:text-2xl lg:text-4xl text-[#242424] ">
+            <p className=" w-full font-medium mt-8 lg:mt-0  text-center text-xl lg:text-3xl 2xl:text-4xl text-[#242424] ">
               Register As A Client
             </p>
             <form
               onSubmit={formik.handleSubmit}
               action=""
-              className="flex flex-col gap-y-4 mt-5 w-full  2xl:max-w-[600px]"
+              className="flex flex-col gap-y-4 mt-5 w-full lg:px-8 xl:px-0  2xl:max-w-[600px]"
             >
               <Input
                 label="First Name"

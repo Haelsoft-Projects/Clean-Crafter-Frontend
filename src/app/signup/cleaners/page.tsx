@@ -89,7 +89,7 @@ const Cleaners = () => {
             <form
               onSubmit={formik.handleSubmit}
               action=""
-              className="flex  flex-col gap-y-4    mt-5 w-full  2xl:max-w-[600px]"
+              className="flex  flex-col gap-y-4    mt-5 w-full px-4 lg:px-8 xl:px-0 2xl:max-w-[600px]"
             >
               <Input
                 label="First Name"

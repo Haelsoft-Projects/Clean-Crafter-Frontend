@@ -72,7 +72,7 @@ const Login = () => {
           <form
             onSubmit={formik.handleSubmit}
             action=""
-            className="flex  flex-col gap-y-4  px-4 mt-5 w-full "
+            className="flex  flex-col gap-y-4  px-4 lg:px-8 mt-5 w-full "
           >
             <Input
               label="Email"
