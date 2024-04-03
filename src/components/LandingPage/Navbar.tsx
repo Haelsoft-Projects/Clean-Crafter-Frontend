@@ -45,7 +45,7 @@ export default function Navbar() {
             onClick={() => router.push("/signup/cleaners")}
             className="bg-[#0056B3] text-sm text-white rounded-[10px] font-bold  px-3 py-2"
           >
-           Register as a Cleaner
+            Register as a Cleaner
           </button>
 
           <HiMenu
@@ -60,9 +60,9 @@ export default function Navbar() {
          text-light z-50 fixed top-[4rem] md:top-[11.2rem] "
         >
           <Link
-            href=""
+            href="/login/client"
+            className=" font-bold  "
             onClick={() => {
-              router.push("/login/client");
               setbool(false);
             }}
           >
@@ -71,9 +71,6 @@ export default function Navbar() {
           </Link>
           <Link href={"/signup/client"} className=" font-bold  ">
             Sign Up{" "}
-          </Link>
-          <Link href="" onClick={() => setbool(false)}>
-            MENU
           </Link>
         </div>
       )}

@@ -14,7 +14,7 @@ import {
 } from "react-icons/hi";
 
 import { useAppContext } from "@/Services/context";
-import { data, newData } from "@/Service";
+import {  newData } from "@/Service";
 import Link from "next/link";
 import Layout from "./Layout";
 const Services = () => {

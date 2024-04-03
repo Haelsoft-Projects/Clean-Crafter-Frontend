@@ -1,5 +1,3 @@
-
-
 const HowitWorks = () => {
   return (
     <div>
@@ -9,28 +7,35 @@ const HowitWorks = () => {
             How it works
           </p>
           <div className="flex flex-col sm:flex-row items-center  justify-evenly gap-y-8 sm:gap-x-10 mt-8 w-full">
-            <div className="flex flex-col font-medium text-center gap-y-3 w-fit  ">
+            <div className="flex flex-col font-medium lg:w-[500px] text-center gap-y-3   ">
               <span className="text-5xl ">1</span>
               <span className="text-lg">Enter Your Address</span>
               <span className="text-base">
-                Enter your postcode to find cleaners available in your area{" "}
+                Enter your address to check if we have cleaners in your area.
               </span>
             </div>
             <div className=" w-[1px]  bg-black h-32"></div>
-            <div className="flex flex-col font-medium text-center gap-y-3 ">
+            <div className="flex flex-col font-medium lg:w-[500px] text-center gap-y-3 ">
               <span className="text-5xl ">2</span>
-              <span className="text-lg">Choose your preferred date</span>
+              <span className="text-lg">Enter Job Description</span>
               <span className="text-base">
-                Select the preferred date, time and frequency of your clean{" "}
+                Describe your job for the cleaners.
               </span>
             </div>{" "}
             <div className=" w-[1px]  bg-black h-32"></div>
-            <div className="flex flex-col font-medium text-center gap-y-3  ">
+            <div className="flex flex-col font-medium lg:w-[500px] text-center gap-y-3  ">
               <span className="text-5xl ">3</span>
-              <span className="text-lg"> Select cleaners & send a request</span>
+              <span className="text-lg">Pay Securely</span>
               <span className="text-base">
-                Compare cleaner profiles and prices and select who will receive
-                your request
+                 You can rest assured that your payment information is protected.
+              </span>
+            </div>
+            <div className=" w-[1px]  bg-black h-32"></div>
+            <div className="flex flex-col font-medium lg:w-[500px] text-center gap-y-3  ">
+              <span className="text-5xl ">4</span>
+              <span className="text-lg">Enjoy a Spotless Environment</span>
+              <span className="text-base">
+                Enjoy a sparkling environment and provide your feedback.
               </span>
             </div>
           </div>

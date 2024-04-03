@@ -89,7 +89,7 @@ const Profile = (props: Props) => {
             onClick={() => {
               setupdateAccount(!updateAccount);
             }}
-            className="px-10 py-2 rounded-lg border  border-[#FFC107]"
+            className="px-10 py-2 rounded-lg border  border-[#0056B3]"
           >
             Edit
           </button>
@@ -105,7 +105,7 @@ const Profile = (props: Props) => {
                 className="grid grid-cols-2 max-w-[435px] gap-x-4 gap-y-4 mt-5 w-full  2xl:max-w-[600px]"
               >
                 <div className="mb-3">
-                  <label className="float-left text-gray-700 text-sm font-medium  mb-2">
+                  <label className="float-left  text-sm font-medium  mb-2">
                     First Name
                   </label>
                   <input
@@ -115,7 +115,7 @@ const Profile = (props: Props) => {
                       formik.errors.firstName && formik.touched.firstName
                         ? "border-red-500"
                         : "border-[#717171]"
-                    } rounded-[5px] w-full py-1 px-3  text-gray-700 leading-7 focus:outline-none focus:shadow-outline`}
+                    } rounded-[5px] w-full py-1 px-3   leading-7 focus:outline-none focus:shadow-outline`}
                     type="text"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
@@ -129,7 +129,7 @@ const Profile = (props: Props) => {
                   )}
                 </div>
                 <div className="mb-3 ">
-                  <label className="float-left text-gray-700 text-sm font-medium  mb-2">
+                  <label className="float-left  text-sm font-medium  mb-2">
                     Last Name
                   </label>
                   <input
@@ -139,7 +139,7 @@ const Profile = (props: Props) => {
                       formik.errors.lastName && formik.touched.lastName
                         ? "border-red-500"
                         : "border-[#717171]"
-                    } rounded-[5px] w-full py-1 px-3 text-gray-700 leading-7 focus:outline-none focus:shadow-outline`}
+                    } rounded-[5px] w-full py-1 px-3  leading-7 focus:outline-none focus:shadow-outline`}
                     type="text"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
@@ -205,7 +205,7 @@ const Profile = (props: Props) => {
                   // onClick={() => {
                   //   setupdateAccount(!updateAccount);
                   // }}
-                  className="px-10 py-2 mb-4 rounded-lg border col-span-2 w-fit mx-auto  border-[#FFC107]"
+                  className="px-10 py-2 mb-4 rounded-lg border col-span-2 w-fit mx-auto  border-[#0056B3]"
                 >
                   Edit
                 </button>
@@ -239,7 +239,7 @@ const Profile = (props: Props) => {
                   toast.success("Logged Out")
                   router.replace("/login/client");
                 }}
-                className="px-2 py-2 rounded-lg border mx-auto lg:mx-0 border-[#FFC107]"
+                className="px-2 py-2 rounded-lg border mx-auto lg:mx-0 border-[#0056B3]"
               >
                 Logout
               </button>

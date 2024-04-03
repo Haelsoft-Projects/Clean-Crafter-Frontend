@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 export default function Hero() {
   const router = useRouter();
-  const [email, setemail] = useState<string>("")
+  const [email, setemail] = useState<string>("");
   const [isloading, setisloading] = useState<boolean>(false);
   const fetchData = (email: string) => {
     setisloading(true);
@@ -73,23 +73,33 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="w-full  flex space-x-4 mt-8 mb-4  md:mt-10 justify-between lg:justify-normal">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                // localStorage.setItem("email", email)
+                if (typeof window !== "undefined" && window.localStorage) {
+                  localStorage.setItem("email", email);
+                }
+                router.push("/signup/client");
+              }}
+              className="w-full  flex space-x-4 mt-8 mb-4  md:mt-10 justify-between lg:justify-normal"
+            >
               <input
                 type="email"
-                placeholder="Enter your Address"
-                onChange={(e)=>{setemail(e.target.value)}}
-                className="border px-2 text-base border-[#292450] w-1/2 lg:w-1/3 xl:w-1/3 py-3 bg-white rounded-[10px]"
+                placeholder="Enter your Email Address"
+                onChange={(e) => {
+                  setemail(e.target.value);
+                }}
+                className="border px-2 outline-none text-base  border-[#292450] w-1/2 lg:w-1/3 xl:w-1/3 py-3 bg-white rounded-[10px]"
+                required
               />
-              <button onClick={()=>{
-                // localStorage.setItem("email", email)
-                if (typeof window !== 'undefined' && window.localStorage) {
-                  localStorage.setItem("email", email)
-              }
-                router.push("/signup/client")
-              }}  className="py-3 px-2 text-base text-white w-1/2  lg:w-1/3 xl:w-1/3  bg-[#0056B3] rounded-[10px]">
+              <button
+                type="submit"
+                className="py-3 px-2 text-base text-white w-1/2  lg:w-1/3 xl:w-1/3  bg-[#0056B3] rounded-[10px]"
+              >
                 Let’s go
               </button>
-            </div>
+            </form>
           </div>
           <Image
             src={heroimage}
